@@ -1,0 +1,125 @@
+.ContactLenderCancelButton {
+    outline: none;
+    width: 8em;
+    height: 4em;
+    margin-left: .5em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.ContactLenderContainer{
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    display: flex;
+    flex-flow: column;
+    height: 20em;
+    justify-content: center;
+    margin-top:.5em;
+    width: 30em;
+}
+
+.ContactLenderContainerTitle {
+    color: #ffca1c;
+    font-size: 24pt;
+    margin-top: -.6em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.ContactLenderEmailInput {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: left;
+    width: 20em;
+}
+
+.ContactLenderEmailInputBorder {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    height: auto;
+    text-align: left;
+    width: 27em;
+}
+
+.ContactLenderInputsContainer {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.ContactLenderBodyContainer {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.ContactLenderButtonsContainer {
+    display: flex;
+    flex-flow: row;
+    margin-top: 1.5em;
+}
+
+.ContactLenderMessageInput {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: left;
+    width: 20em;
+}
+
+.ContactLenderMessageInputBorder{
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    height: auto;
+    margin-top: 1em;
+    width: 27em;
+}
+
+.ContactLenderSaveChangesButton {
+   
+    outline: none;
+    width: 10em;
+    height: 4em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
