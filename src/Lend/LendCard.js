@@ -8,7 +8,7 @@ export const ToolCard = ({ tool }) => {
 
     return (
         <div className="LendToolsIAmLendingCard">
-            <img className="LendToolMeOncePicture" src="Images/Cat.jpg" alt="Logo" />
+            <img className="LendToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
             <div className="LendToolInfoContainer">
                 <div className="LendEditToolButtonContainer">
                     <button className="LendEditToolButton"

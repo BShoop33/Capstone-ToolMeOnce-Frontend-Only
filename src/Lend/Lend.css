@@ -253,6 +253,7 @@
     font-size: 28pt;
     text-align: center;
     text-shadow: 0 0 20px #000000;
+    margin-left: .25em;
 }
 
 .LendToolsICanLendContainer {

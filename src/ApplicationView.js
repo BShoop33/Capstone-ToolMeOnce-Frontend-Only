@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { LendProvider } from "./Lend/LendDataProvider.js"
 import { BorrowPage } from "./Borrow/BorrowList.js"
 import { LendList } from "./Lend/LendList.js"
-import { AddToolPage } from "./AddaNewTool/AddaNewToolForm.js"
+import { AddToolPage } from "./Lend/AddaNewToolForm.js"
 import { ProfilePage } from "./EditProfile/EditProfile.js"
 import { ContactLenderPage } from "./ContactaLender/ContactLender.js"
 

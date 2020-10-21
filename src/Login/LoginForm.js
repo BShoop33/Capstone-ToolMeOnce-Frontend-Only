@@ -4,7 +4,8 @@ import { useHistory } from "react-router-dom"
 export const LoginPage = (props) => {
 
     const email = useRef()
-    const address = useRef()
+    const newemail = useRef()
+    const newaddress = useRef()
     const existDialog = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -22,8 +23,8 @@ export const LoginPage = (props) => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("nutshell_customer", exists.id)
-                    history.push("/")
+                    localStorage.setItem("ToolMeOnce_Member", exists.id)
+                    history.push("/lend")
                 } else {
                     existDialog.current.showModal()
                 }
@@ -44,22 +45,28 @@ export const LoginPage = (props) => {
 
         existingUserCheck2()
             .then((userExists) => {
-                if (!userExists) {
+                if (newemail.current.value === "") {
+                    window.alert("Please enter your email address to register")
+                }
+                else if (newaddress.current.value === "") {
+                    window.alert("Please enter your home address to register")
+                }
+                else if (!userExists) {
                     fetch("http://localhost:8088/users", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            email: email.current.value,
-                            address: `${address.current.value}`
+                            email: newemail.current.value,
+                            address: newaddress.current.value
                         })
                     })
                         .then(_ => _.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("ToolMeOnce_Member", createdUser.id)
-                                history.push("/")
+                                history.push("/lend")
                             }
                         })
                 }
@@ -104,12 +111,12 @@ export const LoginPage = (props) => {
                         <h2 className="LoginNewUsersContainerTitle">New Users</h2>
                         <div className="LoginInputsContainer">
                             <div className="LoginNewUsersEmailInputBorder">
-                                <input type="text" ref={email} id="LoginNewEmailInput" name="LoginNewEmailInput" required autoFocus className="LoginNewEmailInput"
+                                <input type="text" ref={newemail} id="LoginNewEmailInput" name="LoginNewEmailInput" required autoFocus className="LoginNewEmailInput"
                                     placeholder="Enter Your Email Address to Register"
                                 />
                             </div>
                             <div className="LoginNewUsersHomeAddressInputBorder">
-                                <input type="text" ref={address} id="LoginNewHomeAddressInput" name="LoginNewHomeAddressInput" required autoFocus className="LoginNewHomeAddressInput"
+                                <input type="text" ref={newaddress} id="LoginNewHomeAddressInput" name="LoginNewHomeAddressInput" required autoFocus className="LoginNewHomeAddressInput"
                                     placeholder="Enter Your Home Address to Register"
                                 />
                             </div>

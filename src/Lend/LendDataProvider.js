@@ -16,16 +16,16 @@ export const LendProvider = (props) => {
             .then(setTools)
     }
 
-    // const addTools = (tools) => {
-    //     return fetch("http://localhost:8088/Toolstable", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(tools)
-    //     })
-    //         .then(getTools)
-    // }
+    const addTools = (tools) => {
+        return fetch("http://localhost:8088/Toolstable", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(tools)
+        })
+            .then(getTools)
+    }
 
     // const deleteTool = (toolId) => {
     //     return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
@@ -47,7 +47,7 @@ export const LendProvider = (props) => {
 
     return (
         <LendContext.Provider value={{
-            Tools, getTools, getToolById
+            Tools, addTools, getTools, getToolById
         }}>
             {props.children}
         </LendContext.Provider>

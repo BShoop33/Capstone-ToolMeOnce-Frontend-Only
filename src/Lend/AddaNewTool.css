@@ -4,10 +4,6 @@
     justify-content: space-between;
 }
 
-
-
-
-
 .main {
     display: flex;
     justify-content: center;
@@ -17,8 +13,6 @@
 .NewToolInputs {
     margin-right: 2em;
 }
-
-
 
 .AddTool {
     display: flex;
