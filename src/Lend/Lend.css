@@ -1,0 +1,352 @@
+.LendAddNewToolButton {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    outline: none;
+    min-width: 15em;
+    min-height: 5em;
+    margin-left: .8em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    word-spacing: .5em;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.LendBodyContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.LendContactALenderButton {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    outline: none;
+    width: 15em;
+    height: 5em;
+    margin-left: .8em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    word-spacing: 1em;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.LendProfileandBorrowButtonContainer {
+    margin-top: 2em;
+}
+
+.LendEditProfile {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    min-width: 12em;
+    min-height: 5em;
+    margin-right: 1.75em;
+  
+    outline: none;
+    word-spacing: .75em;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+  button:hover {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    background-color: #af8007;
+    border-color: #215a72;
+    box-shadow: 0px 0px 5px yellow;
+    color: black;
+    cursor: pointer;
+    outline: none;
+  }
+
+.LendGoToBorrowButton {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    min-width: 12em;
+    min-height: 5em;
+    margin-right: 1.75em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    outline: none;
+    word-spacing: .75em;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.LendProfileandBorrowButtonContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.LendMessagesContainer {
+    align-items: center;
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    display: flex;
+    flex-flow: column;
+    height: 61.5em;
+    min-width: 35em;
+    overflow: auto;
+}
+
+.LendMessagesTitle {
+    color: #ffca1c;
+    font-size: 28pt;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.LendPageFooter {
+    color: #ffca1c;
+    font-size: 20pt;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.LendPageHeaderContainer {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.LendPageTitle {
+    color: #ffca1c;
+    font-size: 45pt;
+    height: auto;
+    margin-left: 13.6em;
+    margin-top: .3em;
+    min-width: 12em;
+    text-shadow: 0 0 20px #000000;
+}
+
+.LendSubHeaderContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: -10em;
+}
+
+.LendToolInfoContainer {
+    display: flex;
+    flex-flow: column;
+    font-size: 14pt;
+    font-weight: 600;
+   
+    overflow: auto;
+}
+
+.LendToolMeOnceLogo {
+    margin-left: 1em;
+    margin-top: -10em;
+    min-height: 11.5em;
+    min-width: auto;
+}
+
+.LendToolMeOncePicture {
+    height: 20.65em;
+    width: 20.65em;
+}
+
+.LendToolMeOnceTitle {
+    font-size: 38pt;
+    margin-top: -.55em;
+    margin-bottom: -5em;
+    width:  20em;
+    word-spacing: 1em;
+}
+
+.LendToolMeOnceTitleContainer {
+    background-image: url("/Images/dust.png");
+    background-color: black;
+    color: #ffca1c;
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: ridge;
+    min-height: 4em;
+    margin-top: -10em;
+    min-width: 60em;
+    padding-top: 2em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.LendToolsIAmLendingCard {
+    background-color: white;
+    border: .8em;
+    border-color: #f2f0f0;
+    border-style: groove;
+    display: flex;
+    flex-flow: row;
+    height: 20.6em;
+    margin-bottom: .5em;
+    margin-left: .4em;
+    overflow: auto;
+    width: 72.5em;
+}
+
+.LendToolsIAmLendingTitle {
+    color: #ffca1c;
+    font-size: 28pt;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    margin-left: .25em;
+}
+
+.LendToolsICanLendContainer {
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    min-width: 76em;
+    overflow: auto;
+    height: 61.5em;
+}
+
+.LendToolName { 
+    margin-left: .25em;
+}
+
+.LendToolDescription { 
+    margin-left: .25em;
+}
+
+.LendToolSpecs{ 
+    margin-left: .25em;
+}
+
+.LendToolAccessories { 
+    margin-left: .25em;
+}
+
+.LendLenderEmail { 
+    margin-left: .25em;
+}
+
+.LendToolsICanLendHeader {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.LendEditToolButton {
+    outline: none;
+    border: .5em;
+    border-style: ridge;
+    border-radius: 1em;
+    border-color: #00a6ff;
+    height: 3em;
+    width: 15em;
+    color: #ffca1c;
+    font-weight: 1000;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    font-size: 14pt;
+}
+
+.LendEditToolButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    border: .2em;
+    border-style: solid;
+    border-color: black;
+    
+    width: 43.7em;
+    text-align: center;
+    background-color: rgb(63, 54, 54);
+    background-image: url("/Images/dust.png");
+}
+
+.LendDeleteToolButton {
+    outline: none;
+    border: .5em;
+    border-style: ridge;
+    border-radius: 1em;
+    border-color: #00a6ff;
+    height: 3em;
+    width: 15em;
+    color: #ffca1c;
+    font-weight: 1000;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    font-size: 14pt;
+}

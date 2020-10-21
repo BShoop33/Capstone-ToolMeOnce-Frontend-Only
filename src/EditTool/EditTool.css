@@ -1,0 +1,156 @@
+.EditTool {
+    align-items: center;
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    display: flex;
+    flex-flow: column;
+    height: 61.5em;
+    width: 30em;
+    overflow: auto;
+}
+
+.EditToolAccessoriesInput {
+    font-size: 17pt;
+    text-align: center;
+    width: 17.4em;
+    height: 7em;
+    text-align: left;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.EditToolAccessoriesInputBorder {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    width: 25em;
+    height: 10.3em;
+    margin-top: .5em;
+}
+
+.EditToolCancelToolEditsButton {
+    outline: none;
+    width: 8em;
+    height: 4em;
+    margin-left: 1.4em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.EditToolDescriptionInput {
+    font-size: 17pt;
+    text-align: center;
+    width: 17.4em;
+    height: 7em;
+    text-align: left;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.EditToolDescriptionInputBorder {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    width: 25em;
+    height: 10.3em;
+    margin-top: .5em;
+    word-wrap: normal;
+}
+
+.EditToolToolNameInput {
+    font-size: 17pt;
+    text-align: center;
+    width: 17.3em;
+    text-align: left;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.EditToolNameInputBorder {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    width: 25em;
+    height: auto;
+    margin-top: .5em;
+}
+
+.EditToolSpecificationsInput {
+    font-size: 17pt;
+    text-align: center;
+    width: 17.4em;
+    height: 7em;
+    text-align: left;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.EditToolSpecificationsInputBorder {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    width: 25em;
+    height: 10.3em;
+    margin-top: .5em;
+}
+
+.EditToolTitle {
+    color: #ffca1c;
+    font-size: 28pt;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.EditToolSaveToolEditsButton {
+    outline: none;
+    width: 8em;
+    height: 4em;
+    border: .5em;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: 1000;
+    font-size: 18pt;
+    border-color: #00a6ff;
+    color: #ffca1c;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.EditToolEditsButtonsContainer {
+    margin-top: .5em;
+    margin-bottom:.5em;
+}
+
+.EditToolToolMeOnceEditToolPicture {
+    border: .8em;
+    border-style: groove;
+    border-color: #f2f0f0;
+    height: 20em;
+    width: 20em;
+}

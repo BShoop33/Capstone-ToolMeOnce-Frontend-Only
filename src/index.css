@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #645656;
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+}
