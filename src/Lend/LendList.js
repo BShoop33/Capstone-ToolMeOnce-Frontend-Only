@@ -6,14 +6,27 @@ import { useHistory } from "react-router-dom"
 
 export const LendList = () => {
     const history = useHistory();
-    const { getTools } = useContext(LendContext)
+    const { Tools, getTools, setTools } = useContext(LendContext)
 
+    const [NewTools, setNewTools] = useState([])
 
-    const [Tools, setTools] = useState([])
 
     useEffect(() => {
         getTools()
     }, [])
+
+    useEffect(() => {
+        setNewTools(Tools)
+    }, [Tools])
+
+    // useEffect(() => {
+    //     setTools(NewTools)
+    // }, [NewTools])
+
+
+    // useEffect(() => {
+    //     NewToolArray.push(getTools())
+    // }, [])
 
 
 
@@ -48,10 +61,11 @@ export const LendList = () => {
                     </div>
                     <div className="LendReturnedToolsCards">
                         {
-                            Tools.map(tool => {
+                            NewTools.map(tool => {
                                 return <ToolCard key={tool.id} tool={tool} />
                             })
                         }
+
                     </div>
                 </div>
                 <div className="LendMessagesContainer">

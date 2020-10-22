@@ -16,11 +16,11 @@ export const ToolCard = ({ tool }) => {
                         type="button">Edit this Tool</button>
                     <button className="LendDeleteToolButton" type="button">Delete this Tool</button>
                 </div>
-                <div className="LendToolName">Tool Name:  {tool.id}</div>
+                <div className="LendToolName">Tool Name:  {tool.toolname}</div>
                 <div className="LendToolDescription">Tool Description:  {tool.tooldescription}</div>
                 <div className="LendToolSpecs">Tool Specifications:  {tool.toolspecs}</div>
-                <div className="LendToolAccessories">Tool Accessories:  {tool.accessories}</div>
-                <div className="LendLenderEmail">Lender Email:  {tool.lenderid}</div>
+                <div className="LendToolAccessories">Tool Accessories:  {tool.toolaccessories}</div>
+                <div className="LendLenderEmail">Lender Email:  {tool.lenderId}</div>
             </div>
         </div>
     )

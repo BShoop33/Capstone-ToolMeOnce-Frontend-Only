@@ -2,10 +2,7 @@ import React, { useState, createContext } from "react"
 
 export const LendContext = createContext()
 
-const getToolById = (id) => {
-    return fetch(`http://localhost:8088/Toolstable/${id}?_expand=user`)
-        .then(res => res.json())
-}
+
 
 export const LendProvider = (props) => {
     const [Tools, setTools] = useState([])
@@ -15,7 +12,7 @@ export const LendProvider = (props) => {
             .then(res => res.json())
             .then(setTools)
     }
-
+    console.log(Tools)
     const addTools = (tools) => {
         return fetch("http://localhost:8088/Toolstable", {
             method: "POST",
@@ -27,12 +24,17 @@ export const LendProvider = (props) => {
             .then(getTools)
     }
 
-    // const deleteTool = (toolId) => {
-    //     return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
-    //         method: "DELETE"
-    //     })
-    //         .then(getTools)
-    // }
+    const getToolById = (id) => {
+        return fetch(`http://localhost:8088/Toolstable/${id}?_expand=user`)
+            .then(res => res.json())
+    }
+
+    const deleteTool = (toolId) => {
+        return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
+            method: "DELETE"
+        })
+            .then(getTools)
+    }
 
     // const editTools = tool => {
     //     return fetch(`http://localhost:8088/Toolstable/${tool.id}`, {
@@ -47,7 +49,7 @@ export const LendProvider = (props) => {
 
     return (
         <LendContext.Provider value={{
-            Tools, addTools, getTools, getToolById
+            Tools, setTools, addTools, getTools, getToolById, deleteTool
         }}>
             {props.children}
         </LendContext.Provider>

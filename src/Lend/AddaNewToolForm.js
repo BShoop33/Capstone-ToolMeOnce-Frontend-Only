@@ -32,38 +32,43 @@ export const AddToolPage = () => {
         })
     }, [])
 
-    let toolspecs;
-    let toolaccessories;
+    const toolstatus = true;
 
     const constructToolObject = () => {
         setIsLoading(true)
         if (toolId) {
             editTools({
                 id: Tool.id,
-                userId: Tool.userid,
+                userid: localStorage.getItem("ToolMeOnce_Member"),
+                lenderid: localStorage.getItem("ToolMeOnce_Member"),
                 borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
-                toolname: Tool.toolname,
-                tooldescription: Tool.tooldescription,
-                toolspecs: toolspecs,
-                toolaccessories: toolaccessories
+                toolstatus: toolstatus,
+                toolname: Tool.AddToolNameInput,
+                tooldescription: Tool.AddToolDescriptionInput,
+                toolspecs: Tool.AddToolSpecificationsInput,
+                toolaccessories: Tool.AddToolAccessoriesInput
             })
                 .then(() => history.push("/Lend"))
         }
         else {
             addTools({
                 id: Tool.id,
-                userId: Tool.userid,
-                borrowerid: Tool.borrowerid,
+                userid: localStorage.getItem("ToolMeOnce_Member"),
+                lenderId: localStorage.getItem("ToolMeOnce_Member"),
                 imageurl: Tool.imageurl,
-                toolname: Tool.toolname,
-                tooldescription: Tool.tooldescription,
-                toolspecs: toolspecs,
-                toolaccessories: toolaccessories
+                toolstatus: toolstatus,
+                toolname: Tool.AddToolNameInput,
+                tooldescription: Tool.AddToolDescriptionInput,
+                toolspecs: Tool.AddToolSpecificationsInput,
+                toolaccessories: Tool.AddToolAccessoriesInput
             })
                 .then(() => history.push("/Lend"))
         }
     }
+
+    let AddToolSpecificationsInput
+    let AddToolAccessoriesInput
 
     return (
         <>
@@ -106,7 +111,9 @@ export const AddToolPage = () => {
                                     }}
 
                                     type="button">Save Tool</button>
-                                <button className="AddToolCancelButton" type="button">Cancel</button>
+                                <button className="AddToolCancelButton"
+                                    onClick={() => { history.push(`/lend`) }}
+                                    type="button">Cancel</button>
                             </div>
                         </div>
                     </div>

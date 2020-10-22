@@ -61,6 +61,8 @@
 }
 
 .LendProfileandBorrowButtonContainer {
+    display: flex;
+    flex-flow: column;
     margin-top: 2em;
 }
 
@@ -103,6 +105,13 @@
     outline: none;
   }
 
+  .LendToolMeOnceLogo {
+    margin-left: 1em;
+    margin-top: -10em;
+    min-height: 11.5em;
+    min-width: auto;
+}
+
 .LendGoToBorrowButton {
     background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     border: .7em;
@@ -136,6 +145,7 @@
 .LendProfileandBorrowButtonContainer {
     display: flex;
     flex-flow: column;
+    margin-top: 2em;
 }
 
 .LendMessagesContainer {

@@ -10,7 +10,6 @@ export const LoginPage = (props) => {
     const conflictDialog = useRef()
     const history = useHistory()
 
-
     const existingUserCheck = () => {
         return fetch(`http://localhost:8088/users?email=${email.current.value}`)
             .then(res => res.json())
@@ -30,8 +29,6 @@ export const LoginPage = (props) => {
                 }
             })
     }
-
-
 
     const existingUserCheck2 = () => {
         return fetch(`http://localhost:8088/users?email=${email.current.value}`)
@@ -65,7 +62,8 @@ export const LoginPage = (props) => {
                         .then(_ => _.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("ToolMeOnce_Member", createdUser.id)
+                                // localStorage.setItem("ToolMeOnce_Member", createdUser.id)
+                                localStorage.setItem("ToolMeOnce_Member", newemail.current.value)
                                 history.push("/lend")
                             }
                         })
