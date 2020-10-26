@@ -1,56 +1,55 @@
-// import React, { useState, createContext } from "react"
+import React, { useState, createContext } from "react"
+export const BorrowContext = createContext()
 
-// export const ChatContext = createContext()
+export const BorrowProvider = (props) => {
+    const [borrow, setBorrow] = useState([])
 
-// const getChatById = (id) => {
-//     return fetch(`http://localhost:8088/messages/${id}?_expand=user`)
-//         .then(res => res.json())
-// }
 
-// export const ChatProvider = (props) => {
-//     const [messages, setMessages] = useState([])
-//     const [searchTerms, setSearchTerms] = useState("")
+    const getBorrow = () => {
+        return fetch("http://localhost:8088/Toolstable")
+            .then(res => res.json())
+            .then(setBorrow)
+    }
 
-//     const getChat = () => {
-//         return fetch("http://localhost:8088/messages")
-//             .then(res => res.json())
-//             .then(setMessages)
-//     }
+    const addBorrow = (param) => {
+        return fetch("http://localhost:8088/Toolstable", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(param)
+        })
+            .then(getBorrow)
+    }
 
-//     const addChat = (chat) => {
-//         return fetch("http://localhost:8088/messages", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(chat)
-//         })
-//             .then(getChat)
-//     }
+    const getBorrowById = (param) => {
+        return fetch(`http://localhost:8088/Toolstable/${param}?expand=user`)
+            .then(res => res.json())
+    }
 
-//     const deleteChat = (chatId) => {
-//         return fetch(`http://localhost:8088/messages/${chatId}`, {
-//             method: "DELETE"
-//         })
-//             .then(getChat)
-//     }
+    const DeleteBorrow = (param) => {
+        return fetch(`http://localhost:8088/Toolstable/${param}`, {
+            method: "DELETE"
+        })
 
-//     const editChat = chat => {
-//         return fetch(`http://localhost:8088/messages/${chat.id}`, {
-//             method: "PUT",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(chat)
-//         })
-//             .then(getChat)
-//     }
+    }
 
-//     return (
-//         <ChatContext.Provider value={{
-//             messages, getChat, addChat, getChatById, deleteChat, editChat, searchTerms, setSearchTerms
-//         }}>
-//             {props.children}
-//         </ChatContext.Provider>
-//     )
-// }
+    const editBorrow = param => {
+        return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(param)
+        })
+            .then(getBorrow)
+    }
+
+    return (
+        <BorrowContext.Provider value={{
+            borrow, addBorrow, getBorrow, getBorrowById, DeleteBorrow, editBorrow
+        }}>
+            {props.children}
+        </BorrowContext.Provider>
+    )
+}

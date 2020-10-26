@@ -9,7 +9,7 @@ export const ContactLenderPage = () => {
         <>
             <body className="ContactLenderBodyContainer">
                 <div className="ContactLenderContainer">
-                    <h2 className="ContactLenderContainerTitle">Contact A Lender</h2>
+                    <h2 className="ContactLenderContainerTitle">Contact a Lender</h2>
                     <div className="ContactLenderInputsContainer">
                         <div className="ContactLenderEmailInputBorder">
                             <input type="text" id="ContactLenderEmailInput" name="ContactLenderEmailInput" required autoFocus className="ContactLenderEmailInput"

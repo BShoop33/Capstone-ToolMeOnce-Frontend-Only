@@ -1,22 +1,4 @@
-.NewToolContainer {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.NewToolInputs {
-    margin-right: 2em;
-}
-
 .AddTool {
-    display: flex;
-    justify-content: space-between;
     background-color: black;
     background-image: url("/Images/dust.png");
     border: .8em;
@@ -24,125 +6,94 @@
     border-style: groove;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     min-height: 100%;
-    width: 80em;
     overflow: auto;
+    width: 80em;
 }
 
 .AddToolAccessoriesInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    text-align: center;
-    width: 17.4em;
-    height: 7em;
-    text-align: left;
-    font-family: arial, helvetica, sans-serif;
-}
-
-.AddToolAccessoriesInputBorder {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
-    width: 25em;
-    height: 10.3em;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
     margin-top: .5em;
+    text-align: left;
+    width: 26em;
 }
 
 .AddToolButtonsContainer {
-    margin-top: .5em;
+    display: flex;
+    justify-content: center;
     margin-bottom:.5em;
+    margin-top: .5em;
 }
 
 .AddToolCancelButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    color: #ffca1c;
     outline: none;
     width: 8em;
     height: 4em;
     margin-left: 1.4em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    font-size: 18pt;  
     font-weight: 1000;
-    font-size: 18pt;
-    border-color: #00a6ff;
-    color: #ffca1c;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
 }
 
 .AddToolDescriptionInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    text-align: center;
-    width: 17.4em;
-    height: 7em;
-    text-align: left;
-    font-family: arial, helvetica, sans-serif;
-}
-
-.AddToolDescriptionInputBorder {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
-    width: 25em;
-    height: 10.3em;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
     margin-top: .5em;
+    text-align: left;
+    width: 26em;
     word-wrap: normal;
 }
 
 .AddToolNameInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    text-align: center;
-    width: 17.3em;
-    text-align: left;
-    font-family: arial, helvetica, sans-serif;
-}
-
-.AddToolNameInputBorder {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
-    width: 25em;
-    height: auto;
-    margin-top: .5em;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    margin-left: 1em;
+    text-align: left;
+    width: 26em;
 }
 
 .AddToolPicture {
     border: .8em;
-    border-style: groove;
     border-color: #f2f0f0;
+    border-style: groove;
     height: 35em;
     margin-left: 2em;
-    margin-top: .25em;
-    min-width: 35em;
     min-height: 35em;
-
+    min-width: 35em;
 }
 
 .AddToolSaveButton {
-    outline: none;
-    width: 8em;
-    height: 4em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    border-color: #00a6ff;
-    color: #ffca1c;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -152,25 +103,32 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    height: 4em;
+    outline: none;
+    width: 8em;
 }
 
 .AddToolSpecificationsInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    text-align: center;
-    width: 17.4em;
-    height: 7em;
-    text-align: left;
-    font-family: arial, helvetica, sans-serif;
-}
-
-.AddToolSpecificationsInputBorder {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
-    width: 25em;
-    height: 10.3em;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
     margin-top: .5em;
+    text-align: left;
+    width: 26em;
 }
 
 .AddToolTitle {
@@ -178,4 +136,20 @@
     font-size: 28pt;
     text-align: center;
     text-shadow: 0 0 20px #000000;
+}
+
+.addToolMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NewToolContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.NewToolInputs {
+    margin-right: 14em;
 }

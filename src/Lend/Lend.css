@@ -1,5 +1,4 @@
 .LendAddNewToolButton {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     outline: none;
     min-width: 15em;
     min-height: 5em;
@@ -33,7 +32,6 @@
 }
 
 .LendContactALenderButton {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     outline: none;
     width: 15em;
     height: 5em;
@@ -61,11 +59,13 @@
 }
 
 .LendProfileandBorrowButtonContainer {
+    display: flex;
+    flex-flow: column;
     margin-top: 2em;
 }
 
 .LendEditProfile {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    background-image: url("/Images/dust.png");
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -94,7 +94,6 @@
 }
 
   button:hover {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     background-color: #af8007;
     border-color: #215a72;
     box-shadow: 0px 0px 5px yellow;
@@ -103,8 +102,14 @@
     outline: none;
   }
 
+  .LendToolMeOnceLogo {
+    margin-left: 1em;
+    margin-top: -10em;
+    min-height: 11.5em;
+    min-width: auto;
+}
+
 .LendGoToBorrowButton {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -136,6 +141,7 @@
 .LendProfileandBorrowButtonContainer {
     display: flex;
     flex-flow: column;
+    margin-top: 2em;
 }
 
 .LendMessagesContainer {
@@ -349,4 +355,39 @@
     background-color: #131313;
     background-size: 20px 20px;
     font-size: 14pt;
+}
+
+.uploadTitle {
+    color: #ffca1c;
+    font-size: 30pt;
+    height: auto;
+    text-shadow: 0 0 20px #000000;
+}
+
+.cloudinary-fileupload {
+    color: #ffca1c;
+    font-size: 20pt;
+    height: auto;
+    text-shadow: 0 0 20px #000000;
+}
+
+.pictureStyling {
+    width: 36em;
+    height: 36em;
+    border: .8em;
+    border-color: #f2f0f0;
+    border-style: groove;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.pictureUploadContainer {
+    margin-left: 1em;
 }

@@ -32,10 +32,10 @@
     border-style: groove;
     display: flex;
     flex-flow: column;
-    height: 20em;
+    height: 25em;
     justify-content: center;
     margin-top:.5em;
-    width: 30em;
+    width: 60em;
 }
 
 .ProfileEditContainerTitle {
@@ -122,4 +122,24 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+}
+
+.currentProfileEmail {
+    color: #ffca1c;
+    font-size: 20pt;
+    margin-top: -.6em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.currentProfileAddress {
+    color: #ffca1c;
+    font-size: 20pt;
+    margin-top: -.6em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    font-weight: 500;
+    margin-bottom: .5em;
 }

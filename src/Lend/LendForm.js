@@ -3,33 +3,13 @@ import { LendContext } from "./LendDataProvider.js"
 import { useHistory, useParams } from 'react-router-dom';
 import "./AddaNewTool.css"
 
-export const AddToolPage = () => {
-    const { getTools, getToolById, editTools, addTools, deleteTool } = useContext(LendContext)
+export const LendForm = () => {
+    const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
 
     const [Tool, setNewTool] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const { toolId } = useParams()
     const history = useHistory()
-    const [image, setImage] = useState('')
-    const [loading, setLoading] = useState(false)
-    const uploadImage = async e => {
-        const files = e.target.files
-        const data = new FormData()
-        data.append('file', files[0])
-        data.append('upload_preset', 'ToolMeOnce')
-        setLoading(true)
-        const res = await fetch(
-            'https://api.cloudinary.com/v1_1/dstfvbrwf/image/upload',
-            {
-                method: 'POST',
-                body: data
-            }
-        )
-
-        const file = await res.json()
-        setImage(file.secure_url)
-        setLoading(false)
-    }
 
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
@@ -42,8 +22,8 @@ export const AddToolPage = () => {
         getTools().then(() => {
             if (toolId) {
                 getToolById(toolId)
-                    .then(NewTool => {
-                        setNewTool(NewTool)
+                    .then(Tool => {
+                        setNewTool(Tool)
                         setIsLoading(false)
                     })
             } else {
@@ -60,7 +40,6 @@ export const AddToolPage = () => {
             editTools({
                 id: Tool.id,
                 userid: localStorage.getItem("ToolMeOnce_Member"),
-                lenderid: localStorage.getItem("ToolMeOnce_Member"),
                 borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
                 toolstatus: toolstatus,
@@ -75,7 +54,7 @@ export const AddToolPage = () => {
             addTools({
                 id: Tool.id,
                 userid: localStorage.getItem("ToolMeOnce_Member"),
-                lenderId: localStorage.getItem("ToolMeOnce_Member"),
+                borrowerid: localStorage.getItem("ToolMeOnce_Member"),
                 imageurl: Tool.imageurl,
                 toolstatus: toolstatus,
                 toolname: Tool.AddToolNameInput,
@@ -87,17 +66,13 @@ export const AddToolPage = () => {
         }
     }
 
-    let AddToolSpecificationsInput
-    let AddToolAccessoriesInput
-
     return (
         <>
             <body className="addToolMain">
                 <div className="AddTool">
-                    {/* <h2 className="AddToolTitle">Add a New Tool</h2>    {chatId ? "Edit Message" : "Add Message"} */}
+                    <h2 className="AddToolTitle">{toolId ? "Edit Tool" : "Add a Tool"}</h2>
                     <div className="NewToolContainer">
 
-                        <img className="AddToolPicture" src="/Images/Cat.jpg" alt="Logo" />
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
                                 <input type="text" id="AddToolNameInput" name="AddToolNameInput" required autoFocus className="AddToolNameInput"
@@ -125,6 +100,7 @@ export const AddToolPage = () => {
                             </div>
                             <div className="AddToolButtonsContainer">
                                 <button className="AddToolSaveButton"
+                                    disabled={isLoading}
                                     onClick={event => {
                                         event.preventDefault() // Prevent browser from submitting the form
                                         constructToolObject()
@@ -133,7 +109,9 @@ export const AddToolPage = () => {
 
                                     type="button">Save Tool</button>
                                 <button className="AddToolCancelButton"
-                                    onClick={() => { history.push(`/lend`) }}
+                                    onClick={() => {
+                                        history.push(`/lend`)
+                                    }}
                                     type="button">Cancel</button>
                             </div>
                         </div>
@@ -144,54 +122,3 @@ export const AddToolPage = () => {
         </>
     )
 }
-
-
-// function App() {
-//     const [image, setImage] = useState('')
-//     const [loading, setLoading] = useState(false)
-
-//     const uploadImage = async e => {
-//         const files = e.target.files
-//         const data = new FormData()
-//         data.append('file', files[0])
-//         data.append('upload_preset', 'ToolMeOnce')
-//         setLoading(true)
-//         const res = await fetch(
-//             'https://api.cloudinary.com/v1_1/dstfvbrwf/image/upload',
-//             {
-//                 method: 'POST',
-//                 body: data
-//             }
-//         )
-
-//         const file = await res.json()
-//         setImage(file.secure_url)
-//         setLoading(false)
-//     }
-
-
-
-//     return (
-//         <form>
-//             <script src="jquery-3.5.1.min.js"></script>
-//             <h1>Upload Testing</h1>
-
-//             <input type="file" name="file" placeholder="Upload an image" onChange={uploadImage} className="cloudinary-fileupload" data-cloudinary-field="image_id" data-form-data=" --- Data-JSON --- " />
-
-//             {loading ? (
-//                 <h3> Loading . . . </h3>
-//             ) : (
-//                     <img src={image} style={{ width: '300px' }} />
-//                 )}
-
-
-
-
-//         </form>
-//     )
-// }
-
-// export default App;
-
-
-

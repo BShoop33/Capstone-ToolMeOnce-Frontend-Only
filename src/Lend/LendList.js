@@ -5,17 +5,22 @@ import "./Lend.css"
 import { useHistory } from "react-router-dom"
 
 export const LendList = () => {
+    const { tool, getTools, searchTerms } = useContext(LendContext)
     const history = useHistory();
-    const { getTools } = useContext(LendContext)
-
-
-    const [Tools, setTools] = useState([])
+    const [filteredTools, setFiltered] = useState([])
 
     useEffect(() => {
         getTools()
     }, [])
 
+    useEffect(() => {
+        if (searchTerms !== "") {
 
+            setFiltered(tool)
+        } else {
+            setFiltered(tool)
+        }
+    }, [searchTerms, tool])
 
     return (
         <>
@@ -32,26 +37,27 @@ export const LendList = () => {
                         onClick={() => { history.push(`/lend/borrow`) }}
                         type="button">Go To Borrow</button>
                 </div>
-
             </header>
             <div className="LendSubHeaderContainer">
                 <h2 className="LendPageTitle">Lend</h2>
             </div>
+
             <body className="LendBodyContainer">
                 <div className="LendToolsICanLendContainer">
                     <div className="LendToolsICanLendHeader">
                         <h2 className="LendToolsIAmLendingTitle">Tools I Can Lend</h2>
                         <button className="LendAddNewToolButton"
-                            onClick={() => { history.push(`/lend/addnewtool`) }}
+                            onClick={() => { history.push(`/lend/toolchangepage/addnewtool`) }}
                             type="button">Add a New Tool</button>
 
                     </div>
                     <div className="LendReturnedToolsCards">
                         {
-                            Tools.map(tool => {
+                            filteredTools.map(tool => {
                                 return <ToolCard key={tool.id} tool={tool} />
                             })
                         }
+
                     </div>
                 </div>
                 <div className="LendMessagesContainer">
@@ -66,49 +72,3 @@ export const LendList = () => {
 
 
 
-
-
-
-// import React, { useContext, useEffect, useState } from "react"
-// import { ChatContext } from "./ChatProvider"
-// import { ChatCard } from "./ChatCard"
-// import { useHistory } from "react-router-dom"
-
-// Empty dependency array - useEffect only runs after first render
-//     useEffect(() => {
-//         getChat()
-//     }, [])
-
-// export const ChatList = () => {
-//     const { messages, getChat, searchTerms } = useContext(ChatContext)
-//     const [filteredMessages, setFiltered] = useState([])
-//     const history = useHistory()
-
-//     
-//     // useEffect dependency array with dependencies - will run if dependency changes (state)
-//     // searchTerms will cause a change
-//     useEffect(() => {
-//         if (searchTerms !== "") {
-//             const subset = messages.filter(chat => chat.renderedMessage.toLowerCase().includes(searchTerms))
-//             setFiltered(subset)
-//         } else {
-//             setFiltered(messages)
-//         }
-//     }, [searchTerms, messages])
-
-//     return (
-//         <>
-//             <h1>Chat</h1>
-//             <button onClick={() => { history.push("/chats/create") }}>
-//                 Add Message
-//             </button>
-//             <div className="chats">
-//                 {
-//                     filteredMessages.map(chat => {
-//                         return <ChatCard key={chat.id} chat={chat} />
-//                     })
-//                 }
-//             </div>
-//         </>
-//     )
-// }

@@ -1,14 +1,9 @@
 import React, { useState, createContext } from "react"
-
 export const LendContext = createContext()
 
-const getToolById = (id) => {
-    return fetch(`http://localhost:8088/Toolstable/${id}?_expand=user`)
-        .then(res => res.json())
-}
-
 export const LendProvider = (props) => {
-    const [Tools, setTools] = useState([])
+    const [tool, setTools] = useState([])
+    const [searchTerms, setSearchTerms] = useState("")
 
     const getTools = () => {
         return fetch("http://localhost:8088/Toolstable")
@@ -27,27 +22,37 @@ export const LendProvider = (props) => {
             .then(getTools)
     }
 
-    // const deleteTool = (toolId) => {
-    //     return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
-    //         method: "DELETE"
-    //     })
-    //         .then(getTools)
-    // }
 
-    // const editTools = tool => {
-    //     return fetch(`http://localhost:8088/Toolstable/${tool.id}`, {
-    //         method: "PUT",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(tool)
-    //     })
-    //         .then(getTools)
-    // }
+
+
+
+    const getToolById = (id) => {
+        return fetch(`http://localhost:8088/Toolstable/${id}`)
+            .then(res => res.json())
+
+    }
+
+    const DeleteTool = (toolId) => {
+        return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
+            method: "DELETE"
+        })
+            .then(getTools)
+    }
+
+    const editTools = tool => {
+        return fetch(`http://localhost:8088/Toolstable/${tool.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(tool)
+        })
+            .then(getTools)
+    }
 
     return (
         <LendContext.Provider value={{
-            Tools, addTools, getTools, getToolById
+            tool, addTools, getTools, getToolById, DeleteTool, editTools, searchTerms, setSearchTerms
         }}>
             {props.children}
         </LendContext.Provider>

@@ -1,41 +1,36 @@
 import React, { useContext, useEffect, useState } from "react"
-import { ChatContext } from "./ChatProvider"
-
+import { LendContext } from "./LendDataProvider.js"
+import "./Lend.css"
 import { useParams, useHistory } from "react-router-dom"
 
-export const ChatDetail = () => {
-    const { getChatById, deleteChat } = useContext(ChatContext)
-    const [chat, setChat] = useState({})
-    const history = useHistory();
-    const { chatId } = useParams();
+export const ToolCardButtonsContainer = ({ tool }) => {
+    const { getToolById, DeleteTool } = useContext(LendContext)
 
-    useEffect(() => {
-        getChatById(chatId)
-            .then((response) => {
-                setChat(response)
-            })
-    }, [])
+    const history = useHistory();
+
+
+
+
 
     return (
-        <section className="chat">
-            <h3 className="chat__message">{chat.message}</h3>
-            <div className="chat__userId">@{chat.userId}</div>
-            <button onClick={
-                () => {
-                    deleteChat(chat.id)
-                        .then(() => {
-                            history.push("/chats")
-                        })
-                }
+        <>
 
-            }>Delete Message</button>
+            <div className="LendEditToolButtonContainer">
+                <button className="LendEditToolButton"
+                    onClick={() => { history.push(`/lend/toolchangepage/${tool.id}`) }}
+                    type="button">Edit this Tool</button>
+                <button className="LendDeleteToolButton"
+                    onClick={
+                        () => {
+                            DeleteTool(tool.id)
+                                .then(() => {
+                                    history.push("/lend")
+                                })
+                        }
 
-            {/* used in chapter 13 start*/}
-            <button onClick={() => {
-                history.push(`/chats/edit/${chat.id}`)
-            }}>Edit Message</button>
-            {/* used in chapter 13 end */}
+                    } type="button">Delete this Tool</button>
 
-        </section>
+            </div>
+        </>
     )
 }
