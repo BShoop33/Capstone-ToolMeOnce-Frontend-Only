@@ -66,7 +66,7 @@
   "Toolstable": [
     {
       "userid": "braxton.shoop@gmail.com",
-      "lenderId": "braxton.shoop@gmail.com",
+      "borrowerid": "braxton.shoop@gmail.com",
       "toolstatus": true,
       "toolname": "aaaaaaaaaa",
       "tooldescription": "aaaaaaaaaa",
@@ -76,7 +76,7 @@
     },
     {
       "userid": "braxton.shoop@gmail.com",
-      "lenderId": "braxton.shoop@gmail.com",
+      "borrowerid": "braxton.shoop@gmail.com",
       "toolstatus": true,
       "toolname": "bbbbbbbbbbbbbbbb",
       "tooldescription": "bbbbbbbbbbbbbbbb",
@@ -86,7 +86,7 @@
     },
     {
       "userid": "braxton.shoop@gmail.com",
-      "lenderId": "braxton.shoop@gmail.com",
+      "borrowerid": "braxton.shoop@gmail.com",
       "toolstatus": true,
       "toolname": "cccccccccccccccccccc",
       "tooldescription": "cccccccccccccccccccc",

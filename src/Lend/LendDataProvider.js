@@ -22,9 +22,14 @@ export const LendProvider = (props) => {
             .then(getTools)
     }
 
+
+
+
+
     const getToolById = (id) => {
-        return fetch(`http://localhost:8088/Toolstable/${id}?_expand=Toolstable`)
+        return fetch(`http://localhost:8088/Toolstable/${id}`)
             .then(res => res.json())
+
     }
 
     const DeleteTool = (toolId) => {
