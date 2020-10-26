@@ -1,6 +1,103 @@
 
-  
-  .LoginBodyContainer {
+
+.buttoncloseexisting {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    min-width: 8em;
+    min-height: 4em;
+    margin-right: 1.75em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    outline: none;
+    word-spacing: .75em;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.dialogExisting {
+    background-image: url("/Images/dust.png");
+    background-color: black;
+    color: #ffca1c;
+    border: .8em;
+    border-color: red;
+    border-style: ridge;
+    min-height: 4em;
+    font-size: 22pt;
+    font-weight: 1000;
+    width: 15em;
+    padding-top: 2em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    margin-right: 42em;
+}
+
+.dialogNewEmail {
+    background-image: url("/Images/dust.png");
+    background-color: black;
+    color: #ffca1c;
+    border: .8em;
+    border-color: red;
+    border-style: ridge;
+    min-height: 4em;
+    font-size: 22pt;
+    font-weight: 1000;
+    width: 15em;
+    padding-top: 2em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    margin-right: 42em;
+}
+
+.buttonclosenewemail {
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    min-width: 8em;
+    min-height: 4em;
+    margin-right: 1.75em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    outline: none;
+    word-spacing: .75em;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+
+
+
+.LoginBodyContainer {
     align-items: center;
     display: flex;
     flex-flow: column;

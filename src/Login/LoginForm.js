@@ -8,6 +8,7 @@ export const LoginPage = (props) => {
     const newaddress = useRef()
     const existDialog = useRef()
     const conflictDialog = useRef()
+    const conflictDialogAddress = useRef()
     const history = useHistory()
 
     const existingUserCheck = () => {
@@ -43,10 +44,10 @@ export const LoginPage = (props) => {
         existingUserCheck2()
             .then((userExists) => {
                 if (newemail.current.value === "") {
-                    window.alert("Please enter your email address to register")
+                    conflictDialog.current.showModal("Please enter your email address to register")
                 }
                 else if (newaddress.current.value === "") {
-                    window.alert("Please enter your home address to register")
+                    conflictDialogAddress.current.showModal("Please enter your home address to register")
                 }
                 else if (!userExists) {
                     fetch("http://localhost:8088/users", {
@@ -79,14 +80,25 @@ export const LoginPage = (props) => {
     return (
         <>
             <main className="container--login">
-                <dialog className="dialog dialog--auth" ref={existDialog}>
-                    <div>User does not exist</div>
-                    <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
+
+                <dialog className="dialogExisting" ref={existDialog}>
+                    <div>Oops! It looks like we don't have a user record for you. Please register as a new user in the New User field below.</div>
+                    <button className="buttoncloseexisting" onClick={e => existDialog.current.close()}>Close</button>
                 </dialog>
-                <dialog className="dialog dialog--password" ref={conflictDialog}>
-                    <div>Account with that email address already exists</div>
-                    <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
+
+
+                <dialog className="dialogNewEmail" ref={conflictDialog}>
+                    <div>Please enter your email address to register</div>
+                    <button className="buttonclosenewemail" onClick={e => conflictDialog.current.close()}>Close</button>
                 </dialog>
+
+
+                <dialog className="dialogNewEmail" ref={conflictDialogAddress}>
+                    <div>Please enter your home address to register</div>
+                    <button className="buttonclosenewemail" onClick={e => conflictDialogAddress.current.close()}>Close</button>
+                </dialog>
+
+
                 <header className="LoginPageHeaderContainer">
                     <img className="LoginToolMeOnceLogo" src="Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
                     <div className="LoginToolMeOnceLoginTitleContainer">
@@ -106,7 +118,7 @@ export const LoginPage = (props) => {
                     </div>
 
                     <div className="LoginNewUsersContainer">
-                        <h2 className="LoginNewUsersContainerTitle">New Users</h2>
+                        <h2 className="LoginNewUsersContainerTitle">New User</h2>
                         <div className="LoginInputsContainer">
                             <div className="LoginNewUsersEmailInputBorder">
                                 <input type="text" ref={newemail} id="LoginNewEmailInput" name="LoginNewEmailInput" required autoFocus className="LoginNewEmailInput"
