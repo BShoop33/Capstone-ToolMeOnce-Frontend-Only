@@ -1,6 +1,3 @@
-
-
-
 import React, { useContext, useEffect, useState } from "react"
 import { ChatContext } from "./ChatProvider"
 import { ChatCard } from "./ChatCard"
@@ -12,13 +9,10 @@ export const ChatList = () => {
     const [filteredMessages, setFiltered] = useState([])
     const history = useHistory()
 
-    // Empty dependency array - useEffect only runs after first render
     useEffect(() => {
         getChat()
     }, [])
 
-    // useEffect dependency array with dependencies - will run if dependency changes (state)
-    // searchTerms will cause a change
     useEffect(() => {
         if (searchTerms !== "") {
             const subset = messages.filter(chat => chat.renderedMessage.toLowerCase().includes(searchTerms))

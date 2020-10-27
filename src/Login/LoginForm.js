@@ -23,7 +23,7 @@ export const LoginPage = (props) => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("ToolMeOnce_Member", exists.id)
+                    localStorage.setItem("ToolMeOnce_Member", email.current.value)
                     history.push("/lend")
                 } else {
                     existDialog.current.showModal()

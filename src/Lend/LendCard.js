@@ -3,7 +3,6 @@ import { ToolCardButtonsContainer } from "./LendDetail"
 import "./Lend.css"
 
 export const ToolCard = ({ tool }) => (
-
     <div className="LendToolsIAmLendingCard">
         <img className="LendToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
         <div className="LendToolInfoContainer">
@@ -12,6 +11,7 @@ export const ToolCard = ({ tool }) => (
             <div className="LendToolDescription">Tool Description:  {tool.tooldescription}</div>
             <div className="LendToolSpecs">Tool Specifications:  {tool.toolspecs}</div>
             <div className="LendToolAccessories">Tool Accessories:  {tool.toolaccessories}</div>
+            <div className="LendToolBorrower">Borrower Email:  {tool.borrowerid}</div>
         </div>
     </div>
 )

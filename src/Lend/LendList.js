@@ -3,24 +3,20 @@ import { LendContext } from "./LendDataProvider"
 import { ToolCard } from "./LendCard"
 import "./Lend.css"
 import { useHistory } from "react-router-dom"
+import { ProfileContext } from "../EditProfile/EditProfileDataProvider"
 
 export const LendList = () => {
-    const { tool, getTools, searchTerms } = useContext(LendContext)
+    const { tool, getTools } = useContext(LendContext)
+    const { profile, getProfile } = useContext(ProfileContext)
     const history = useHistory();
-    const [filteredTools, setFiltered] = useState([])
 
     useEffect(() => {
         getTools()
     }, [])
 
     useEffect(() => {
-        if (searchTerms !== "") {
-
-            setFiltered(tool)
-        } else {
-            setFiltered(tool)
-        }
-    }, [searchTerms, tool])
+        getProfile()
+    }, [])
 
     return (
         <>
@@ -30,18 +26,23 @@ export const LendList = () => {
                     <h1 className="LendToolMeOnceTitle">Tool - Me - Once</h1>
                 </div>
                 <div className="LendProfileandBorrowButtonContainer">
+                    <button className="LendLogOutButton"
+                        onClick={() => {
+                            localStorage.clear()
+                            history.push(`/lend`)
+                        }}
+                        type="button">Log Out</button>
                     <button className="LendEditProfile"
-                        onClick={() => { history.push(`/lend/profile`) }}
+                        onClick={() => { history.push(`/lend/profile/${profile}`) }}
                         type="button">Edit Profile</button>
-                    <button className="LendGoToBorrowButton"
-                        onClick={() => { history.push(`/lend/borrow`) }}
-                        type="button">Go To Borrow</button>
                 </div>
             </header>
             <div className="LendSubHeaderContainer">
+                <button className="LendGoToBorrowButton"
+                    onClick={() => { history.push(`/lend/borrow`) }}
+                    type="button">Go To Borrow</button>
                 <h2 className="LendPageTitle">Lend</h2>
             </div>
-
             <body className="LendBodyContainer">
                 <div className="LendToolsICanLendContainer">
                     <div className="LendToolsICanLendHeader">
@@ -49,11 +50,10 @@ export const LendList = () => {
                         <button className="LendAddNewToolButton"
                             onClick={() => { history.push(`/lend/toolchangepage/addnewtool`) }}
                             type="button">Add a New Tool</button>
-
                     </div>
                     <div className="LendReturnedToolsCards">
                         {
-                            filteredTools.map(tool => {
+                            tool.map(tool => {
                                 return <ToolCard key={tool.id} tool={tool} />
                             })
                         }
@@ -62,13 +62,9 @@ export const LendList = () => {
                 </div>
                 <div className="LendMessagesContainer">
                     <h2 className="LendMessagesTitle">Messages</h2>
-
                 </div>
             </body>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )
 }
-
-
-

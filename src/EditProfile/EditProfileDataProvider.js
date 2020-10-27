@@ -2,9 +2,6 @@ import React, { useState, createContext } from "react"
 
 export const ProfileContext = createContext()
 
-
-
-
 export const ProfileProvider = (props) => {
     const [profile, setProfile] = useState([])
 
@@ -25,8 +22,8 @@ export const ProfileProvider = (props) => {
             .then(getProfile)
     }
 
-    const getProfileById = () => {
-        return fetch(`http://localhost:8088/Toolstable/`)
+    const getProfileById = (id) => {
+        return fetch(`http://localhost:8088/Users/${id}`)
             .then(res => res.json())
     }
 

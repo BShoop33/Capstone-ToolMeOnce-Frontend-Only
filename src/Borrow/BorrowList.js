@@ -1,114 +1,68 @@
-import React from "react"
-import "./Borrow.css"
+import React, { useContext, useEffect, useState } from "react"
+import { BorrowContext } from "./BorrowDataProvider"
+import { ContactContext } from "../ContactaLender/ContactLenderDataProvider"
+import { ToolsIAmBorrowingCard } from "./ToolsIAmBorrowingCard"
+import { ToolsICanBorrowCard } from "./ToolsICanBorrowCard"
+import { BorrowerMessagesCard } from "../ContactaLender/ContactLenderCard"
 import { useHistory } from "react-router-dom"
+import "./Borrow.css"
 
-export const BorrowPage = () => {
+export const BorrowList = () => {
+    const { borrow, getBorrow } = useContext(BorrowContext)
+    const { contact, getContact } = useContext(ContactContext)
     const history = useHistory();
+
+    useEffect(() => {
+        getBorrow()
+    }, [])
+
+    useEffect(() => {
+        getContact()
+    }, [])
 
     return (
         <>
-
-            {/* <header className="LendPageHeaderContainer">
-                <img className="LendToolMeOnceLogo" src="Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
-
-                <div className="LendToolMeOnceTitleContainer">
-                    <h1 className="LendToolMeOnceTitle">Tool - Me - Once</h1>
-                </div>
-                <div className="LendProfileandBorrowButtonContainer">
-                    <button className="LendEditProfile" type="button">Edit Profile</button>
-                    <button className="LendGoToBorrowButton" type="button">Go To Borrow</button>
-
-                </div>
-
-            </header>
-            <div className="LendSubHeaderContainer">
-                <h2 className="LendPageTitle">Lend</h2>
-            </div> */}
-
-
-
             <header className="BorrowPageHeaderContainer">
                 <img className="BorrowToolMeOnceLogo" src="/Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
                 <div className="BorrowToolMeOnceTitleContainer">
                     <h1 className="BorrowToolMeOnceTitle">Tool - Me - Once</h1>
                 </div>
                 <div className="BorrowProfileandBorrowButtonContainer">
+                    <button className="LendLogOutButton"
+                        onClick={() => {
+                            localStorage.clear()
+                            history.push(`/lend`)
+                        }}
+                        type="button">Log Out</button>
                     <button className="BorrowEditProfile"
                         onClick={() => { history.push(`/lend/profile`) }}
                         type="button">Edit Profile</button>
-                    <button className="BorrowGoToLendButton"
-                        onClick={() => { history.push(`/lend`) }}
-                        type="button">Go To Lend</button>
                 </div>
             </header>
 
-
-
             <div className="BorrowSubHeaderContainer">
+                <button className="BorrowGoToLendButton"
+                    onClick={() => { history.push(`/lend`) }}
+                    type="button">Go To Lend</button>
                 <h2 className="BorrowPageTitle">Borrow</h2>
             </div>
             <body className="BorrowBodyContainer">
                 <div className="BorrowToolsIAmBorrowingandToolsICanBorrowContainer">
                     <div className="BorrowToolsIAmBorrowingContainer">
                         <h2 className="BorrowToolsIAmBorrowingTitle">Tools I Am Borrowing</h2>
-                        <div className="BorrowToolsIAmBorrowingCard">
-                            <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
-                            <div className="BorrowToolInfoContainer">
-                                <div className="ReturnButtonContainer">
-                                    <button className="ReturnButton" type="button">Return Tool to Lender</button>
-                                </div>
-                                <div className="ToolInfoContainer">
-                                    <div className="BorrowToolName">Tool Name:</div>
-                                    <div className="BorrowToolDescription">Tool Description:</div>
-                                    <div className="BorrowToolSpecs">Tool Specifications:</div>
-                                    <div className="BorrowToolAccessories">Tool Accessories:</div>
-                                    <div className="BorrowLenderEmail">Lender Email:  </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        {
+                            borrow.map(borrow => {
+                                return <ToolsIAmBorrowingCard key={borrow.id} borrow={borrow} />
+                            })
+                        }
                     </div>
                     <div className="BorrowToolsICanBorrowContainer">
                         <h2 className="BorrowToolsICanBorrowTitle">Tools I Can Borrow</h2>
-                        <div className="BorrowToolsIAmBorrowingCard">
-                            <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
-                            <div className="BorrowToolInfoContainer">
-                                <div className="BorrowButtonContainer">
-                                    <button className="BorrowButton" type="button">Borrow this Tool</button>
-                                </div>
-                                <div className="BorrowToolName">Tool Name:</div>
-                                <div className="BorrowToolDescription">Tool Description:</div>
-                                <div className="BorrowToolSpecs">Tool Specifications:</div>
-                                <div className="BorrowToolAccessories">Tool Accessories:</div>
-                                <div className="BorrowLenderEmail">Lender Email:  </div>
-                            </div>
-                        </div>
-                        <div className="BorrowToolsIAmBorrowingCard">
-                            <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
-                            <div className="BorrowToolInfoContainer">
-                                <div className="BorrowButtonContainer">
-                                    <button className="BorrowButton" type="button">Borrow this Tool</button>
-                                </div>
-                                <div className="BorrowToolName">Tool Name:</div>
-                                <div className="BorrowToolDescription">Tool Description:</div>
-                                <div className="BorrowToolSpecs">Tool Specifications:</div>
-                                <div className="BorrowToolAccessories">Tool Accessories:</div>
-                                <div className="BorrowLenderEmail">Lender Email:  </div>
-                            </div>
-                        </div>
-                        <div className="BorrowToolsIAmBorrowingCard">
-                            <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
-                            <div className="BorrowToolInfoContainer">
-                                <div className="BorrowButtonContainer">
-                                    <button className="BorrowButton" type="button">Borrow this Tool</button>
-                                </div>
-                                <div className="BorrowToolName">Tool Name:</div>
-                                <div className="BorrowToolDescription">Tool Description:</div>
-                                <div className="BorrowToolSpecs">Tool Specifications:</div>
-                                <div className="BorrowToolAccessories">Tool Accessories:</div>
-                                <div className="BorrowLenderEmail">Lender Email:  </div>
-                            </div>
-                        </div>
+                        {
+                            borrow.map(borrow => {
+                                return <ToolsICanBorrowCard key={borrow.id} borrow={borrow} />
+                            })
+                        }
                     </div>
                 </div>
                 <div className="BorrowMessagesContainer">
@@ -116,6 +70,12 @@ export const BorrowPage = () => {
                     <button className="BorrowContactALenderButton"
                         onClick={() => { history.push(`/lend/contact`) }}
                         type="button">Contact a Lender</button>
+                    {
+                        contact.map(message => {
+                            return < BorrowerMessagesCard key={message.id} message={message} />
+
+                        })
+                    }
                 </div>
             </body>
             <footer className="BorrowPageFooter">&copy; Tool Me Once, 2020</footer>

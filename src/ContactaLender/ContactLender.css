@@ -1,7 +1,7 @@
-.ContactLenderCancelButton {
+.ContactLenderDeleteButton {
     outline: none;
-    width: 8em;
-    height: 4em;
+    width: 12em;
+    height: 3em;
     margin-left: .5em;
     border: .5em;
     border-style: ridge;
@@ -10,7 +10,7 @@
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
     font-weight: 1000;
-    font-size: 18pt;
+    font-size: 14pt;
     border-color: #00a6ff;
     color: #ffca1c;
     background:
@@ -76,12 +76,6 @@
     justify-content: center;
 }
 
-.ContactLenderButtonsContainer {
-    display: flex;
-    flex-flow: row;
-    margin-top: 1.5em;
-}
-
 .ContactLenderMessageInput {
     font-family: arial, helvetica, sans-serif;
     font-size: 16pt;
@@ -98,11 +92,10 @@
     width: 27em;
 }
 
-.ContactLenderSaveChangesButton {
-   
+.ContactLenderReplyButton {
     outline: none;
     width: 10em;
-    height: 4em;
+    height: 3em;
     border: .5em;
     border-style: ridge;
     border-top-right-radius: 2em;
@@ -110,7 +103,7 @@
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
     font-weight: 1000;
-    font-size: 18pt;
+    font-size: 14pt;
     border-color: #00a6ff;
     color: #ffca1c;
     background:
@@ -122,4 +115,52 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+}
+
+.BorrowerMessagesCard {
+    margin-top: .5em;
+}
+
+.ContactLenderButtonContainer {
+    display: flex;
+    justify-content: center;
+    border: .2em;
+    border-style: solid;
+    border-color: black;
+    height: 3em;
+    width: 33.2em;
+    text-align: center;
+    background-color: rgb(63, 54, 54);
+    background-image: url("/Images/dust.png");
+    margin-left: -.1em;
+}
+
+ .BorrowerMessagesCardInfoContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-bottom: .5em;
+    font-size: 14pt;
+    font-weight: 600;
+    background-color: white;
+    padding-bottom: .25em;
+    line-height: 1.5;
+    margin-top: .5em;
+} 
+
+.ContactLenderId { 
+    margin-left: .25em;
+}
+
+.ContactLenderMessage {
+    margin-left: .25em;
+}
+
+.ContactLenderButtonsContainer {
+    display: flex;
+    height: 3em;
+    justify-content: space-between;
+    margin-top: 1em;
+    text-align: center;
+    width: 27.5em;    
 }

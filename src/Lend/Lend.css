@@ -1,19 +1,20 @@
-.LendAddNewToolButton {
+button:hover {
+    background-color: #af8007;
+    border-color: #215a72;
+    box-shadow: 0px 0px 5px yellow;
+    color: black;
+    cursor: pointer;
     outline: none;
-    min-width: 15em;
-    min-height: 5em;
-    margin-left: .8em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    word-spacing: .5em;
-    border-color: #00a6ff;
+  }
+
+  .cloudinary-fileupload {
     color: #ffca1c;
+    font-size: 20pt;
+    height: auto;
+    text-shadow: 0 0 20px #000000;
+}
+
+.LendAddNewToolButton {
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -23,6 +24,21 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    margin-left: .8em;
+    min-height: 5em;
+    min-width: 15em;
+    outline: none;
+    word-spacing: .5em;
 }
 
 .LendBodyContainer {
@@ -32,21 +48,6 @@
 }
 
 .LendContactALenderButton {
-    outline: none;
-    width: 15em;
-    height: 5em;
-    margin-left: .8em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    word-spacing: 1em;
-    border-color: #00a6ff;
-    color: #ffca1c;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -56,16 +57,56 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    height: 5em;
+    margin-left: .8em;
+    outline: none;
+    width: 15em;
+    word-spacing: 1em;
 }
 
-.LendProfileandBorrowButtonContainer {
-    display: flex;
-    flex-flow: column;
-    margin-top: 2em;
+.LendDeleteToolButton {
+    outline: none;
+    border: .5em;
+    border-style: ridge;
+    border-radius: 1em;
+    border-color: #00a6ff;
+    height: 3em;
+    width: 15em;
+    color: #ffca1c;
+    font-weight: 1000;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    font-size: 14pt;
 }
 
 .LendEditProfile {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
     background-image: url("/Images/dust.png");
+    background-size: 20px 20px;
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -76,12 +117,23 @@
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
-    min-width: 12em;
-    min-height: 5em;
     margin-right: 1.75em;
-  
+    min-height: 5em;
+    min-width: 12em;
     outline: none;
     word-spacing: .75em;
+}
+
+.LendEditToolButton {
+    outline: none;
+    border: .5em;
+    border-style: ridge;
+    border-radius: 1em;
+    border-color: #00a6ff;
+    height: 3em;
+    width: 15em;
+    color: #ffca1c;
+    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -91,22 +143,20 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    font-size: 14pt;
 }
 
-  button:hover {
-    background-color: #af8007;
-    border-color: #215a72;
-    box-shadow: 0px 0px 5px yellow;
-    color: black;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .LendToolMeOnceLogo {
-    margin-left: 1em;
-    margin-top: -10em;
-    min-height: 11.5em;
-    min-width: auto;
+.LendEditToolButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    border: .2em;
+    border-style: solid;
+    border-color: black;
+    height: 3em;
+    width: 43.2em;
+    text-align: center;
+    background-color: rgb(63, 54, 54);
+    background-image: url("/Images/dust.png");
 }
 
 .LendGoToBorrowButton {
@@ -122,9 +172,8 @@
     font-weight: 1000;
     min-width: 12em;
     min-height: 5em;
-    margin-right: 1.75em;
+    margin-left: 1em;
     margin-bottom: 2em;
-    margin-top: 1em;
     outline: none;
     word-spacing: .75em;
     background:
@@ -138,10 +187,37 @@
     background-size: 20px 20px;
 }
 
-.LendProfileandBorrowButtonContainer {
-    display: flex;
-    flex-flow: column;
-    margin-top: 2em;
+.LendLenderEmail { 
+    margin-left: .25em;
+}
+
+.LendLogOutButton {
+    background-image: url("/Images/dust.png");
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    width: 12em;
+    height: 5em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+    outline: none;
+    word-spacing: .1.25em;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
 }
 
 .LendMessagesContainer {
@@ -156,6 +232,7 @@
     height: 61.5em;
     min-width: 35em;
     overflow: auto;
+    margin-top: -1.4em;
 }
 
 .LendMessagesTitle {
@@ -183,17 +260,35 @@
     color: #ffca1c;
     font-size: 45pt;
     height: auto;
-    margin-left: 13.6em;
+    margin-left: 8.4em;
     margin-top: .3em;
     min-width: 12em;
     text-shadow: 0 0 20px #000000;
 }
 
+.LendProfileandBorrowButtonContainer {
+    display: flex;
+    flex-flow: column;
+    margin-top: 2em;
+}
+
 .LendSubHeaderContainer {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: -10em;
+}
+
+.LendToolAccessories { 
+    margin-left: .25em;
+}
+
+.LendToolBorrower {
+    margin-left: .25em;
+}
+
+.LendToolDescription { 
+    margin-left: .25em;
 }
 
 .LendToolInfoContainer {
@@ -201,13 +296,12 @@
     flex-flow: column;
     font-size: 14pt;
     font-weight: 600;
-   
     overflow: auto;
 }
 
 .LendToolMeOnceLogo {
     margin-left: 1em;
-    margin-top: -10em;
+    margin-top: 1em;
     min-height: 11.5em;
     min-width: auto;
 }
@@ -240,6 +334,10 @@
     text-shadow: 0 0 20px #000000;
 }
 
+.LendToolName { 
+    margin-left: .25em;
+}
+
 .LendToolsIAmLendingCard {
     background-color: white;
     border: .8em;
@@ -252,6 +350,7 @@
     margin-left: .4em;
     overflow: auto;
     width: 72.5em;
+    line-height: 1.5;
 }
 
 .LendToolsIAmLendingTitle {
@@ -271,26 +370,7 @@
     min-width: 76em;
     overflow: auto;
     height: 61.5em;
-}
-
-.LendToolName { 
-    margin-left: .25em;
-}
-
-.LendToolDescription { 
-    margin-left: .25em;
-}
-
-.LendToolSpecs{ 
-    margin-left: .25em;
-}
-
-.LendToolAccessories { 
-    margin-left: .25em;
-}
-
-.LendLenderEmail { 
-    margin-left: .25em;
+    margin-top: -1.4em;
 }
 
 .LendToolsICanLendHeader {
@@ -300,75 +380,8 @@
     margin-bottom: 1em;
 }
 
-.LendEditToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    font-size: 14pt;
-}
-
-.LendEditToolButtonContainer {
-    display: flex;
-    justify-content: space-between;
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    
-    width: 43.7em;
-    text-align: center;
-    background-color: rgb(63, 54, 54);
-    background-image: url("/Images/dust.png");
-}
-
-.LendDeleteToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    font-size: 14pt;
-}
-
-.uploadTitle {
-    color: #ffca1c;
-    font-size: 30pt;
-    height: auto;
-    text-shadow: 0 0 20px #000000;
-}
-
-.cloudinary-fileupload {
-    color: #ffca1c;
-    font-size: 20pt;
-    height: auto;
-    text-shadow: 0 0 20px #000000;
+.LendToolSpecs{ 
+    margin-left: .25em;
 }
 
 .pictureStyling {
@@ -390,4 +403,11 @@
 
 .pictureUploadContainer {
     margin-left: 1em;
+}
+
+.uploadTitle {
+    color: #ffca1c;
+    font-size: 30pt;
+    height: auto;
+    text-shadow: 0 0 20px #000000;
 }

@@ -4,7 +4,6 @@ export const ContactContext = createContext()
 export const ContactProvider = (props) => {
     const [contact, setContact] = useState([])
 
-
     const getContact = () => {
         return fetch("http://localhost:8088/Messages")
             .then(res => res.json())
@@ -31,7 +30,6 @@ export const ContactProvider = (props) => {
         return fetch(`http://localhost:8088/Messages/${param}`, {
             method: "DELETE"
         })
-
     }
 
     const editContact = param => {
