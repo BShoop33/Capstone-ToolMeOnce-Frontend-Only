@@ -5,16 +5,10 @@ import { useParams, useHistory } from "react-router-dom"
 
 export const ToolCardButtonsContainer = ({ tool }) => {
     const { getToolById, DeleteTool } = useContext(LendContext)
-
     const history = useHistory();
-
-
-
-
 
     return (
         <>
-
             <div className="LendEditToolButtonContainer">
                 <button className="LendEditToolButton"
                     onClick={() => { history.push(`/lend/toolchangepage/${tool.id}`) }}
@@ -27,9 +21,7 @@ export const ToolCardButtonsContainer = ({ tool }) => {
                                     history.push("/lend")
                                 })
                         }
-
                     } type="button">Delete this Tool</button>
-
             </div>
         </>
     )

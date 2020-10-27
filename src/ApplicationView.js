@@ -1,9 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { BorrowPage } from "./Borrow/BorrowList.js"
+
+import { BorrowList } from "./Borrow/BorrowList.js"
 import { BorrowProvider } from "./Borrow/BorrowDataProvider.js"
+// import { BorrowerMessagesCard } from "./ContactaLender/ContactLenderCard"
+// import { BorrowerMessagesCardButtonsContainer } from "./ContactaLender/ContactLenderCardDetail"
+import { ToolsIAmBorrowingCard } from "./Borrow/ToolsIAmBorrowingCard.js"
+import { ToolsICanBorrowCard } from "./Borrow/ToolsICanBorrowCard.js"
+
+
 import { ContactLenderPage } from "./ContactaLender/ContactLenderList.js"
-import { ProfilePage } from "./EditProfile/EditProfileList.js"
+import { ContactProvider } from "./ContactaLender/ContactLenderDataProvider.js"
+
+
+// import { ProfilePage } from "./EditProfile/EditProfileList.js"
 import { ProfileProvider } from "./EditProfile/EditProfileDataProvider.js"
 
 
@@ -15,23 +25,36 @@ import { ToolCardButtonsContainer } from "./Lend/LendDetail.js"
 export const ApplicationViews = () => {
     return (
         <>
+            <ContactProvider>
+                <BorrowProvider>
+                    <Route exact path="/lend/borrow">
+                        <BorrowList />
+                    </Route>
+                </BorrowProvider>
+            </ContactProvider>
+
             <BorrowProvider>
-                <Route exact path="/lend/borrow">
-                    <BorrowPage />
+                <Route exact path="/lend/borrow/ToolsIAmBorrowingCard/:borrowId(\d+)">
+                    <ToolsIAmBorrowingCard />
                 </Route>
             </BorrowProvider>
 
             <BorrowProvider>
+                <Route exact path="/lend/borrow/ToolsICanBorrowCard/:borrowId(\d+)">
+                    <ToolsICanBorrowCard />
+                </Route>
+            </BorrowProvider>
+
+
+
+
+
+            <ContactProvider>
                 <Route exact path="/lend/contact">
                     <ContactLenderPage />
                 </Route>
-            </BorrowProvider>
+            </ContactProvider>
 
-            <ProfileProvider>
-                <Route exact path="/lend/profile">
-                    <ProfilePage />
-                </Route>
-            </ProfileProvider>
 
 
 
@@ -49,9 +72,11 @@ export const ApplicationViews = () => {
             </LendProvider>
 
             <LendProvider>
-                <Route exact path="/lend">
-                    <LendList />
-                </Route>
+                <ProfileProvider>
+                    <Route exact path="/lend">
+                        <LendList />
+                    </Route>
+                </ProfileProvider>
             </LendProvider>
 
             <LendProvider>
@@ -59,6 +84,7 @@ export const ApplicationViews = () => {
                     <ToolCardButtonsContainer />
                 </Route>
             </LendProvider>
+
 
 
         </>

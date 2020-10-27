@@ -6,7 +6,7 @@ export const LendProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getTools = () => {
-        return fetch("http://localhost:8088/Toolstable")
+        return fetch(`http://localhost:8088/Toolstable?userid=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setTools)
     }
@@ -22,14 +22,9 @@ export const LendProvider = (props) => {
             .then(getTools)
     }
 
-
-
-
-
     const getToolById = (id) => {
         return fetch(`http://localhost:8088/Toolstable/${id}`)
             .then(res => res.json())
-
     }
 
     const DeleteTool = (toolId) => {
@@ -52,7 +47,7 @@ export const LendProvider = (props) => {
 
     return (
         <LendContext.Provider value={{
-            tool, addTools, getTools, getToolById, DeleteTool, editTools, searchTerms, setSearchTerms
+            tool, addTools, getTools, getToolById, DeleteTool, editTools
         }}>
             {props.children}
         </LendContext.Provider>

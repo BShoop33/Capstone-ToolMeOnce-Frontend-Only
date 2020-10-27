@@ -43,19 +43,19 @@
     background-color: #131313;
     background-size: 20px 20px;
     border: .5em;
-    border-color: #00a6ff;
-    color: #ffca1c;
-    outline: none;
-    width: 8em;
-    height: 4em;
-    margin-left: 1.4em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
     border-style: ridge;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
+    color: #ffca1c;
     font-size: 18pt;  
     font-weight: 1000;
+    height: 4em;
+    margin-left: 1.4em;
+    outline: none;
+    width: 8em;
 }
 
 .AddToolDescriptionInput {
@@ -70,6 +70,12 @@
     text-align: left;
     width: 26em;
     word-wrap: normal;
+}
+
+.addToolMain {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .AddToolNameInput {
@@ -138,10 +144,54 @@
     text-shadow: 0 0 20px #000000;
 }
 
-.addToolMain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ContactLenderCancelButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    height: 4em;
+    outline: none;
+    width: 8em;
+}
+
+.ContactLenderSaveChangesButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    height: 4em;
+    outline: none;
+    width: 12em;
 }
 
 .NewToolContainer {

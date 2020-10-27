@@ -5,7 +5,6 @@ import "./AddaNewTool.css"
 
 export const LendForm = () => {
     const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
-
     const [Tool, setNewTool] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const { toolId } = useParams()
@@ -13,7 +12,6 @@ export const LendForm = () => {
 
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
-
         addedTool[event.target.name] = event.target.value
         setNewTool(addedTool)
     }
@@ -32,8 +30,6 @@ export const LendForm = () => {
         })
     }, [])
 
-    const toolstatus = true;
-
     const constructToolObject = () => {
         setIsLoading(true)
         if (toolId) {
@@ -42,21 +38,20 @@ export const LendForm = () => {
                 userid: localStorage.getItem("ToolMeOnce_Member"),
                 borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
-                toolstatus: toolstatus,
+                toolstatus: Tool.toolstatus,
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
                 toolaccessories: Tool.AddToolAccessoriesInput
             })
                 .then(() => history.push("/Lend"))
-        }
-        else {
+        } else {
             addTools({
                 id: Tool.id,
                 userid: localStorage.getItem("ToolMeOnce_Member"),
-                borrowerid: localStorage.getItem("ToolMeOnce_Member"),
+                borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
-                toolstatus: toolstatus,
+                toolstatus: true,
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
@@ -72,7 +67,6 @@ export const LendForm = () => {
                 <div className="AddTool">
                     <h2 className="AddToolTitle">{toolId ? "Edit Tool" : "Add a Tool"}</h2>
                     <div className="NewToolContainer">
-
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
                                 <input type="text" id="AddToolNameInput" name="AddToolNameInput" required autoFocus className="AddToolNameInput"
@@ -106,7 +100,6 @@ export const LendForm = () => {
                                         constructToolObject()
                                         history.push(`/lend`)
                                     }}
-
                                     type="button">Save Tool</button>
                                 <button className="AddToolCancelButton"
                                     onClick={() => {

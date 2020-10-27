@@ -4,7 +4,6 @@ export const BorrowContext = createContext()
 export const BorrowProvider = (props) => {
     const [borrow, setBorrow] = useState([])
 
-
     const getBorrow = () => {
         return fetch("http://localhost:8088/Toolstable")
             .then(res => res.json())
@@ -23,7 +22,7 @@ export const BorrowProvider = (props) => {
     }
 
     const getBorrowById = (param) => {
-        return fetch(`http://localhost:8088/Toolstable/${param}?expand=user`)
+        return fetch(`http://localhost:8088/Toolstable/${param}`)
             .then(res => res.json())
     }
 
@@ -31,7 +30,7 @@ export const BorrowProvider = (props) => {
         return fetch(`http://localhost:8088/Toolstable/${param}`, {
             method: "DELETE"
         })
-
+            .then(getBorrow)
     }
 
     const editBorrow = param => {
