@@ -5,9 +5,9 @@ import "./EditProfile.css"
 
 export const ProfilePage = () => {
     const { getProfile, getProfileById, editProfile } = useContext(ProfileContext)
+    const { profileId } = useParams()
     const [profile, setNewProfile] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const { profileId } = useParams()
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
@@ -46,13 +46,19 @@ export const ProfilePage = () => {
                     <h2 className="ProfileEditContainerTitle">Edit Profile</h2>
                     <div className="ProfileInputsContainer">
                         <div className="ProfileEditEmailInputBorder">
-                            <input type="text" id="ProfileEditEmailInput" name="ProfileEditEmailInput" required autoFocus className="ProfileEditEmailInput"
+                            <input type="text" id="ProfileEditEmailInput"
+                                name="ProfileEditEmailInput" required autoFocus
+                                className="ProfileEditEmailInput"
                                 placeholder="Enter your new email address"
                                 onChange={handleControlledInputChange}
                             />
                         </div>
                         <div className="ProfileEditHomeAddressInputBorder">
-                            <input type="text" id="ProfileEditHomeAddressInput" name="ProfileEditHomeAddressInput" required autoFocus className="ProfileEditHomeAddressInput"
+                            <input
+                                type="text"
+                                id="ProfileEditHomeAddressInput"
+                                name="ProfileEditHomeAddressInput" required autoFocus
+                                className="ProfileEditHomeAddressInput"
                                 placeholder="Enter your new home address"
                                 onChange={handleControlledInputChange}
                             />
@@ -65,10 +71,14 @@ export const ProfilePage = () => {
                                     constructToolObject()
                                     history.push(`lend`)
                                 }}
-                                type="button">Save Changes</button>
+                                type="button">Save Changes
+                            </button>
                             <button className="ProfileCancelButton"
-                                onClick={() => { history.push(`/lend`) }}
-                                type="button">Cancel</button>
+                                onClick={() => {
+                                    history.push(`/lend`)
+                                }}
+                                type="button">Cancel
+                            </button>
                         </div>
                     </div>
                 </div>

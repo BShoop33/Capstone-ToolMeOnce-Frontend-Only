@@ -4,12 +4,6 @@ export const LendMessagesContext = createContext()
 export const LendMessagesProvider = (props) => {
     const [lendMessage, setLendMessage] = useState([])
 
-    const getLendMessages = () => {
-        return fetch("http://localhost:8088/Messages")
-            .then(res => res.json())
-            .then(setLendMessage)
-    }
-
     const addLendMessages = (messages) => {
         return fetch("http://localhost:8088/Messages", {
             method: "POST",
@@ -21,11 +15,6 @@ export const LendMessagesProvider = (props) => {
             .then(getLendMessages)
     }
 
-    const getLendMessagesById = (id) => {
-        return fetch(`http://localhost:8088/Messages/${id}`)
-            .then(res => res.json())
-    }
-
     const DeleteLendMessages = (messagesId) => {
         return fetch(`http://localhost:8088/Messages/${messagesId}`, {
             method: "DELETE"
@@ -33,9 +22,20 @@ export const LendMessagesProvider = (props) => {
             .then(getLendMessages)
     }
 
+    const getLendMessages = () => {
+        return fetch("http://localhost:8088/Messages")
+            .then(res => res.json())
+            .then(setLendMessage)
+    }
+
+    const getLendMessagesById = (id) => {
+        return fetch(`http://localhost:8088/Messages/${id}`)
+            .then(res => res.json())
+    }
+
     return (
         <LendMessagesContext.Provider value={{
-            lendMessage, setLendMessage, addLendMessages, getLendMessages, getLendMessagesById, DeleteLendMessages
+            lendMessage, addLendMessages, DeleteLendMessages, getLendMessages, getLendMessagesById, setLendMessage
         }}>
             {props.children}
         </LendMessagesContext.Provider>

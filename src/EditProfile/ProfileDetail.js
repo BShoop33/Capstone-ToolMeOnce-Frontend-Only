@@ -10,11 +10,17 @@ export const EditProfileDetail = ({ profile }) => {
         <>
             <div className="ProfileEditButtonsContainer">
                 <button className="ProfileSaveChangesButton"
-                    onClick={() => { history.push(`/lend/profile/${profile.id}`) }}
-                    type="button">Save Changes</button>
+                    onClick={() => {
+                        history.push(`/lend/profile/${profile.id}`)
+                    }}
+                    type="button">Save Changes
+                </button>
                 <button className="ProfileCancelButton"
-                    onClick={() => { history.push(`/lend`) }}
-                    type="button">Cancel</button>
+                    onClick={() => {
+                        history.push(`/lend`)
+                    }}
+                    type="button">Cancel
+                </button>
             </div>
         </>
     )

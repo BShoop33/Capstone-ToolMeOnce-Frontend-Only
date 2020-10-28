@@ -4,14 +4,11 @@ import { useHistory, useParams } from 'react-router-dom';
 import "./AddaNewTool.css"
 
 export const AddToolPage = () => {
-    const { getTools, getToolById, editTools, addTools, deleteTool } = useContext(LendContext)
-
+    const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
     const [Tool, setNewTool] = useState({})
-    const [isLoading, setIsLoading] = useState(true)
     const { toolId } = useParams()
     const history = useHistory()
     const [image, setImage] = useState('')
-    const [loading, setLoading] = useState(false)
     const uploadImage = async e => {
         const files = e.target.files
         const data = new FormData()
@@ -25,33 +22,26 @@ export const AddToolPage = () => {
                 body: data
             }
         )
-
         const file = await res.json()
         setImage(file.secure_url)
         setLoading(false)
     }
-
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
         addedTool[event.target.name] = event.target.value
         setNewTool(addedTool)
     }
-
     useEffect(() => {
         getTools().then(() => {
-            if (toolId) {
-                getToolById(toolId)
-                    .then(NewTool => {
-                        setNewTool(NewTool)
-                        setIsLoading(false)
-                    })
-            } else {
-                setIsLoading(false)
-            }
+
+            getToolById(toolId)
+                .then(NewTool => {
+                    setNewTool(NewTool)
+                })
         })
     }, [])
 
-    const toolstatus = true;
+    const toolstatus = false;
 
     const constructToolObject = () => {
         setIsLoading(true)
@@ -59,7 +49,6 @@ export const AddToolPage = () => {
             editTools({
                 id: Tool.id,
                 userid: localStorage.getItem("ToolMeOnce_Member"),
-                lenderid: localStorage.getItem("ToolMeOnce_Member"),
                 borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
                 toolstatus: toolstatus,
@@ -74,9 +63,9 @@ export const AddToolPage = () => {
             addTools({
                 id: Tool.id,
                 userid: localStorage.getItem("ToolMeOnce_Member"),
-                lenderId: localStorage.getItem("ToolMeOnce_Member"),
+                borrowerid: "",
                 imageurl: Tool.imageurl,
-                toolstatus: toolstatus,
+                toolstatus: Tool.toolstatus,
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
@@ -95,25 +84,38 @@ export const AddToolPage = () => {
                         <img className="AddToolPicture" src="/Images/Cat.jpg" alt="Logo" />
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
-                                <input type="text" id="AddToolNameInput" name="AddToolNameInput" required autoFocus className="AddToolNameInput"
+                                <input
+                                    type="text"
+                                    id="AddToolNameInput"
+                                    name="AddToolNameInput" required autoFocus
+                                    className="AddToolNameInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's name here"
                                 />
                             </div>
                             <div className="AddToolDescriptionInputBorder">
-                                <textarea id="AddToolDescriptionInput" name="AddToolDescriptionInput" required autoFocus className="AddToolDescriptionInput"
+                                <textarea
+                                    id="AddToolDescriptionInput"
+                                    name="AddToolDescriptionInput" required autoFocus
+                                    className="AddToolDescriptionInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's description here"
                                 />
                             </div>
                             <div className="AddToolSpecificationsInputBorder">
-                                <textarea id="AddToolSpecificationsInput" name="AddToolSpecificationsInput" required autoFocus className="AddToolSpecificationsInput"
+                                <textarea
+                                    id="AddToolSpecificationsInput"
+                                    name="AddToolSpecificationsInput" required autoFocus
+                                    className="AddToolSpecificationsInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's specifications here"
                                 />
                             </div>
                             <div className="AddToolAccessoriesInputBorder">
-                                <textarea id="AddToolAccessoriesInput" name="AddToolAccessoriesInput" required autoFocus className="AddToolAccessoriesInput"
+                                <textarea
+                                    id="AddToolAccessoriesInput"
+                                    name="AddToolAccessoriesInput" required autoFocus
+                                    className="AddToolAccessoriesInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's accessories here"
                                 />
@@ -125,10 +127,14 @@ export const AddToolPage = () => {
                                         constructToolObject()
                                         history.push(`/lend`)
                                     }}
-                                    type="button">Save Tool</button>
+                                    type="button">Save Tool
+                                </button>
                                 <button className="AddToolCancelButton"
-                                    onClick={() => { history.push(`/lend`) }}
-                                    type="button">Cancel</button>
+                                    onClick={() => {
+                                        history.push(`/lend`)
+                                    }}
+                                    type="button">Cancel
+                                </button>
                             </div>
                         </div>
                     </div>

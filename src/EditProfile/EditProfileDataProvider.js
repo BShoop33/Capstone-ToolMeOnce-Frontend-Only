@@ -5,12 +5,6 @@ export const ProfileContext = createContext()
 export const ProfileProvider = (props) => {
     const [profile, setProfile] = useState([])
 
-    const getProfile = () => {
-        return fetch("http://localhost:8088/Users")
-            .then(res => res.json())
-            .then(setProfile)
-    }
-
     const editProfile = profile => {
         return fetch(`http://localhost:8088/Users/${profile.id}`, {
             method: "PUT",
@@ -22,6 +16,12 @@ export const ProfileProvider = (props) => {
             .then(getProfile)
     }
 
+    const getProfile = () => {
+        return fetch("http://localhost:8088/Users")
+            .then(res => res.json())
+            .then(setProfile)
+    }
+
     const getProfileById = (id) => {
         return fetch(`http://localhost:8088/Users/${id}`)
             .then(res => res.json())
@@ -29,7 +29,7 @@ export const ProfileProvider = (props) => {
 
     return (
         <ProfileContext.Provider value={{
-            profile, setProfile, getProfile, getProfileById, editProfile
+            profile, editProfile, getProfile, getProfileById, setProfile
         }}>
             {props.children}
         </ProfileContext.Provider>

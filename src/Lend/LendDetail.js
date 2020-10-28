@@ -1,18 +1,21 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import { LendContext } from "./LendDataProvider.js"
+import { useHistory } from "react-router-dom"
 import "./Lend.css"
-import { useParams, useHistory } from "react-router-dom"
 
 export const ToolCardButtonsContainer = ({ tool }) => {
-    const { getToolById, DeleteTool } = useContext(LendContext)
+    const { DeleteTool } = useContext(LendContext)
     const history = useHistory();
 
     return (
         <>
             <div className="LendEditToolButtonContainer">
                 <button className="LendEditToolButton"
-                    onClick={() => { history.push(`/lend/toolchangepage/${tool.id}`) }}
-                    type="button">Edit this Tool</button>
+                    onClick={() => {
+                        history.push(`/lend/toolchangepage/${tool.id}`)
+                    }}
+                    type="button">Edit this Tool
+                </button>
                 <button className="LendDeleteToolButton"
                     onClick={
                         () => {
@@ -21,7 +24,9 @@ export const ToolCardButtonsContainer = ({ tool }) => {
                                     history.push("/lend")
                                 })
                         }
-                    } type="button">Delete this Tool</button>
+                    }
+                    type="button">Delete this Tool
+                    </button>
             </div>
         </>
     )

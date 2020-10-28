@@ -1,20 +1,26 @@
 import React, { useContext, useEffect, useState } from "react"
 import { BorrowContext } from "./BorrowDataProvider"
+import { BorrowerMessagesCard } from "../ContactaLender/ContactLenderCard"
 import { ContactContext } from "../ContactaLender/ContactLenderDataProvider"
 import { ToolsIAmBorrowingCard } from "./ToolsIAmBorrowingCard"
 import { ToolsICanBorrowCard } from "./ToolsICanBorrowCard"
-import { BorrowerMessagesCard } from "../ContactaLender/ContactLenderCard"
 import { useHistory } from "react-router-dom"
 import "./Borrow.css"
 
 export const BorrowList = () => {
-    const { borrow, getBorrow } = useContext(BorrowContext)
+    const { borrow, getBorrow, getBorrowToolsIAmBorrowing, toolsIAmBorrowing } = useContext(BorrowContext)
     const { contact, getContact } = useContext(ContactContext)
     const history = useHistory();
 
+
+
+    useEffect(() => {
+        getBorrowToolsIAmBorrowing()
+    }, [])
+
     useEffect(() => {
         getBorrow()
-    }, [])
+    })
 
     useEffect(() => {
         getContact()
@@ -33,16 +39,21 @@ export const BorrowList = () => {
                             localStorage.clear()
                             history.push(`/lend`)
                         }}
-                        type="button">Log Out</button>
+                        type="button">Log Out
+                    </button>
                     <button className="BorrowEditProfile"
-                        onClick={() => { history.push(`/lend/profile`) }}
-                        type="button">Edit Profile</button>
+                        onClick={() => {
+                            history.push(`/lend/profile`)
+                        }}
+                        type="button">Edit Profile
+                    </button>
                 </div>
             </header>
-
             <div className="BorrowSubHeaderContainer">
                 <button className="BorrowGoToLendButton"
-                    onClick={() => { history.push(`/lend`) }}
+                    onClick={() => {
+                        history.push(`/lend`)
+                    }}
                     type="button">Go To Lend</button>
                 <h2 className="BorrowPageTitle">Borrow</h2>
             </div>
@@ -51,7 +62,7 @@ export const BorrowList = () => {
                     <div className="BorrowToolsIAmBorrowingContainer">
                         <h2 className="BorrowToolsIAmBorrowingTitle">Tools I Am Borrowing</h2>
                         {
-                            borrow.map(borrow => {
+                            toolsIAmBorrowing.map(borrow => {
                                 return <ToolsIAmBorrowingCard key={borrow.id} borrow={borrow} />
                             })
                         }
@@ -68,12 +79,14 @@ export const BorrowList = () => {
                 <div className="BorrowMessagesContainer">
                     <h2 className="BorrowMessagesTitle">Messages</h2>
                     <button className="BorrowContactALenderButton"
-                        onClick={() => { history.push(`/lend/contact`) }}
-                        type="button">Contact a Lender</button>
+                        onClick={() => {
+                            history.push(`/lend/contact`)
+                        }}
+                        type="button">Contact a Lender
+                    </button>
                     {
                         contact.map(message => {
                             return < BorrowerMessagesCard key={message.id} message={message} />
-
                         })
                     }
                 </div>

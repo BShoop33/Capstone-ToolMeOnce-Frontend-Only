@@ -1,60 +1,60 @@
 import React, { useContext, useEffect, useState } from "react"
-import { ContactContext } from "./ContactLenderDataProvider"
+import { LendResponseContext } from "./LendResponseDataProvider"
 import { useHistory, useParams } from "react-router-dom"
-import "./ContactLender.css"
+import "./LendResponse.css"
 
-export const ContactLenderPage = () => {
-    const { addContact, getContact } = useContext(ContactContext)
-    const [contact, setContact] = useState({})
+export const LendResponsePage = () => {
+    const { addResponse, getResponse } = useContext(LendResponseContext)
+    const [response, setResponse] = useState({})
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
-        const addedMessage = { ...contact }
+        const addedMessage = { ...response }
         addedMessage[event.target.name] = event.target.value
-        setContact(addedMessage)
+        setResponse(addedMessage)
     }
 
     useEffect(() => {
-        getContact()
+        getResponse()
     }, [])
 
     const constructMessageObject = () => {
-        addContact({
-            id: contact.id,
+        addResponse({
+            id: response.id,
             userid: localStorage.getItem("ToolMeOnce_Member"),
-            replytoid: contact.ContactLenderEmailInput,
-            message: contact.ContactLenderMessageInput
+            message: response.LendResponseMessageInput,
+            replytoid: response.LendResponseEmailInput
         })
             .then(() =>
-                history.push("/lend/borrow"))
+                history.push("/lend"))
     }
 
     return (
         <>
-            <body className="ContactLenderBodyContainer">
-                <div className="ContactLenderContainer">
-                    <h2 className="ContactLenderContainerTitle">Contact a Lender</h2>
-                    <div className="ContactLenderInputsContainer">
-                        <div className="ContactLenderEmailInputBorder">
+            <body className="LendResponseBodyContainer">
+                <div className="LendResponseContainer">
+                    <h2 className="LendResponseContainerTitle">Respond to Borrower</h2>
+                    <div className="LendResponseInputsContainer">
+                        <div className="LendResponseEmailInputBorder">
                             <input type="text"
-                                id="ContactLenderEmailInput"
+                                id="LendResponseEmailInput"
                                 onChange={handleControlledInputChange}
-                                name="ContactLenderEmailInput" required autoFocus
-                                className="ContactLenderEmailInput"
+                                name="LendResponseEmailInput" required autoFocus
+                                className="LendResponseEmailInput"
                                 placeholder="Enter the lender's email address here"
                             />
                         </div>
-                        <div className="ContactLenderMessageInputBorder">
+                        <div className="LendResponseMessageInputBorder">
                             <input type="text"
-                                id="ContactLenderMessageInput"
+                                id="LendResponseMessageInput"
                                 onChange={handleControlledInputChange}
-                                name="ContactLenderMessageInput" required autoFocus
-                                className="ContactLenderMessageInput"
+                                name="LendResponseMessageInput" required autoFocus
+                                className="LendResponseMessageInput"
                                 placeholder="Enter your message here"
                             />
                         </div>
-                        <div className="ContactLenderButtonsContainer">
-                            <button className="ContactLenderSaveChangesButton"
+                        <div className="LendResponseButtonsContainer">
+                            <button className="LendResponseSaveChangesButton"
                                 onClick={event => {
                                     event.preventDefault()
                                     constructMessageObject()
@@ -62,9 +62,9 @@ export const ContactLenderPage = () => {
                                 }}
                                 type="button">Send Message
                             </button>
-                            <button className="ContactLenderCancelButton"
+                            <button className="LendResponseCancelButton"
                                 onClick={() => {
-                                    history.push(`/lend/borrow`)
+                                    history.push(`/lend`)
                                 }}
                                 type="button">Cancel
                             </button>

@@ -3,6 +3,7 @@ import { ToolsICanBorrowButtonsContainer } from "./ToolsICanBorrowButtonsContain
 import "./Borrow.css"
 
 export const ToolsICanBorrowCard = ({ borrow }) => (
+
     <div className="BorrowToolsIAmBorrowingCard">
         <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
         <div className="BorrowToolInfoContainer">
