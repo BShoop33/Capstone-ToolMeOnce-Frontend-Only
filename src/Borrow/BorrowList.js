@@ -8,9 +8,12 @@ import { useHistory } from "react-router-dom"
 import "./Borrow.css"
 
 export const BorrowList = () => {
-    const { borrow, getBorrow, getBorrowToolsIAmBorrowing, toolsIAmBorrowing } = useContext(BorrowContext)
+    const { toolsIAmBorrowing, getBorrowToolsIAmBorrowing } = useContext(BorrowContext)
+    const { toolsICanBorrow, getBorrowToolsICanBorrow } = useContext(BorrowContext)
     const { contact, getContact } = useContext(ContactContext)
     const history = useHistory();
+
+    // getBorrow, getBorrowToolsIAmBorrowing, toolsIAmBorrowing, ToolsICanBorrowButtonsContainer, getBorrowToolsICanBorrow
 
 
 
@@ -19,8 +22,12 @@ export const BorrowList = () => {
     }, [])
 
     useEffect(() => {
-        getBorrow()
+        getBorrowToolsICanBorrow()
     })
+
+    // useEffect(() => {
+    //     getBorrow()
+    // })
 
     useEffect(() => {
         getContact()
@@ -70,7 +77,7 @@ export const BorrowList = () => {
                     <div className="BorrowToolsICanBorrowContainer">
                         <h2 className="BorrowToolsICanBorrowTitle">Tools I Can Borrow</h2>
                         {
-                            borrow.map(borrow => {
+                            toolsICanBorrow.map(borrow => {
                                 return <ToolsICanBorrowCard key={borrow.id} borrow={borrow} />
                             })
                         }

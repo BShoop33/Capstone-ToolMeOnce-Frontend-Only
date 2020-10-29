@@ -11,7 +11,7 @@ import { ToolsICanBorrowCard } from "./Borrow/ToolsICanBorrowCard.js"
 import { ContactLenderPage } from "./ContactaLender/ContactLenderList.js"
 import { ContactProvider } from "./ContactaLender/ContactLenderDataProvider.js"
 
-// import { ProfilePage } from "./EditProfile/EditProfileList.js"
+import { ProfilePage } from "./EditProfile/EditProfileList.js"
 import { ProfileProvider } from "./EditProfile/EditProfileDataProvider.js"
 
 
@@ -55,6 +55,12 @@ export const ApplicationViews = () => {
             </BorrowProvider>
 
 
+
+            <ProfileProvider>
+                <Route exact path="/lend/editprofile">
+                    <ProfilePage />
+                </Route>
+            </ProfileProvider>
 
 
 

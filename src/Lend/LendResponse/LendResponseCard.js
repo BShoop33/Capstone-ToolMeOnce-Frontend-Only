@@ -2,7 +2,7 @@ import React from "react"
 import { ResponseCardButtonsContainer } from "./LendResponseDetail"
 import "./LendResponse.css"
 
-export const ToolCard = ({ response }) => (
+export const LenderResponseCard = ({ response }) => (
     <div className="LendResponseCard">
         <div className="LendResponseCardContainer">
             <div className="responseHeader">

@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
 import { BorrowContext } from "./BorrowDataProvider.js"
 import { LendContext } from "../Lend/LendDataProvider"
-import "./Borrow.css"
 import { useHistory } from "react-router-dom"
+import "./Borrow.css"
 
 export const ToolsICanBorrowButtonsContainer = ({ borrow }) => {
-
     const { BorrowTool } = useContext(BorrowContext)
     const { getTools } = useContext(LendContext)
     const history = useHistory();
@@ -19,7 +18,7 @@ export const ToolsICanBorrowButtonsContainer = ({ borrow }) => {
         BorrowTool({
             id: borrow.id,
             userid: borrow.userid,
-            borrowerid: borrow.borrowerid,
+            borrowerid: borrow.userid,
             imageurl: borrow.imageurl,
             toolstatus: borrowed,
             toolname: borrow.toolname,

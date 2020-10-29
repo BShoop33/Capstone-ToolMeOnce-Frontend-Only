@@ -8,24 +8,26 @@ export const AddToolPage = () => {
     const [Tool, setNewTool] = useState({})
     const { toolId } = useParams()
     const history = useHistory()
-    const [image, setImage] = useState('')
-    const uploadImage = async e => {
-        const files = e.target.files
-        const data = new FormData()
-        data.append('file', files[0])
-        data.append('upload_preset', 'ToolMeOnce')
-        setLoading(true)
-        const res = await fetch(
-            'https://api.cloudinary.com/v1_1/dstfvbrwf/image/upload',
-            {
-                method: 'POST',
-                body: data
-            }
-        )
-        const file = await res.json()
-        setImage(file.secure_url)
-        setLoading(false)
-    }
+
+    // const [image, setImage] = useState('')
+    // const uploadImage = async e => {
+    //     const files = e.target.files
+    //     const data = new FormData()
+    //     data.append('file', files[0])
+    //     data.append('upload_preset', 'ToolMeOnce')
+    //     setLoading(true)
+    //     const res = await fetch(
+    //         'https://api.cloudinary.com/v1_1/dstfvbrwf/image/upload',
+    //         {
+    //             method: 'POST',
+    //             body: data
+    //         }
+    //     )
+    //     const file = await res.json()
+    //     setImage(file.secure_url)
+    //     setLoading(false)
+    // }
+
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
         addedTool[event.target.name] = event.target.value

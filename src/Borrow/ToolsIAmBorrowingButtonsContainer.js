@@ -5,9 +5,8 @@ import { useHistory } from "react-router-dom"
 import "./Borrow.css"
 
 export const ToolsIAmBorrowingButtonsContainer = ({ borrow }) => {
-    const { ReturnBorrowTool } = useContext(BorrowContext)
+    const { ReturnBorrowTool, } = useContext(BorrowContext)
     const { getTools } = useContext(LendContext)
-    const [isLoading, setIsLoading] = useState(true)
     const history = useHistory();
 
     useEffect(() => {

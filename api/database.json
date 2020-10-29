@@ -36,17 +36,40 @@
       "id": 7
     }
   ],
-  "Messages": [],
+  "Messages": [
+    {
+      "userid": "jchrishop2@hostgator.com",
+      "replytoid": "braxton.shoop@gmail.com",
+      "message": "Got any tools?",
+      "id": 1
+    },
+    {
+      "userid": " jchrishop2@hostgator.com",
+      "message": "test",
+      "replytoid": "braxton.shoop@gmail.com",
+      "id": 2
+    }
+  ],
   "Toolstable": [
     {
       "id": 1,
-      "userid": "cdumbelton4@amazon.co.jp",
-      "borrowerid": "",
-      "toolstatus": true,
+      "userid": "braxton.shoop@gmail.com",
+      "borrowerid": "braxton.shoop@gmail.com",
+      "toolstatus": false,
       "toolname": "aaaaaaaaaaaaaa",
       "tooldescription": "aaaaaaaaaaaaaa",
       "toolspecs": "aaaaaaaaaaaaaa",
       "toolaccessories": "aaaaaaaaaaaaaa"
+    },
+    {
+      "id": 2,
+      "userid": "braxton.shoop@gmail.com",
+      "borrowerid": "",
+      "toolstatus": true,
+      "toolname": "bbbbbbbbb",
+      "tooldescription": "bbbbbbbbb",
+      "toolspecs": "bbbbbbbbb",
+      "toolaccessories": "bbbbbbbbb"
     }
   ]
 }

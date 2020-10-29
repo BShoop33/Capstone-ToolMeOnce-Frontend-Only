@@ -4,6 +4,7 @@ export const BorrowContext = createContext()
 export const BorrowProvider = (props) => {
     const [borrow, setBorrow] = useState([])
     const [toolsIAmBorrowing, setToolsIAmBorrowing] = useState([])
+    const [toolsICanBorrow, setToolsICanBorrow] = useState([])
 
     const addBorrow = (param) => {
         return fetch(`http://localhost:8088/Toolstable`, {
@@ -35,16 +36,16 @@ export const BorrowProvider = (props) => {
     }
 
     const getBorrowToolsIAmBorrowing = () => {
-        return fetch(`http://localhost:8088/Toolstable?userid=${localStorage.getItem("ToolMeOnce_Member")}&toolstatus=false`)
+        return fetch(`http://localhost:8088/Toolstable?toolstatus=false&userid_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setToolsIAmBorrowing)
     }
 
-    // const getBorrowTool = () => {
-    //     return fetch(`http://localhost:8088/Toolstable?userid=${localStorage.getItem("ToolMeOnce_Member")}&toolstatus=false`)
-    //         .then(res => res.json())
-    //         .then(setToolsIAmBorrowing)
-    //}
+    const getBorrowToolsICanBorrow = () => {
+        return fetch(`http://localhost:8088/Toolstable?toolstatus=true&userid_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
+            .then(res => res.json())
+            .then(setToolsICanBorrow)
+    }
 
     const getBorrow = () => {
         return fetch(`http://localhost:8088/Toolstable?toolstatus=true`)
@@ -82,7 +83,7 @@ export const BorrowProvider = (props) => {
 
     return (
         <BorrowContext.Provider value={{
-            borrow, toolsIAmBorrowing, addBorrow, getBorrow, getBorrowById, getBorrowToolsIAmBorrowing, DeleteBorrow, editBorrow, ReturnBorrowTool, BorrowTool
+            borrow, toolsIAmBorrowing, toolsICanBorrow, getBorrowToolsICanBorrow, addBorrow, getBorrow, getBorrowById, getBorrowToolsIAmBorrowing, DeleteBorrow, editBorrow, ReturnBorrowTool, BorrowTool
         }}>
             {props.children}
         </BorrowContext.Provider>

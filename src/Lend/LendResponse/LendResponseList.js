@@ -21,9 +21,9 @@ export const LendResponsePage = () => {
     const constructMessageObject = () => {
         addResponse({
             id: response.id,
-            userid: localStorage.getItem("ToolMeOnce_Member"),
+            userid: response.LendResponseEmailInput,
             message: response.LendResponseMessageInput,
-            replytoid: response.LendResponseEmailInput
+            replytoid: localStorage.getItem("ToolMeOnce_Member")
         })
             .then(() =>
                 history.push("/lend"))

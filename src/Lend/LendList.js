@@ -42,7 +42,7 @@ export const LendList = () => {
                     </button>
                     <button className="LendEditProfile"
                         onClick={() => {
-                            history.push(`/lend/profile/${profile}`)
+                            history.push(`/lend/editprofile/${profile.id}`)
                         }}
                         type="button">Edit Profile
                     </button>
@@ -84,6 +84,9 @@ export const LendList = () => {
                             return < LenderMessagesCard key={reply.id} reply={reply} />
                         })
                     }
+
+
+
                 </div>
             </body>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
