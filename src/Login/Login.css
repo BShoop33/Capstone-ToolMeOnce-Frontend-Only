@@ -1,7 +1,14 @@
-
-
 .buttoncloseexisting {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-image: url("/Images/dust.png");
+    background-size: 20px 20px;
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -12,77 +19,50 @@
     color: #ffca1c;
     font-size: 14pt;
     font-weight: 1000;
-    min-width: 8em;
-    min-height: 4em;
-    margin-right: 1.75em;
     margin-bottom: 2em;
+    margin-right: 1.75em;
     margin-top: 1em;
+    min-height: 4em;
+    min-width: 8em;
     outline: none;
     word-spacing: .75em;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
 }
 
 .dialogExisting {
-    background-image: url("/Images/dust.png");
     background-color: black;
-    color: #ffca1c;
+    background-image: url("/Images/dust.png");
     border: .8em;
     border-color: red;
     border-style: ridge;
-    min-height: 4em;
+    color: #ffca1c;
     font-size: 22pt;
     font-weight: 1000;
-    width: 15em;
+    min-height: 4em;
+    margin-right: 42em;
     padding-top: 2em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
-    margin-right: 42em;
+    width: 15em;
 }
 
 .dialogNewEmail {
     background-image: url("/Images/dust.png");
     background-color: black;
-    color: #ffca1c;
     border: .8em;
     border-color: red;
     border-style: ridge;
-    min-height: 4em;
+    color: #ffca1c;
     font-size: 22pt;
     font-weight: 1000;
-    width: 15em;
+    margin-right: 42em;
+    min-height: 4em;
     padding-top: 2em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
-    margin-right: 42em;
+    width: 15em;
 }
 
 .buttonclosenewemail {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
-    border: .7em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-color: #00a6ff;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    color: #ffca1c;
-    font-size: 14pt;
-    font-weight: 1000;
-    min-width: 8em;
-    min-height: 4em;
-    margin-right: 1.75em;
-    margin-bottom: 2em;
-    margin-top: 1em;
-    outline: none;
-    word-spacing: .75em;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -91,11 +71,26 @@
     linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
+    background-image: url("/Images/dust.png");
     background-size: 20px 20px;
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    margin-bottom: 2em;
+    margin-right: 1.75em;
+    margin-top: 1em;
+    min-height: 4em;
+    min-width: 8em;
+    outline: none;
+    word-spacing: .75em;
 }
-
-
-
 
 .LoginBodyContainer {
     align-items: center;
@@ -112,9 +107,10 @@
 }
 
 .LoginExistingEmailInputBorder {
-    border: .5em;text-align: left;
+    border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
+    text-align: left;
     width: 27em;
 }
 
@@ -139,9 +135,9 @@
     font-size: 18pt;
     font-weight: 1000;
     height: 4em;
-    width: 15em;
     margin-top: .75em;
     outline: none;
+    width: 15em;
 }
 
 .LoginExistingUsersContainer {
@@ -161,8 +157,8 @@
 .LoginExistingUsersContainerTitle {
     color: #ffca1c;
     font-size: 24pt;
-    text-shadow: 0 0 20px #000000;
     margin-top: -.5em;
+    text-shadow: 0 0 20px #000000;
 }
 
 .LoginInputsContainer {
@@ -173,15 +169,24 @@
 }
 
 .LoginNewEmailInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
     font-family: arial, helvetica, sans-serif;
     font-size: 16pt;
+    height: auto;
     text-align: left;
     width: 20em;
 }
 
 .LoginNewHomeAddressInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
     font-family: arial, helvetica, sans-serif;
     font-size: 16pt;
+    height: auto;
+    margin-top: 1em;
     text-align: left;
     width: 20em;
 }
@@ -206,10 +211,10 @@
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
-   margin-bottom: -.5em;
+    height: 4em;
+    margin-bottom: -.5em;
     margin-top: .75em;
     outline: none;
-    height: 4em;
     width: 17em;
 }
 
@@ -233,24 +238,6 @@
     margin-top: -.6em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
-}
-
-.LoginNewUsersEmailInputBorder {
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    height: auto;
-    text-align: left;
-    width: 27em;
-}
-
-.LoginNewUsersHomeAddressInputBorder{
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    height: auto;
-    margin-top: 1em;
-    width: 27em;
 }
 
 .LoginPageFooter {

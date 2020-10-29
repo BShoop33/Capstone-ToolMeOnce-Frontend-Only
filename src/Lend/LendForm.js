@@ -5,9 +5,9 @@ import "./AddaNewTool.css"
 
 export const LendForm = () => {
     const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
+    const { toolId } = useParams()
     const [Tool, setNewTool] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const { toolId } = useParams()
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
@@ -69,25 +69,37 @@ export const LendForm = () => {
                     <div className="NewToolContainer">
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
-                                <input type="text" id="AddToolNameInput" name="AddToolNameInput" required autoFocus className="AddToolNameInput"
+                                <input type="text"
+                                    id="AddToolNameInput"
+                                    name="AddToolNameInput" required autoFocus
+                                    className="AddToolNameInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's name here"
                                 />
                             </div>
                             <div className="AddToolDescriptionInputBorder">
-                                <textarea id="AddToolDescriptionInput" name="AddToolDescriptionInput" required autoFocus className="AddToolDescriptionInput"
+                                <textarea
+                                    id="AddToolDescriptionInput"
+                                    name="AddToolDescriptionInput" required autoFocus
+                                    className="AddToolDescriptionInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's description here"
                                 />
                             </div>
                             <div className="AddToolSpecificationsInputBorder">
-                                <textarea id="AddToolSpecificationsInput" name="AddToolSpecificationsInput" required autoFocus className="AddToolSpecificationsInput"
+                                <textarea
+                                    id="AddToolSpecificationsInput"
+                                    name="AddToolSpecificationsInput" required autoFocus
+                                    className="AddToolSpecificationsInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's specifications here"
                                 />
                             </div>
                             <div className="AddToolAccessoriesInputBorder">
-                                <textarea id="AddToolAccessoriesInput" name="AddToolAccessoriesInput" required autoFocus className="AddToolAccessoriesInput"
+                                <textarea
+                                    id="AddToolAccessoriesInput"
+                                    name="AddToolAccessoriesInput" required autoFocus
+                                    className="AddToolAccessoriesInput"
                                     onChange={handleControlledInputChange}
                                     placeholder="Enter your tool's accessories here"
                                 />
@@ -96,16 +108,18 @@ export const LendForm = () => {
                                 <button className="AddToolSaveButton"
                                     disabled={isLoading}
                                     onClick={event => {
-                                        event.preventDefault() // Prevent browser from submitting the form
+                                        event.preventDefault()
                                         constructToolObject()
                                         history.push(`/lend`)
                                     }}
-                                    type="button">Save Tool</button>
+                                    type="button">Save Tool
+                                </button>
                                 <button className="AddToolCancelButton"
                                     onClick={() => {
                                         history.push(`/lend`)
                                     }}
-                                    type="button">Cancel</button>
+                                    type="button">Cancel
+                                </button>
                             </div>
                         </div>
                     </div>

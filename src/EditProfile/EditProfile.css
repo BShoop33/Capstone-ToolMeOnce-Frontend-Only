@@ -1,18 +1,24 @@
-.ProfileCancelButton {
-    outline: none;
-    width: 8em;
-    height: 4em;
-    margin-left: .5em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    border-color: #00a6ff;
+.currentProfileAddress {
     color: #ffca1c;
+    font-size: 20pt;
+    margin-top: -.6em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.currentProfileEmail {
+    color: #ffca1c;
+    font-size: 20pt;
+    margin-top: -.6em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.ProfileCancelButton {
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -22,6 +28,26 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    height: 4em;
+    margin-left: .5em;
+    outline: none;
+    width: 8em;
+}
+
+.ProfileEditButtonsContainer {
+    display: flex;
+    flex-flow: row;
+    margin-top: 1.5em;
 }
 
 .ProfileEditContainer{
@@ -47,19 +73,26 @@
 }
 
 .ProfileEditEmailInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
     font-family: arial, helvetica, sans-serif;
     font-size: 16pt;
+    height: auto;
     text-align: left;
     width: 20em;
 }
 
-.ProfileEditEmailInputBorder {
+.ProfileEditHomeAddressInput {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16pt;
     height: auto;
+    margin-top: 1em;
     text-align: left;
-    width: 27em;
+    width: 20em;
 }
 
 .ProfileInputsContainer {
@@ -76,42 +109,7 @@
     justify-content: center;
 }
 
-.ProfileEditButtonsContainer {
-    display: flex;
-    flex-flow: row;
-    margin-top: 1.5em;
-}
-
-.ProfileEditHomeAddressInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 16pt;
-    text-align: left;
-    width: 20em;
-}
-
-.ProfileEditHomeAddressInputBorder{
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    height: auto;
-    margin-top: 1em;
-    width: 27em;
-}
-
 .ProfileSaveChangesButton {
-    outline: none;
-    width: 10em;
-    height: 4em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    border-color: #00a6ff;
-    color: #ffca1c;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -121,24 +119,17 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
-}
-
-.currentProfileEmail {
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
     color: #ffca1c;
-    font-size: 20pt;
-    margin-top: -.6em;
-    text-align: center;
-    text-shadow: 0 0 20px #000000;
-    font-weight: 500;
-    margin-bottom: .5em;
-}
-
-.currentProfileAddress {
-    color: #ffca1c;
-    font-size: 20pt;
-    margin-top: -.6em;
-    text-align: center;
-    text-shadow: 0 0 20px #000000;
-    font-weight: 500;
-    margin-bottom: .5em;
+    font-size: 18pt;
+    font-weight: 1000;
+    height: 4em;
+    outline: none;
+    width: 10em;    
 }

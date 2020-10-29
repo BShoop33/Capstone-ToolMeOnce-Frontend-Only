@@ -75,15 +75,6 @@ button:hover {
 }
 
 .LendDeleteToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -93,7 +84,16 @@ button:hover {
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .LendEditProfile {
@@ -105,7 +105,6 @@ button:hover {
     linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
-    background-image: url("/Images/dust.png");
     background-size: 20px 20px;
     border: .7em;
     border-bottom-left-radius: 2em;
@@ -125,15 +124,6 @@ button:hover {
 }
 
 .LendEditToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -143,48 +133,57 @@ button:hover {
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .LendEditToolButtonContainer {
-    display: flex;
-    justify-content: space-between;
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    height: 3em;
-    width: 43.2em;
-    text-align: center;
     background-color: rgb(63, 54, 54);
     background-image: url("/Images/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    height: 3em;
+    justify-content: space-between;
+    text-align: center;
+    width: 43.2em;
 }
 
 .LendGoToBorrowButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
     border-color: #00a6ff;
     border-style: ridge;
-    border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
-    min-width: 12em;
-    min-height: 5em;
+    height: 5em;
     margin-left: 1em;
-    margin-bottom: 2em;
+    margin-top: 1.83em;
+    min-width: 12em;
     outline: none;
     word-spacing: .75em;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
 }
 
 .LendLenderEmail { 
@@ -192,7 +191,15 @@ button:hover {
 }
 
 .LendLogOutButton {
-    background-image: url("/Images/dust.png");
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
     border: .7em;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -203,21 +210,12 @@ button:hover {
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
-    width: 12em;
-    height: 5em;
-    margin-right: 1em;
-    margin-bottom: .5em;
+    margin-bottom: 1em; 
+    margin-right: 1.75em;
+    min-height: 5em;
+    min-width: 12em;
     outline: none;
-    word-spacing: .1.25em;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
+    word-spacing: .75em;
 }
 
 .LendMessagesContainer {
@@ -230,9 +228,9 @@ button:hover {
     display: flex;
     flex-flow: column;
     height: 61.5em;
-    min-width: 35em;
+   
+    min-width: 39em;
     overflow: auto;
-    margin-top: -1.4em;
 }
 
 .LendMessagesTitle {
@@ -244,7 +242,7 @@ button:hover {
 
 .LendPageFooter {
     color: #ffca1c;
-    font-size: 20pt;
+    font-size: 28pt;
     text-align: center;
     text-shadow: 0 0 20px #000000;
 }
@@ -261,7 +259,7 @@ button:hover {
     font-size: 45pt;
     height: auto;
     margin-left: 8.4em;
-    margin-top: .3em;
+    margin-top: 1em;
     min-width: 12em;
     text-shadow: 0 0 20px #000000;
 }
@@ -301,7 +299,7 @@ button:hover {
 
 .LendToolMeOnceLogo {
     margin-left: 1em;
-    margin-top: 1em;
+    margin-top: -7.25em;
     min-height: 11.5em;
     min-width: auto;
 }
@@ -313,8 +311,8 @@ button:hover {
 
 .LendToolMeOnceTitle {
     font-size: 38pt;
-    margin-top: -.55em;
     margin-bottom: -5em;
+    margin-top: -.55em;
     width:  20em;
     word-spacing: 1em;
 }
@@ -327,7 +325,7 @@ button:hover {
     border-color: #ffca1c;
     border-style: ridge;
     min-height: 4em;
-    margin-top: -10em;
+    margin-top: -7.25em;
     min-width: 60em;
     padding-top: 2em;
     text-align: center;
@@ -346,19 +344,19 @@ button:hover {
     display: flex;
     flex-flow: row;
     height: 20.6em;
+    line-height: 1.5;
     margin-bottom: .5em;
     margin-left: .4em;
     overflow: auto;
     width: 72.5em;
-    line-height: 1.5;
 }
 
 .LendToolsIAmLendingTitle {
     color: #ffca1c;
     font-size: 28pt;
+    margin-left: .25em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
-    margin-left: .25em;
 }
 
 .LendToolsICanLendContainer {
@@ -367,16 +365,15 @@ button:hover {
     border: .8em;
     border-color: #ffca1c;
     border-style: groove;
+    height: 61.5em;
     min-width: 76em;
     overflow: auto;
-    height: 61.5em;
-    margin-top: -1.4em;
 }
 
 .LendToolsICanLendHeader {
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
     margin-bottom: 1em;
 }
 
@@ -385,11 +382,6 @@ button:hover {
 }
 
 .pictureStyling {
-    width: 36em;
-    height: 36em;
-    border: .8em;
-    border-color: #f2f0f0;
-    border-style: groove;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -399,6 +391,11 @@ button:hover {
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .8em;
+    border-color: #f2f0f0;
+    border-style: groove;
+    height: 36em;
+    width: 36em;
 }
 
 .pictureUploadContainer {

@@ -1,32 +1,32 @@
 import React, { useContext, useEffect, useState } from "react"
-import { ContactContext } from "./ContactLenderDataProvider"
+import { ReplyContext } from "./LenderReplyDataProvider"
 import { useHistory, useParams } from "react-router-dom"
-import "./ContactLender.css"
+import "./Reply.css"
 
-export const ContactLenderPage = () => {
-    const { addContact, getContact } = useContext(ContactContext)
-    const [contact, setContact] = useState({})
+export const BorrowerReplyPage = () => {
+    const { addReply, getReply } = useContext(ReplyContext)
+    const [chats, setChats] = useState({})
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
-        const addedMessage = { ...contact }
+        const addedMessage = { ...chats }
         addedMessage[event.target.name] = event.target.value
-        setContact(addedMessage)
+        setChats(addedMessage)
     }
 
     useEffect(() => {
-        getContact()
+        getReply()
     }, [])
 
     const constructMessageObject = () => {
-        addContact({
-            id: contact.id,
+        addReply({
+            id: chats.id,
             userid: localStorage.getItem("ToolMeOnce_Member"),
-            replytoid: contact.ContactLenderEmailInput,
-            message: contact.ContactLenderMessageInput
+            message: chats.ContactLenderMessageInput,
+            replytoid: chats.ContactLenderEmailInput
         })
             .then(() =>
-                history.push("/lend/borrow"))
+                history.push("/lend"))
     }
 
     return (
@@ -64,7 +64,7 @@ export const ContactLenderPage = () => {
                             </button>
                             <button className="ContactLenderCancelButton"
                                 onClick={() => {
-                                    history.push(`/lend/borrow`)
+                                    history.push(`/lend`)
                                 }}
                                 type="button">Cancel
                             </button>

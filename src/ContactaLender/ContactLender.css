@@ -1,29 +1,3 @@
-.ContactLenderDeleteButton {
-    outline: none;
-    width: 12em;
-    height: 3em;
-    margin-left: .5em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 14pt;
-    border-color: #00a6ff;
-    color: #ffca1c;
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-}
-
 .ContactLenderContainer{
     background-color: black;
     background-image: url("/Images/dust.png");
@@ -38,6 +12,32 @@
     width: 30em;
 }
 
+.ContactLenderDeleteButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    margin-left: .5em;
+    outline: none;
+    width: 12em;
+}
+
 .ContactLenderContainerTitle {
     color: #ffca1c;
     font-size: 24pt;
@@ -47,19 +47,14 @@
 }
 
 .ContactLenderEmailInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 16pt;
-    text-align: left;
-    width: 20em;
-}
-
-.ContactLenderEmailInputBorder {
     border: .5em;
     border-color:#f2f0f0;
     border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16pt;
     height: auto;
     text-align: left;
-    width: 27em;
+    width: 20em;
 }
 
 .ContactLenderInputsContainer {
@@ -77,35 +72,18 @@
 }
 
 .ContactLenderMessageInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
     font-family: arial, helvetica, sans-serif;
     font-size: 16pt;
+    height: auto;
+    margin-top: 1em;
     text-align: left;
     width: 20em;
 }
 
-.ContactLenderMessageInputBorder{
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    height: auto;
-    margin-top: 1em;
-    width: 27em;
-}
-
 .ContactLenderReplyButton {
-    outline: none;
-    width: 10em;
-    height: 3em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 14pt;
-    border-color: #00a6ff;
-    color: #ffca1c;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -115,6 +93,19 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 10em;
 }
 
 .BorrowerMessagesCard {
@@ -122,30 +113,30 @@
 }
 
 .ContactLenderButtonContainer {
-    display: flex;
-    justify-content: center;
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    height: 3em;
-    width: 33.2em;
-    text-align: center;
     background-color: rgb(63, 54, 54);
     background-image: url("/Images/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    height: 3em;
+    justify-content: center;
     margin-left: -.1em;
+    width: 33.2em;
+    text-align: center;
 }
 
  .BorrowerMessagesCardInfoContainer {
+    background-color: white;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
-    margin-bottom: .5em;
     font-size: 14pt;
     font-weight: 600;
-    background-color: white;
-    padding-bottom: .25em;
+    justify-content: space-between;
     line-height: 1.5;
+    margin-bottom: .5em;
     margin-top: .5em;
+    padding-bottom: .25em;
 } 
 
 .ContactLenderId { 

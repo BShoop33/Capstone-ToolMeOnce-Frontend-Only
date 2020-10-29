@@ -4,14 +4,8 @@ export const ContactContext = createContext()
 export const ContactProvider = (props) => {
     const [contact, setContact] = useState([])
 
-    const getContact = () => {
-        return fetch("http://localhost:8088/Messages")
-            .then(res => res.json())
-            .then(setContact)
-    }
-
     const addContact = (param) => {
-        return fetch("http://localhost:8088/Messages", {
+        return fetch(`http://localhost:8088/Messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,11 +13,6 @@ export const ContactProvider = (props) => {
             body: JSON.stringify(param)
         })
             .then(getContact)
-    }
-
-    const getContactById = (param) => {
-        return fetch(`http://localhost:8088/Messages/${param}?expand=user`)
-            .then(res => res.json())
     }
 
     const DeleteContact = (param) => {
@@ -43,9 +32,20 @@ export const ContactProvider = (props) => {
             .then(getContact)
     }
 
+    const getContact = () => {
+        return fetch(`http://localhost:8088/Messages?userid=${localStorage.getItem("ToolMeOnce_Member")}`)
+            .then(res => res.json())
+            .then(setContact)
+    }
+
+    const getContactById = (param) => {
+        return fetch(`http://localhost:8088/Messages/${param}?expand=user`)
+            .then(res => res.json())
+    }
+
     return (
         <ContactContext.Provider value={{
-            contact, addContact, getContact, getContactById, DeleteContact, editContact
+            contact, DeleteContact, editContact, addContact, getContact, getContactById,
         }}>
             {props.children}
         </ContactContext.Provider>

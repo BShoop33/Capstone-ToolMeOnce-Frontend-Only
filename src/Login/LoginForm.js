@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
-import "./Login.css"
 import { useHistory } from "react-router-dom"
+import "./Login.css"
+
 export const LoginPage = (props) => {
 
     const email = useRef()
@@ -19,7 +20,6 @@ export const LoginPage = (props) => {
 
     const handleLogin = (e) => {
         e.preventDefault()
-
         existingUserCheck()
             .then(exists => {
                 if (exists) {
@@ -73,31 +73,32 @@ export const LoginPage = (props) => {
                     conflictDialog.current.showModal()
                 }
             })
-
     }
 
 
     return (
         <>
             <main className="container--login">
-
                 <dialog className="dialogExisting" ref={existDialog}>
                     <div>Oops! It looks like we don't have a user record for you. Please register as a new user in the New User field below.</div>
-                    <button className="buttoncloseexisting" onClick={e => existDialog.current.close()}>Close</button>
+                    <button className="buttoncloseexisting"
+                        onClick={e => existDialog.current.close()}>Close
+                        </button>
                 </dialog>
-
 
                 <dialog className="dialogNewEmail" ref={conflictDialog}>
                     <div>Please enter your email address to register</div>
-                    <button className="buttonclosenewemail" onClick={e => conflictDialog.current.close()}>Close</button>
+                    <button className="buttonclosenewemail"
+                        onClick={e => conflictDialog.current.close()}>Close
+                        </button>
                 </dialog>
-
 
                 <dialog className="dialogNewEmail" ref={conflictDialogAddress}>
                     <div>Please enter your home address to register</div>
-                    <button className="buttonclosenewemail" onClick={e => conflictDialogAddress.current.close()}>Close</button>
+                    <button className="buttonclosenewemail"
+                        onClick={e => conflictDialogAddress.current.close()}>Close
+                        </button>
                 </dialog>
-
 
                 <header className="LoginPageHeaderContainer">
                     <img className="LoginToolMeOnceLogo" src="Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
@@ -110,75 +111,50 @@ export const LoginPage = (props) => {
                     <div className="LoginExistingUsersContainer">
                         <h2 className="LoginExistingUsersContainerTitle">Existing Users</h2>
                         <div className="LoginExistingEmailInputBorder">
-                            <input type="text" ref={email} id="LoginExistingEmailInput" name="LoginExistingEmailInput" required autoFocus className="LoginExistingEmailInput"
+                            <input type="text"
+                                ref={email}
+                                id="LoginExistingEmailInput"
+                                name="LoginExistingEmailInput" required autoFocus
+                                className="LoginExistingEmailInput"
                                 placeholder="Enter Your Email Address to Log In"
                             />
                         </div>
-                        <button className="LoginExistingUserLoginButton" onClick={handleLogin} type="button">Log Into Tool Me Once</button>
+                        <button className="LoginExistingUserLoginButton"
+                            onClick={handleLogin}
+                            type="button">Log Into Tool Me Once
+                        </button>
                     </div>
 
                     <div className="LoginNewUsersContainer">
                         <h2 className="LoginNewUsersContainerTitle">New User</h2>
                         <div className="LoginInputsContainer">
                             <div className="LoginNewUsersEmailInputBorder">
-                                <input type="text" ref={newemail} id="LoginNewEmailInput" name="LoginNewEmailInput" required autoFocus className="LoginNewEmailInput"
+                                <input type="text"
+                                    ref={newemail}
+                                    id="LoginNewEmailInput"
+                                    name="LoginNewEmailInput" required autoFocus
+                                    className="LoginNewEmailInput"
                                     placeholder="Enter Your Email Address to Register"
                                 />
                             </div>
                             <div className="LoginNewUsersHomeAddressInputBorder">
-                                <input type="text" ref={newaddress} id="LoginNewHomeAddressInput" name="LoginNewHomeAddressInput" required autoFocus className="LoginNewHomeAddressInput"
+                                <input type="text"
+                                    ref={newaddress}
+                                    id="LoginNewHomeAddressInput"
+                                    name="LoginNewHomeAddressInput" required autoFocus
+                                    className="LoginNewHomeAddressInput"
                                     placeholder="Enter Your Home Address to Register"
                                 />
                             </div>
-                            <button className="LoginNewUserLoginButton" onClick={handleRegister} type="button">Register for Tool Me Once</button>
+                            <button className="LoginNewUserLoginButton"
+                                onClick={handleRegister}
+                                type="button">Register for Tool Me Once
+                            </button>
                         </div>
-
                     </div>
                     <footer className="LoginPageFooter">&copy; Tool Me Once, 2020</footer>
                 </body>
-
             </main>
         </>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <dialog className="dialog dialog--password" ref={conflictDialog}>
-//                 <div>Account with that email address already exists</div>
-//                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
-//             </dialog>
-
-//             <form className="form--login" onSubmit={handleRegister}>
-//                 <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
-//                 <fieldset>
-//                     <label htmlFor="userName"> Username </label>
-//                     <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required autoFocus />
-//                 </fieldset>
-//                 {/* <fieldset>
-//                     <label htmlFor="lastName"> Last Name </label>
-//                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
-//                 </fieldset> */}
-//                 <fieldset>
-//                     <label htmlFor="inputEmail"> Email address </label>
-//                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
-//                 </fieldset>
-//                 <fieldset>
-//                     <button type="submit"> Sign in </button>
-//                 </fieldset>
-//             </form>
