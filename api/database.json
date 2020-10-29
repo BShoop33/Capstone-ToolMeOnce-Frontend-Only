@@ -54,8 +54,8 @@
     {
       "id": 1,
       "userid": "braxton.shoop@gmail.com",
-      "borrowerid": "braxton.shoop@gmail.com",
-      "toolstatus": false,
+      "borrowerid": "",
+      "toolstatus": true,
       "toolname": "aaaaaaaaaaaaaa",
       "tooldescription": "aaaaaaaaaaaaaa",
       "toolspecs": "aaaaaaaaaaaaaa",

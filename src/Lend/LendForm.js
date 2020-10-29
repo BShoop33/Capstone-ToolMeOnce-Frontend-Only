@@ -63,7 +63,7 @@ export const LendForm = () => {
 
     return (
         <>
-            <body className="addToolMain">
+            <div className="addToolMain">
                 <div className="AddTool">
                     <h2 className="AddToolTitle">{toolId ? "Edit Tool" : "Add a Tool"}</h2>
                     <div className="NewToolContainer">
@@ -124,7 +124,7 @@ export const LendForm = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

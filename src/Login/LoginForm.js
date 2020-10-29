@@ -107,7 +107,7 @@ export const LoginPage = (props) => {
                     </div>
                 </header>
 
-                <body className="LoginBodyContainer">
+                <div className="LoginBodyContainer">
                     <div className="LoginExistingUsersContainer">
                         <h2 className="LoginExistingUsersContainerTitle">Existing Users</h2>
                         <div className="LoginExistingEmailInputBorder">
@@ -153,7 +153,7 @@ export const LoginPage = (props) => {
                         </div>
                     </div>
                     <footer className="LoginPageFooter">&copy; Tool Me Once, 2020</footer>
-                </body>
+                </div>
             </main>
         </>
     )

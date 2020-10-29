@@ -57,7 +57,7 @@ export const LendList = () => {
                 </button>
                 <h2 className="LendPageTitle">Lend</h2>
             </div>
-            <body className="LendBodyContainer">
+            <div className="LendBodyContainer">
                 <div className="LendToolsICanLendContainer">
                     <div className="LendToolsICanLendHeader">
                         <h2 className="LendToolsIAmLendingTitle">Tools I Can Lend</h2>
@@ -88,7 +88,7 @@ export const LendList = () => {
 
 
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

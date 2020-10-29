@@ -31,7 +31,7 @@ export const ContactLenderPage = () => {
 
     return (
         <>
-            <body className="ContactLenderBodyContainer">
+            <div className="ContactLenderBodyContainer">
                 <div className="ContactLenderContainer">
                     <h2 className="ContactLenderContainerTitle">Contact a Lender</h2>
                     <div className="ContactLenderInputsContainer">
@@ -71,7 +71,7 @@ export const ContactLenderPage = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

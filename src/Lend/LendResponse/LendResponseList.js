@@ -31,7 +31,7 @@ export const LendResponsePage = () => {
 
     return (
         <>
-            <body className="LendResponseBodyContainer">
+            <div className="LendResponseBodyContainer">
                 <div className="LendResponseContainer">
                     <h2 className="LendResponseContainerTitle">Respond to Borrower</h2>
                     <div className="LendResponseInputsContainer">
@@ -71,7 +71,7 @@ export const LendResponsePage = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

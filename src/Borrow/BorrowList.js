@@ -16,14 +16,13 @@ export const BorrowList = () => {
     // getBorrow, getBorrowToolsIAmBorrowing, toolsIAmBorrowing, ToolsICanBorrowButtonsContainer, getBorrowToolsICanBorrow
 
 
-
     useEffect(() => {
         getBorrowToolsIAmBorrowing()
     }, [])
 
     useEffect(() => {
         getBorrowToolsICanBorrow()
-    })
+    }, [])
 
     // useEffect(() => {
     //     getBorrow()
@@ -64,7 +63,7 @@ export const BorrowList = () => {
                     type="button">Go To Lend</button>
                 <h2 className="BorrowPageTitle">Borrow</h2>
             </div>
-            <body className="BorrowBodyContainer">
+            <div className="BorrowBodyContainer">
                 <div className="BorrowToolsIAmBorrowingandToolsICanBorrowContainer">
                     <div className="BorrowToolsIAmBorrowingContainer">
                         <h2 className="BorrowToolsIAmBorrowingTitle">Tools I Am Borrowing</h2>
@@ -97,7 +96,7 @@ export const BorrowList = () => {
                         })
                     }
                 </div>
-            </body>
+            </div>
             <footer className="BorrowPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

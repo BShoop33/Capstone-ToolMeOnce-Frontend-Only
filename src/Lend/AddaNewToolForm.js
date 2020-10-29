@@ -79,7 +79,7 @@ export const AddToolPage = () => {
 
     return (
         <>
-            <body className="addToolMain">
+            <div className="addToolMain">
                 <div className="AddTool">
                     {/* <h2 className="AddToolTitle">Add a New Tool</h2>    {chatId ? "Edit Message" : "Add Message"} */}
                     <div className="NewToolContainer">
@@ -141,7 +141,7 @@ export const AddToolPage = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )

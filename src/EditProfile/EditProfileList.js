@@ -36,7 +36,7 @@ export const ProfilePage = () => {
 
     return (
         <>
-            <body className="ProfileLoginBodyContainer">
+            <div className="ProfileLoginBodyContainer">
                 <div className="ProfileEditContainer">
                     <h2 className="ProfileEditContainerTitle">Edit Profile</h2>
                     <div className="ProfileInputsContainer">
@@ -76,7 +76,7 @@ export const ProfilePage = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
         </>
     )
@@ -130,7 +130,7 @@ export const ProfilePage = () => {
 
 //     return (
 //         <>
-//             <body className="ProfileLoginBodyContainer">
+//             <div className="ProfileLoginBodyContainer">
 //                 <div className="ProfileEditContainer">
 //                     <h2 className="ProfileEditContainerTitle">Edit Profile</h2>
 //                     <div className="ProfileInputsContainer">
@@ -170,7 +170,7 @@ export const ProfilePage = () => {
 //                         </div>
 //                     </div>
 //                 </div>
-//             </body>
+//             </div>
 //             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
 //         </>
 //     )

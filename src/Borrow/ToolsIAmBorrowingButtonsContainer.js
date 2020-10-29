@@ -9,9 +9,14 @@ export const ToolsIAmBorrowingButtonsContainer = ({ borrow }) => {
     const { getTools } = useContext(LendContext)
     const history = useHistory();
 
+
+
     useEffect(() => {
         getTools()
     }, [])
+
+
+
     const borrowed = true;
     const constructToolObject = () => {
 
@@ -27,6 +32,7 @@ export const ToolsIAmBorrowingButtonsContainer = ({ borrow }) => {
             toolaccessories: borrow.toolaccessories
         })
             .then(() => history.push("/lend/borrow"))
+
     }
 
     return (
@@ -37,7 +43,6 @@ export const ToolsIAmBorrowingButtonsContainer = ({ borrow }) => {
                         event.preventDefault()
                         constructToolObject()
                         history.push(`/lend/borrow`)
-                        window.location.reload()
                     }}
                     type="button">Return this Tool
                 </button>
