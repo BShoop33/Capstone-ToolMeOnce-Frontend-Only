@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 import "./ContactLender.css"
 
 export const BorrowerMessagesCardButtonsContainer = ({ message }) => {
-    const { DeleteContact } = useContext(ContactContext)
+    const { deleteContact } = useContext(ContactContext)
     const history = useHistory();
 
     return (
@@ -13,7 +13,7 @@ export const BorrowerMessagesCardButtonsContainer = ({ message }) => {
                 <button className="ContactLenderDeleteButton"
                     onClick={
                         () => {
-                            DeleteContact(message.id)
+                            deleteContact(message.id)
                                 .then(() => {
                                     history.push("/lend/borrow")
                                 })

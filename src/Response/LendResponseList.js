@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router-dom"
 import "./LendResponse.css"
 
 export const LendResponsePage = () => {
-    const { addResponse, getResponse } = useContext(LendResponseContext)
+    const { addResponse } = useContext(LendResponseContext)
     const [response, setResponse] = useState({})
     const history = useHistory()
 
@@ -13,10 +13,6 @@ export const LendResponsePage = () => {
         addedMessage[event.target.name] = event.target.value
         setResponse(addedMessage)
     }
-
-    useEffect(() => {
-        getResponse()
-    }, [])
 
     const constructMessageObject = () => {
         addResponse({

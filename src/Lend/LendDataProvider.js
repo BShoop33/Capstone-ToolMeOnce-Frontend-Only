@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+
 export const LendContext = createContext()
 
 export const LendProvider = (props) => {
@@ -15,7 +16,7 @@ export const LendProvider = (props) => {
             .then(getTools)
     }
 
-    const DeleteTool = (toolId) => {
+    const deleteTool = (toolId) => {
         return fetch(`http://localhost:8088/Toolstable/${toolId}`, {
             method: "DELETE"
         })
@@ -46,7 +47,7 @@ export const LendProvider = (props) => {
 
     return (
         <LendContext.Provider value={{
-            tool, addTools, DeleteTool, editTools, getTools, getToolById
+            tool, addTools, deleteTool, editTools, getTools, getToolById
         }}>
             {props.children}
         </LendContext.Provider>

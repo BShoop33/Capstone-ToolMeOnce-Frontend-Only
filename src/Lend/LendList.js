@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react"
 import { LendContext } from "./LendDataProvider"
-import { LenderMessagesCard } from "../Reply/LenderMessagesCard"
+import { ReplyCard } from "../ReplyCard/ReplyCard"
 import { ToolCard } from "./LendCard"
 import { useHistory } from "react-router-dom"
 import { ProfileContext } from "../EditProfile/EditProfileDataProvider"
 import "./Lend.css"
-import { ReplyContext } from "../Reply/LenderReplyDataProvider"
+import { ReplyContext } from "../ReplyCard/ReplyDataProvider"
+import { EditProfileButton } from "../EditProfile/EditProfileButton"
 
 export const LendList = () => {
     const { tool, getTools } = useContext(LendContext)
@@ -21,12 +22,14 @@ export const LendList = () => {
         getProfile()
     }, [])
 
+
     useEffect(() => {
         getReply()
     }, [])
 
     return (
         <>
+
             <header className="LendPageHeaderContainer">
                 <img className="LendToolMeOnceLogo" src="/Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
                 <div className="LendToolMeOnceTitleContainer">
@@ -40,12 +43,11 @@ export const LendList = () => {
                         }}
                         type="button">Log Out
                     </button>
-                    <button className="LendEditProfile"
-                        onClick={() => {
-                            history.push(`/lend/editprofile/${profile.id}`)
-                        }}
-                        type="button">Edit Profile
-                    </button>
+                    {
+                        profile.map(profile => {
+                            return <EditProfileButton key={profile.id} profile={profile} />
+                        })
+                    }
                 </div>
             </header>
             <div className="LendSubHeaderContainer">
@@ -81,7 +83,7 @@ export const LendList = () => {
                     <h2 className="LendMessagesTitle">Messages</h2>
                     {
                         reply.map(reply => {
-                            return < LenderMessagesCard key={reply.id} reply={reply} />
+                            return < ReplyCard key={reply.id} reply={reply} />
                         })
                     }
 

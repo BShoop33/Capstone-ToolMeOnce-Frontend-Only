@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
 import { ContactContext } from "./ContactLenderDataProvider"
-import { useHistory, useParams } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import "./ContactLender.css"
 
 export const ContactLenderPage = () => {
-    const { addContact, getContact } = useContext(ContactContext)
+    const { addContact } = useContext(ContactContext)
     const [contact, setContact] = useState({})
     const history = useHistory()
 
@@ -13,10 +13,6 @@ export const ContactLenderPage = () => {
         addedMessage[event.target.name] = event.target.value
         setContact(addedMessage)
     }
-
-    useEffect(() => {
-        getContact()
-    }, [])
 
     const constructMessageObject = () => {
         addContact({

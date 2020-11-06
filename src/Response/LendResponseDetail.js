@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 import "./LendResponse.css"
 
 export const ResponseCardButtonsContainer = ({ response }) => {
-    const { DeleteResponse } = useContext(LendResponseContext)
+    const { deleteResponse } = useContext(LendResponseContext)
     const history = useHistory();
 
     return (
@@ -13,7 +13,7 @@ export const ResponseCardButtonsContainer = ({ response }) => {
                 <button className="LendDeleteToolButton"
                     onClick={
                         () => {
-                            DeleteResponse(response.id)
+                            deleteResponse(response.id)
                                 .then(() => {
                                     history.push("/lend")
                                 })

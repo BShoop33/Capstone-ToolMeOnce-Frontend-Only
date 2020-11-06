@@ -15,7 +15,7 @@ export const LendResponseProvider = (props) => {
             .then(getResponse)
     }
 
-    const DeleteResponse = (param) => {
+    const deleteResponse = (param) => {
         return fetch(`http://localhost:8088/Messages/${param}`, {
             method: "DELETE"
         })
@@ -28,14 +28,9 @@ export const LendResponseProvider = (props) => {
             .then(setResponse)
     }
 
-    // const getToolById = (param) => {
-    //     return fetch(`http://localhost:8088/Toolstable/${param}`)
-    //         .then(res => res.json())
-    // }
-
     return (
         <LendResponseContext.Provider value={{
-            response, addResponse, DeleteResponse, getResponse
+            response, addResponse, deleteResponse, getResponse
         }}>
             {props.children}
         </LendResponseContext.Provider>

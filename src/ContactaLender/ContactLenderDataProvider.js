@@ -15,21 +15,10 @@ export const ContactProvider = (props) => {
             .then(getContact)
     }
 
-    const DeleteContact = (param) => {
+    const deleteContact = (param) => {
         return fetch(`http://localhost:8088/Messages/${param}`, {
             method: "DELETE"
         })
-    }
-
-    const editContact = param => {
-        return fetch(`http://localhost:8088/Messages/${param.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(param)
-        })
-            .then(getContact)
     }
 
     const getContact = () => {
@@ -38,14 +27,9 @@ export const ContactProvider = (props) => {
             .then(setContact)
     }
 
-    const getContactById = (param) => {
-        return fetch(`http://localhost:8088/Messages/${param}?expand=user`)
-            .then(res => res.json())
-    }
-
     return (
         <ContactContext.Provider value={{
-            contact, DeleteContact, editContact, addContact, getContact, getContactById,
+            contact, addContact, deleteContact, getContact
         }}>
             {props.children}
         </ContactContext.Provider>

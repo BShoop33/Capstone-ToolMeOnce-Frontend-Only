@@ -13,9 +13,6 @@ export const BorrowList = () => {
     const { contact, getContact } = useContext(ContactContext)
     const history = useHistory();
 
-    // getBorrow, getBorrowToolsIAmBorrowing, toolsIAmBorrowing, ToolsICanBorrowButtonsContainer, getBorrowToolsICanBorrow
-
-
     useEffect(() => {
         getBorrowToolsIAmBorrowing()
     }, [])
@@ -23,10 +20,6 @@ export const BorrowList = () => {
     useEffect(() => {
         getBorrowToolsICanBorrow()
     }, [])
-
-    // useEffect(() => {
-    //     getBorrow()
-    // })
 
     useEffect(() => {
         getContact()

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { LendContext } from "./LendDataProvider.js"
 import { useHistory, useParams } from 'react-router-dom';
-import "./AddaNewTool.css"
+import "./Lend.css"
 
 export const LendForm = () => {
     const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
