@@ -17,14 +17,7 @@ export const BorrowProvider = (props) => {
             .then(getBorrow)
     }
 
-    const DeleteBorrow = (param) => {
-        return fetch(`http://localhost:8088/Toolstable/${param}`, {
-            method: "DELETE"
-        })
-            .then(getBorrow)
-    }
-
-    const editBorrow = param => {
+    const borrowTool = param => {
         return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
             method: "PUT",
             headers: {
@@ -33,6 +26,12 @@ export const BorrowProvider = (props) => {
             body: JSON.stringify(param)
         })
             .then(getBorrow)
+    }
+
+    const getBorrow = () => {
+        return fetch(`http://localhost:8088/Toolstable?toolstatus=true`)
+            .then(res => res.json())
+            .then(setBorrow)
     }
 
     const getBorrowToolsIAmBorrowing = () => {
@@ -47,18 +46,7 @@ export const BorrowProvider = (props) => {
             .then(setToolsICanBorrow)
     }
 
-    const getBorrow = () => {
-        return fetch(`http://localhost:8088/Toolstable?toolstatus=true`)
-            .then(res => res.json())
-            .then(setBorrow)
-    }
-
-    const getBorrowById = (param) => {
-        return fetch(`http://localhost:8088/Toolstable/${param}`)
-            .then(res => res.json())
-    }
-
-    const ReturnBorrowTool = param => {
+    const returnBorrowTool = param => {
         return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
             method: "PUT",
             headers: {
@@ -68,22 +56,10 @@ export const BorrowProvider = (props) => {
         })
             .then(getBorrow)
     }
-
-    const BorrowTool = param => {
-        return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(param)
-        })
-            .then(getBorrow)
-    }
-
 
     return (
         <BorrowContext.Provider value={{
-            borrow, toolsIAmBorrowing, toolsICanBorrow, getBorrowToolsICanBorrow, addBorrow, getBorrow, getBorrowById, getBorrowToolsIAmBorrowing, DeleteBorrow, editBorrow, ReturnBorrowTool, BorrowTool
+            borrow, toolsIAmBorrowing, toolsICanBorrow, getBorrowToolsICanBorrow, addBorrow, getBorrow, getBorrowToolsIAmBorrowing, returnBorrowTool, borrowTool
         }}>
             {props.children}
         </BorrowContext.Provider>

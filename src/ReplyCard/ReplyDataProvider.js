@@ -4,12 +4,6 @@ export const ReplyContext = createContext()
 export const ReplyProvider = (props) => {
     const [reply, setReply] = useState([])
 
-    const getReply = () => {
-        return fetch(`http://localhost:8088/Messages?replytoid=${localStorage.getItem("ToolMeOnce_Member")}`)
-            .then(res => res.json())
-            .then(setReply)
-    }
-
     const addReply = (param) => {
         return fetch(`http://localhost:8088/Messages`, {
             method: "POST",
@@ -21,15 +15,21 @@ export const ReplyProvider = (props) => {
             .then(getReply)
     }
 
-    const DeleteReply = (param) => {
+    const deleteReply = (param) => {
         return fetch(`http://localhost:8088/Messages/${param}`, {
             method: "DELETE"
         })
     }
 
+    const getReply = () => {
+        return fetch(`http://localhost:8088/Messages?replytoid=${localStorage.getItem("ToolMeOnce_Member")}`)
+            .then(res => res.json())
+            .then(setReply)
+    }
+
     return (
         <ReplyContext.Provider value={{
-            reply, addReply, DeleteReply, getReply
+            reply, addReply, deleteReply, getReply
         }}>
             {props.children}
         </ReplyContext.Provider>

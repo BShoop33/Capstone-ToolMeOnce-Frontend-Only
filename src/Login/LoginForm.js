@@ -3,17 +3,16 @@ import { useHistory } from "react-router-dom"
 import "./Login.css"
 
 export const LoginPage = (props) => {
-
+    const history = useHistory()
     const email = useRef()
     const newemail = useRef()
     const newaddress = useRef()
     const existDialog = useRef()
     const conflictDialog = useRef()
     const conflictDialogAddress = useRef()
-    const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/users?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/UsersTable?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -32,14 +31,13 @@ export const LoginPage = (props) => {
     }
 
     const existingUserCheck2 = () => {
-        return fetch(`http://localhost:8088/users?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/UsersTable?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
 
     const handleRegister = (e) => {
         e.preventDefault()
-
 
         existingUserCheck2()
             .then((userExists) => {
@@ -50,7 +48,7 @@ export const LoginPage = (props) => {
                     conflictDialogAddress.current.showModal("Please enter your home address to register")
                 }
                 else if (!userExists) {
-                    fetch("http://localhost:8088/users", {
+                    fetch("http://localhost:8088/UsersTable", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -74,7 +72,6 @@ export const LoginPage = (props) => {
                 }
             })
     }
-
 
     return (
         <>
@@ -107,7 +104,7 @@ export const LoginPage = (props) => {
                     </div>
                 </header>
 
-                <body className="LoginBodyContainer">
+                <div className="LoginBodyContainer">
                     <div className="LoginExistingUsersContainer">
                         <h2 className="LoginExistingUsersContainerTitle">Existing Users</h2>
                         <div className="LoginExistingEmailInputBorder">
@@ -153,7 +150,7 @@ export const LoginPage = (props) => {
                         </div>
                     </div>
                     <footer className="LoginPageFooter">&copy; Tool Me Once, 2020</footer>
-                </body>
+                </div>
             </main>
         </>
     )
