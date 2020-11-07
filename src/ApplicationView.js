@@ -8,13 +8,10 @@ import { ToolsICanBorrowCard } from "./Borrow/ToolsICanBorrowCard.js"
 
 import { ContactLenderPage } from "./ContactaLender/ContactLenderList.js"
 import { ContactProvider } from "./ContactaLender/ContactLenderDataProvider.js"
+import { ReplyProvider } from "./ReplyCard/ReplyDataProvider.js"
 
 import { ProfilePage } from "./EditProfile/EditProfileList"
 import { ProfileProvider } from "./EditProfile/EditProfileDataProvider.js"
-
-
-
-import { ReplyProvider } from "./ReplyCard/ReplyDataProvider.js"
 
 import { LendList } from "./Lend/LendList.js"
 import { LendProvider } from "./Lend/LendDataProvider.js"
@@ -50,15 +47,6 @@ export const ApplicationViews = () => {
             </BorrowProvider>
 
 
-            {/* 
-            <LendProvider>
-                <ProfileProvider>
-                    <Route exact path="/lend/editprofile/:profileId(\d+)">
-                        
-                    </Route>
-                </ProfileProvider>
-            </LendProvider> */}
-
 
             <ContactProvider>
                 <Route exact path="/lend/contact">
@@ -74,19 +62,6 @@ export const ApplicationViews = () => {
 
 
 
-
-
-
-
-            {/* <ReplyProvider>
-                <Route exact path="/lend/reply/card">
-                    <ReplyCard />
-                </Route>
-            </ReplyProvider> */}
-
-
-
-
             <LendResponseProvider>
                 <Route exact path="/lend">
                     <LendResponseProvider />
@@ -98,7 +73,6 @@ export const ApplicationViews = () => {
                     <LendResponsePage />
                 </Route>
             </LendResponseProvider>
-
 
 
 

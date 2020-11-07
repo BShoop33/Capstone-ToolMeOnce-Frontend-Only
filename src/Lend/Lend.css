@@ -1,3 +1,139 @@
+.AddTool {
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-height: 100%;
+    overflow: auto;
+    width: 80em;
+}
+
+.AddToolAccessoriesInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
+    margin-top: .5em;
+    text-align: left;
+    width: 26em;
+}
+
+.AddToolButtonsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom:.5em;
+    margin-top: .5em;
+}
+
+.AddToolCancelButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;  
+    font-weight: 1000;
+    height: 4em;
+    margin-left: 1.4em;
+    outline: none;
+    width: 8em;
+}
+
+.AddToolDescriptionInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
+    margin-top: .5em;
+    text-align: left;
+    width: 26em;
+    word-wrap: normal;
+}
+
+.AddToolMain {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.AddToolNameInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    margin-left: 1em;
+    text-align: left;
+    width: 26em;
+}
+
+.AddToolSaveButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    height: 4em;
+    outline: none;
+    width: 8em;
+}
+
+.AddToolSpecificationsInput {
+    border: .5em;
+    border-color:#f2f0f0;
+    border-style: groove;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 17pt;
+    height: 7em;
+    margin-left: 1em;
+    margin-top: .5em;
+    text-align: left;
+    width: 26em;
+}
+
+.AddToolTitle {
+    color: #ffca1c;
+    font-size: 28pt;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
 button:hover {
     background-color: #af8007;
     border-color: #215a72;
@@ -6,13 +142,6 @@ button:hover {
     cursor: pointer;
     outline: none;
   }
-
-  .cloudinary-fileupload {
-    color: #ffca1c;
-    font-size: 20pt;
-    height: auto;
-    text-shadow: 0 0 20px #000000;
-}
 
 .LendAddNewToolButton {
     background:
@@ -47,33 +176,6 @@ button:hover {
     justify-content: space-around;
 }
 
-.LendContactALenderButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-color: #00a6ff;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 18pt;
-    font-weight: 1000;
-    height: 5em;
-    margin-left: .8em;
-    outline: none;
-    width: 15em;
-    word-spacing: 1em;
-}
-
 .LendDeleteToolButton {
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -95,8 +197,6 @@ button:hover {
     outline: none;
     width: 15em;
 }
-
-
 
 .LendEditToolButton {
     background:
@@ -161,10 +261,6 @@ button:hover {
     word-spacing: .75em;
 }
 
-.LendLenderEmail { 
-    margin-left: .25em;
-}
-
 .LendLogOutButton {
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -180,8 +276,8 @@ button:hover {
     border-bottom-right-radius: 2em;
     border-color: #00a6ff;
     border-style: ridge;
-    border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
@@ -203,7 +299,6 @@ button:hover {
     display: flex;
     flex-flow: column;
     height: 61.5em;
-   
     min-width: 39em;
     overflow: auto;
 }
@@ -293,14 +388,14 @@ button:hover {
 }
 
 .LendToolMeOnceTitleContainer {
-    background-image: url("/Images/dust.png");
     background-color: black;
-    color: #ffca1c;
+    background-image: url("/Images/dust.png");
     border: .8em;
     border-color: #ffca1c;
     border-style: ridge;
-    min-height: 4em;
+    color: #ffca1c;
     margin-top: -7.25em;
+    min-height: 4em;
     min-width: 60em;
     padding-top: 2em;
     text-align: center;
@@ -356,244 +451,6 @@ button:hover {
     margin-left: .25em;
 }
 
-.pictureStyling {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .8em;
-    border-color: #f2f0f0;
-    border-style: groove;
-    height: 36em;
-    width: 36em;
-}
-
-.pictureUploadContainer {
-    margin-left: 1em;
-}
-
-.uploadTitle {
-    color: #ffca1c;
-    font-size: 30pt;
-    height: auto;
-    text-shadow: 0 0 20px #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.AddTool {
-    background-color: black;
-    background-image: url("/Images/dust.png");
-    border: .8em;
-    border-color: #ffca1c;
-    border-style: groove;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    min-height: 100%;
-    overflow: auto;
-    width: 80em;
-}
-
-.AddToolAccessoriesInput {
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    height: 7em;
-    margin-left: 1em;
-    margin-top: .5em;
-    text-align: left;
-    width: 26em;
-}
-
-.AddToolButtonsContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom:.5em;
-    margin-top: .5em;
-}
-
-.AddToolCancelButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-color: #00a6ff;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 18pt;  
-    font-weight: 1000;
-    height: 4em;
-    margin-left: 1.4em;
-    outline: none;
-    width: 8em;
-}
-
-.AddToolDescriptionInput {
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    height: 7em;
-    margin-left: 1em;
-    margin-top: .5em;
-    text-align: left;
-    width: 26em;
-    word-wrap: normal;
-}
-
-.addToolMain {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.AddToolNameInput {
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    margin-left: 1em;
-    text-align: left;
-    width: 26em;
-}
-
-.AddToolPicture {
-    border: .8em;
-    border-color: #f2f0f0;
-    border-style: groove;
-    height: 35em;
-    margin-left: 2em;
-    min-height: 35em;
-    min-width: 35em;
-}
-
-.AddToolSaveButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-color: #00a6ff;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 18pt;
-    font-weight: 1000;
-    height: 4em;
-    outline: none;
-    width: 8em;
-}
-
-.AddToolSpecificationsInput {
-    border: .5em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    height: 7em;
-    margin-left: 1em;
-    margin-top: .5em;
-    text-align: left;
-    width: 26em;
-}
-
-.AddToolTitle {
-    color: #ffca1c;
-    font-size: 28pt;
-    text-align: center;
-    text-shadow: 0 0 20px #000000;
-}
-
-.ContactLenderCancelButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-color: #00a6ff;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 14pt;
-    font-weight: 1000;
-    height: 4em;
-    outline: none;
-    width: 8em;
-}
-
-.ContactLenderSaveChangesButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-color: #00a6ff;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 14pt;
-    font-weight: 1000;
-    height: 4em;
-    outline: none;
-    width: 12em;
-}
-
 .NewToolContainer {
     display: flex;
     flex-flow: row;
@@ -601,5 +458,54 @@ button:hover {
 }
 
 .NewToolInputs {
-    margin-right: 14em;
+    margin-right: 5em;
+}
+
+.ToolCardPicture {
+    height: 20.65em;
+    width: 20.65em;
+}
+
+.ToolPictureFileInput {
+    color: #ffca1c;
+    font-size: 16pt;
+    margin-left: .25em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.UploadTitle {
+    color: #ffca1c;
+    font-size: 28pt;
+    margin-left: .25em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+
+.NewToolPictureContainer{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5em;
+}
+
+.UploadTitle {
+    margin-top: 2em;
+    margin-left: -4.05em;
+}
+
+.NewToolPictureLoading {
+    color: #ffca1c;
+    font-size: 16pt;
+    margin-left: .25em;
+    text-align: center;
+    text-shadow: 0 0 20px #000000;
+}
+
+.NewToolPicture {
+    height: 26em;
+    width: 26em;
+    border: 0;
 }

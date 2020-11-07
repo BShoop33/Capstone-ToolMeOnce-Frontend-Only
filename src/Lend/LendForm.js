@@ -10,6 +10,32 @@ export const LendForm = () => {
     const [isLoading, setIsLoading] = useState(true)
     const history = useHistory()
 
+
+    //////////////////////////////////////////////////////////////////////
+    const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', 'ToolMeOnce')
+        setLoading(true)
+        const res = await fetch(
+            'https://api.cloudinary.com/v1_1/dstfvbrwf/image/upload',
+            {
+                method: 'POST',
+                body: data
+            }
+        )
+        const file = await res.json()
+        setImage(file.secure_url)
+        localStorage.setItem("Tool_Photo", image)
+        setLoading(false)
+    }
+    //////////////////////////////////////////////////////////////////////
+
+
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
         addedTool[event.target.name] = event.target.value
@@ -40,6 +66,7 @@ export const LendForm = () => {
                 imageurl: Tool.imageurl,
                 toolstatus: Tool.toolstatus,
                 toolname: Tool.AddToolNameInput,
+                toolpicture: localStorage.getItem("Tool_Photo"),
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
                 toolaccessories: Tool.AddToolAccessoriesInput
@@ -52,6 +79,7 @@ export const LendForm = () => {
                 borrowerid: Tool.borrowerid,
                 imageurl: Tool.imageurl,
                 toolstatus: true,
+                toolpicture: localStorage.getItem("Tool_Photo"),
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
@@ -63,10 +91,29 @@ export const LendForm = () => {
 
     return (
         <>
-            <div className="addToolMain">
+            <div className="AddToolMain">
                 <div className="AddTool">
                     <h2 className="AddToolTitle">{toolId ? "Edit Tool" : "Add a Tool"}</h2>
                     <div className="NewToolContainer">
+                        <div className="NewToolPictureContainer">
+                            <div className="NewToolPicture">
+                                {loading ? (
+                                    <h3 className="NewToolPictureLoading">Loading . . .</h3>
+                                ) : (
+                                        <img className="NewToolPicture" src={image} />
+                                    )
+                                }
+                                <h1 className="UploadTitle">Upload Image</h1>
+                                <input
+                                    className="ToolPictureFileInput"
+                                    type="file"
+                                    name="file"
+                                    placeholder="Upload an image"
+                                    onChange={localStorage.setItem("Tool_Photo", image), uploadImage}
+                                />
+                            </div>
+                        </div>
+
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
                                 <input type="text"
@@ -116,6 +163,7 @@ export const LendForm = () => {
                                 </button>
                                 <button className="AddToolCancelButton"
                                     onClick={() => {
+                                        localStorage.setItem("Tool_Photo", "")
                                         history.push(`/lend`)
                                     }}
                                     type="button">Cancel

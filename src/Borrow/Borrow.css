@@ -5,15 +5,6 @@
 }
 
 .BorrowButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -23,26 +14,19 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .BorrowContactALenderButton {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
-    outline: none;
-    width: 15em;
-    height: 5em;
-    margin-left: .8em;
-    border: .5em;
-    border-style: ridge;
-    border-top-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-    font-weight: 1000;
-    font-size: 18pt;
-    word-spacing: 1em;
-    border-color: #00a6ff;
-    color: #ffca1c;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -52,18 +36,24 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    min-height: 5em;
+    margin-left: .8em;
+    outline: none;
+    width: 15em;
+    word-spacing: 1em;
 }
 
 .BorrowDeleteToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -73,7 +63,16 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .BorrowEditProfile {
@@ -91,8 +90,8 @@
     border-bottom-right-radius: 2em;
     border-color: #00a6ff;
     border-style: ridge;
-    border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
     color: #ffca1c;
     font-size: 18pt;
     font-weight: 1000;
@@ -101,21 +100,20 @@
     min-width: 12em;
     outline: none;
     word-spacing: .75em;
-    
 }
 
 .BorrowEditToolButtonContainer {
-    display: flex;
-    justify-content: center;
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    height: 3em;
-    width: 43.7em;
-    text-align: left;
     background-color: rgb(63, 54, 54);
     background-image: url("/Images/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    height: 3em;
+    justify-content: center;
     margin-left: -1em;
+    text-align: left;
+    width: 43.7em;
 }
 
 .BorrowGoToLendButton {
@@ -140,15 +138,44 @@
     font-weight: 1000;
     height: 5em;
     margin-left: 1em;
-    margin-top: 1.83em;
+    margin-top: 6.25em;
+    margin-bottom: 1.1em;
     min-width: 12em;
     outline: none;
     word-spacing: .75em;
-    
 }
 
 .BorrowLenderEmail { 
     margin-left: -.75em;
+}
+
+.BorrowLogOutButton {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: .7em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-color: #00a6ff;
+    border-style: ridge;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    color: #ffca1c;
+    font-size: 18pt;
+    font-weight: 1000;
+    margin-bottom: 1em; 
+    margin-right: 1.75em;
+    margin-top: -.55em;
+    min-height: 5em;
+    min-width: 12em;
+    outline: none;
+    word-spacing: .75em;
 }
 
 .BorrowMessagesContainer {
@@ -191,7 +218,7 @@
     font-size: 45pt;
     height: auto;
     margin-left: 8em;
-    margin-top: 1em;
+    margin-top: 2.75em;
     min-width: 12em;
     text-shadow: 0 0 20px #000000;
 }
@@ -210,15 +237,6 @@
 }
 
 .BorrowThisToolButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -228,7 +246,16 @@
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .BorrowToolAccessories { 
@@ -245,12 +272,11 @@
     font-size: 14pt;
     font-weight: 600;
     margin-left: 1em; 
-  
 }
 
 .BorrowToolMeOnceLogo {
     margin-left: 1em;
-    margin-top: -7.25em;
+    margin-top: -.62em;
     min-height: 11.5em;
     min-width: auto;
 }
@@ -262,21 +288,21 @@
 
 .BorrowToolMeOnceTitle {
     font-size: 38pt;
-    margin-top: -.55em;
     margin-bottom: -5em;
+    margin-top: -.55em;
     width:  20em;
     word-spacing: 1em;
 }
 
 .BorrowToolMeOnceTitleContainer {
-    background-image: url("/Images/dust.png");
     background-color: black;
-    color: #ffca1c;
+    background-image: url("/Images/dust.png");
     border: .8em;
     border-color: #ffca1c;
     border-style: ridge;
+    color: #ffca1c;
+    margin-top: -.62em;
     min-height: 4em;
-    margin-top: -7.25em;
     min-width: 60em;
     padding-top: 2em;
     text-align: center;
@@ -295,11 +321,11 @@
     display: flex;
     flex-flow: row;
     height: 20.6em;
+    line-height: 1.5;
     margin-bottom: .5em;
     margin-left: .4em;
     overflow: auto;
     width: 72.5em;
-    line-height: 1.5;
 }
 
 .BorrowToolsIAmBorrowingContainer {
@@ -343,7 +369,7 @@
 }
 
 button:hover {
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    background-image: url("/Images/dust.png");
     background-color: #af8007;
     border-color: #215a72;
     box-shadow: 0px 0px 5px yellow;
@@ -353,15 +379,6 @@ button:hover {
     }
 
 .ReturnButton {
-    outline: none;
-    border: .5em;
-    border-style: ridge;
-    border-radius: 1em;
-    border-color: #00a6ff;
-    height: 3em;
-    width: 15em;
-    color: #ffca1c;
-    font-weight: 1000;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -371,27 +388,36 @@ button:hover {
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    border: .5em;
+    border-color: #00a6ff;
+    border-radius: 1em;
+    border-style: ridge;
+    color: #ffca1c;
     font-size: 14pt;
+    font-weight: 1000;
+    height: 3em;
+    outline: none;
+    width: 15em;
 }
 
 .ReturnButtonContainer {
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    margin-left: -1em;
-    width: 43.7em;
-    text-align: center;
+    background-image: url("/Images/dust.png");
     background-color: rgb(63, 54, 54);
-    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    margin-left: -1em;
+    text-align: center;
+    width: 43.7em;
 }
 
 .ToolsICanBorrowButtonsContainer {
-    border: .2em;
-    border-style: solid;
-    border-color: black;
-    margin-left: -1em;
-    width: 43.7em;
-    text-align: center;
     background-color: rgb(63, 54, 54);
     background-image: url("/Images/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    margin-left: -1em;
+    text-align: center;
+    width: 43.7em;
 }

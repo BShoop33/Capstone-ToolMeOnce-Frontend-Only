@@ -15,6 +15,7 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
             borrowerid: "",
             imageurl: borrow.imageurl,
             toolstatus: borrowed,
+            toolpicture: borrow.toolpicture,
             toolname: borrow.toolname,
             tooldescription: borrow.tooldescription,
             toolspecs: borrow.toolspecs,
@@ -26,7 +27,7 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
     return (
         <>
             <div className="BorrowToolsIAmBorrowingCard">
-                <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
+                <img className="ToolCardPicture" src={borrow.toolpicture} alt="Tool Picture" />
                 <div className="BorrowToolInfoContainer">
                     <div className="BorrowEditToolButtonContainer">
                         <button className="BorrowDeleteToolButton"

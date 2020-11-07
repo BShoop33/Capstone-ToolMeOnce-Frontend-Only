@@ -14,15 +14,21 @@ export const BorrowList = () => {
     const history = useHistory();
 
     useEffect(() => {
-        getBorrowToolsIAmBorrowing()
+        setInterval(() => {
+            getBorrowToolsIAmBorrowing()
+        }, 125)
     }, [])
 
     useEffect(() => {
-        getBorrowToolsICanBorrow()
+        setInterval(() => {
+            getBorrowToolsICanBorrow()
+        }, 125)
     }, [])
 
     useEffect(() => {
-        getContact()
+        setInterval(() => {
+            getContact()
+        }, 125)
     }, [])
 
     return (
@@ -33,18 +39,12 @@ export const BorrowList = () => {
                     <h1 className="BorrowToolMeOnceTitle">Tool - Me - Once</h1>
                 </div>
                 <div className="BorrowProfileandBorrowButtonContainer">
-                    <button className="LendLogOutButton"
+                    <button className="BorrowLogOutButton"
                         onClick={() => {
                             localStorage.clear()
                             history.push(`/lend`)
                         }}
                         type="button">Log Out
-                    </button>
-                    <button className="BorrowEditProfile"
-                        onClick={() => {
-                            history.push(`/lend/profile`)
-                        }}
-                        type="button">Edit Profile
                     </button>
                 </div>
             </header>

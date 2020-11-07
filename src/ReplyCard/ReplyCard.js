@@ -30,7 +30,6 @@ export const ReplyCard = ({ reply }) => {
                                     .then(() => {
                                         history.push("/lend")
                                     })
-                                window.location.reload()
                             }
                         }
                         type="button">Delete Message

@@ -36,6 +36,7 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
                 borrowerid: localStorage.getItem("ToolMeOnce_Member"),
                 imageurl: borrow.imageurl,
                 toolstatus: borrowed,
+                toolpicture: borrow.toolpicture,
                 toolname: borrow.toolname,
                 tooldescription: borrow.tooldescription,
                 toolspecs: borrow.toolspecs,
@@ -47,7 +48,7 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
 
     return (
         <div className="BorrowToolsIAmBorrowingCard">
-            <img className="BorrowToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
+            <img className="ToolCardPicture" src={borrow.toolpicture} alt="Tool Picture" />
             <div className="BorrowToolInfoContainer">
                 <div className="BorrowEditToolButtonContainer">
                     <button className="BorrowThisToolButton"

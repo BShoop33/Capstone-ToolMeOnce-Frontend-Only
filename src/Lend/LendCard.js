@@ -4,7 +4,7 @@ import "./Lend.css"
 
 export const ToolCard = ({ tool }) => (
     <div className="LendToolsIAmLendingCard">
-        <img className="LendToolMeOncePicture" src="/Images/Cat.jpg" alt="Logo" />
+        <img className="ToolCardPicture" src={tool.toolpicture} alt="Tool Picture" />
         <div className="LendToolInfoContainer">
             <ToolCardButtonsContainer tool={tool} />
             <div className="LendToolName">Tool Name:  {tool.toolname}</div>
