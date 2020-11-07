@@ -76,23 +76,23 @@ export const LoginPage = (props) => {
     return (
         <>
             <main className="container--login">
-                <dialog className="dialogExisting" ref={existDialog}>
+                <dialog className="DialogExisting" ref={existDialog}>
                     <div>Oops! It looks like we don't have a user record for you. Please register as a new user in the New User field below.</div>
-                    <button className="buttoncloseexisting"
+                    <button className="ButtonCloseExisting"
                         onClick={e => existDialog.current.close()}>Close
                         </button>
                 </dialog>
 
-                <dialog className="dialogNewEmail" ref={conflictDialog}>
+                <dialog className="DialogNewEmail" ref={conflictDialog}>
                     <div>Please enter your email address to register</div>
-                    <button className="buttonclosenewemail"
+                    <button className="ButtonCloseNewEmail"
                         onClick={e => conflictDialog.current.close()}>Close
                         </button>
                 </dialog>
 
-                <dialog className="dialogNewEmail" ref={conflictDialogAddress}>
+                <dialog className="DialogNewEmail" ref={conflictDialogAddress}>
                     <div>Please enter your home address to register</div>
-                    <button className="buttonclosenewemail"
+                    <button className="ButtonCloseNewEmail"
                         onClick={e => conflictDialogAddress.current.close()}>Close
                         </button>
                 </dialog>

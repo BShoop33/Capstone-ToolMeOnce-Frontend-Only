@@ -1,15 +1,56 @@
-.LendResponseContainer{
-    background-color: black;
-    background-image: url("/Images/dust.png");
-    border: .8em;
-    border-color: #ffca1c;
-    border-style: groove;
+.BorrowerMessagesCard {
+    margin-top: .5em;
+}
+
+.BorrowerMessagesCardInfoContainer {
+    background-color: white;
     display: flex;
     flex-flow: column;
-    height: 20em;
+    font-size: 14pt;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 1.5;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    padding-bottom: .25em;
+} 
+
+.ContactLenderButtonContainer {
+    background-color: rgb(63, 54, 54);
+    background-image: url("/Images/dust.png");
+    border: .2em;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    height: 3em;
     justify-content: center;
-    margin-top:.5em;
-    width: 30em;
+    margin-left: -.1em;
+    text-align: center;
+    width: 33.2em;
+}
+
+.ContactLenderId { 
+    margin-left: .25em;
+}
+
+.ContactLenderMessage {
+    margin-left: .25em;
+}
+
+.LendResponseBodyContainer {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.LendResponseButtonsContainer {
+    display: flex;
+    height: 3em;
+    justify-content: space-between;
+    margin-top: 1em;
+    text-align: center;
+    width: 27.5em;    
 }
 
 .LendResponseCancelButton {
@@ -35,7 +76,21 @@
     height: 3em;
     margin-left: .5em;
     outline: none;
-    width: 12em;
+    width: 10em;
+}
+
+.LendResponseContainer{
+    background-color: black;
+    background-image: url("/Images/dust.png");
+    border: .8em;
+    border-color: #ffca1c;
+    border-style: groove;
+    display: flex;
+    flex-flow: column;
+    height: 20em;
+    justify-content: center;
+    margin-top:.5em;
+    width: 30em;
 }
 
 .LendResponseContainerTitle {
@@ -58,13 +113,6 @@
 }
 
 .LendResponseInputsContainer {
-    align-items: center;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-}
-
-.LendResponseBodyContainer {
     align-items: center;
     display: flex;
     flex-flow: column;
@@ -105,53 +153,5 @@
     font-weight: 1000;
     height: 3em;
     outline: none;
-    width: 10em;
-}
-
-.BorrowerMessagesCard {
-    margin-top: .5em;
-}
-
-.ContactLenderButtonContainer {
-    background-color: rgb(63, 54, 54);
-    background-image: url("/Images/dust.png");
-    border: .2em;
-    border-color: black;
-    border-style: solid;
-    display: flex;
-    height: 3em;
-    justify-content: center;
-    margin-left: -.1em;
-    width: 33.2em;
-    text-align: center;
-}
-
- .BorrowerMessagesCardInfoContainer {
-    background-color: white;
-    display: flex;
-    flex-flow: column;
-    font-size: 14pt;
-    font-weight: 600;
-    justify-content: space-between;
-    line-height: 1.5;
-    margin-bottom: .5em;
-    margin-top: .5em;
-    padding-bottom: .25em;
-} 
-
-.ContactLenderId { 
-    margin-left: .25em;
-}
-
-.ContactLenderMessage {
-    margin-left: .25em;
-}
-
-.LendResponseButtonsContainer {
-    display: flex;
-    height: 3em;
-    justify-content: space-between;
-    margin-top: 1em;
-    text-align: center;
-    width: 27.5em;    
+    width: 12em;
 }

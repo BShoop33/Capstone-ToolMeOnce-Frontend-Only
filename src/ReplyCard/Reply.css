@@ -61,105 +61,10 @@
     width: 12em;
 }
 
-.Reply {
-    align-items: center;
-    background-color: black;
-    background-image: url("/Images/dust.png");
-    border: .8em;
-    border-color: #ffca1c;
-    border-style: groove;
-    display: flex;
-    flex-flow: column;
-    height: 25em;
-    overflow: auto;
-    width: 30em;
-}
-
-.ReplyAddToolAccessoriesInput {
-    font-family: arial, helvetica, sans-serif;
-    font-size: 17pt;
-    height: 7em;
-    text-align: left;
-    width: 17.4em;
-}
-
-.ReplyAddToolButtonsContainer {
-    margin-bottom:.5em;
-    margin-top: .5em;
-}
-
 .ReplyBorrowerId {
     margin-left: .25em;
 }
 
 .ReplyBorrowerMessage {
     margin-left: .25em;
-}
-
-.ReplyCancelButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-color: #00a6ff;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 18pt;
-    font-weight: 1000;
-    height: 3em;
-    margin-left: 1.8em;
-    outline: none;
-    width: 8em;
-}
-
-.ReplySendButton {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
-    border: .5em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-color: #00a6ff;
-    border-style: ridge;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    color: #ffca1c;
-    font-size: 18pt;
-    font-weight: 1000;
-    height: 3em;
-    outline: none;
-    width: 8em;
-}
-
-.ReplyTitle {
-    color: #ffca1c;
-    font-size: 28pt;
-    text-align: center;
-    text-shadow: 0 0 20px #000000;
-}
-
-.ReplyToolAccessoriesInputBorder {
-    border: .8em;
-    border-color:#f2f0f0;
-    border-style: groove;
-    height: 10.3em;
-    margin-bottom: .5em;
-    margin-top: -.5em;
-    width: 25em;
 }

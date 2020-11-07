@@ -20,7 +20,7 @@ export const ResponseCardButtonsContainer = ({ response }) => {
                         }
                     }
                     type="button">Delete Response
-                    </button>
+                </button>
             </div>
         </>
     )
