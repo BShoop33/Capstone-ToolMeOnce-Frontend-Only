@@ -23,6 +23,27 @@ the user's registered home address.
 &nbsp;&nbsp;&nbsp;&nbsp;-Reply:&nbsp;  https://user-images.githubusercontent.com/69258389/98603455-ad75e680-22a7-11eb-82bc-0d7739440809.jpg  
 *ToolMeOnce Logo:&nbsp;  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
 
+**##Technologies Used in Current Version**  
+*CSS3 for styling
+*ReactJS for structure and behavior
+*Cloudinary for image hosting
+
+**##Asset Installation**  
+For this project, please ensure you have Node.js, Node Package Manager (NPM), ReactJS, ReactJS Router DOM, and Cloudinary installed on your device. To install those assets, please reference the following instructions:  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;-To install Node.js please visit https://nodejs.org/en/ and click on the install button that contains the letters "LTS". When downloading that software accept all of the defaults settings.  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;-To install Node Pacakage Manager (NPM), please visit https://www.npmjs.com/get-npm and follow that site's instructions.  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;
+From a command line interface, create the directory where you want this project to reside. In that directory install the ReactJS library with the following command:  
+&nbsp;&nbsp;&nbsp;&nbsp;-npx create-react-app .  
+  
+Then install the ReactJS Router DOM with the following command:  
+&nbsp;&nbsp;&nbsp;&nbsp;npm i --save react-router-dom  
+  
+Finally install the Cloudinary 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
