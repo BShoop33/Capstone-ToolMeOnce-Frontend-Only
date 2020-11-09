@@ -1,30 +1,26 @@
 #ToolMeOnce  
 ToolMeOnce is an app designed to help neighbors lend and borrow tools with their other neighbors.
 
-##Purpose
-
+##Purpose  
 The purpose of ToolMeOnce is to help make it cheaper and easier for people to obtain tools when they are temporarily needed.
 
-##Status
-
-ToolMeOnce Version 1.0 is complete.
+##Status  
+ToolMeOnce Version 1.0 is complete.  
 ToolMeOnce Verison 1.1 is in development and will feature Google Geocoding, Maps, and Places API integration to enable autocomplete
 functionality for address inputs and administrative geofencing to restrict lend/borrow transactions to within a one-mile radius of
 the user's registered home address.
 
-##Planning Documentation
-
-*Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080
-*Wireframes:
-  -Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084
-  -Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345
-  -Contact a Lender:  https://github.com/BShoop33/capstone-toolme-once/issues/11#issue-739141548
-  -Edit Profile:  https://github.com/BShoop33/capstone-toolme-once/issues/12#issue-739141735
-  -Edit Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/13#issue-739141960
-  -Lend Page:  https://github.com/BShoop33/capstone-toolme-once/issues/14#issue-739142134
-  -Login Page:  https://github.com/BShoop33/capstone-toolme-once/issues/15#issue-739142298
+##Planning Documentation  
+*Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080  
+*Wireframes:  
+  -Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
+  -Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345  
+  -Contact a Lender:  https://github.com/BShoop33/capstone-toolme-once/issues/11#issue-739141548  
+  -Edit Profile:  https://github.com/BShoop33/capstone-toolme-once/issues/12#issue-739141735  
+  -Edit Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/13#issue-739141960  
+  -Lend Page:  https://github.com/BShoop33/capstone-toolme-once/issues/14#issue-739142134  
+  -Login Page:  https://github.com/BShoop33/capstone-toolme-once/issues/15#issue-739142298  
   -Reply:  https://github.com/BShoop33/capstone-toolme-once/issues/16#issue-739142449
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
