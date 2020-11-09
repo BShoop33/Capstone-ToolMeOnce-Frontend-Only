@@ -298,7 +298,7 @@ button:hover {
     border-style: groove;
     display: flex;
     flex-flow: column;
-    height: 61.5em;
+    height: auto;
     min-width: 39em;
     overflow: auto;
 }
@@ -435,7 +435,7 @@ button:hover {
     border: .8em;
     border-color: #ffca1c;
     border-style: groove;
-    height: 61.5em;
+    height: auto;
     min-width: 76em;
     overflow: auto;
 }
@@ -505,7 +505,39 @@ button:hover {
 }
 
 .NewToolPicture {
-    height: 26em;
-    width: 26em;
-    border: 0;
+    height: 20.6em;
+    width: 20.6em;
+}
+
+.NewToolPictureForm {
+    border: .5em;
+    border-style: groove;
+    border-color: #f2f0f0;
+    height: 20.6em;
+    width: 20.6em;
+}
+
+.ToolCardToolName {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolCardToolDescription{
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolCardToolSpecs {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolCardToolAccessories {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolCardBorrowerEmail {
+    font-weight: 1000;
+    font-size: 16pt;
 }

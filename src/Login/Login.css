@@ -187,6 +187,7 @@
 }
 
 .LoginNewUserLoginButton {
+    position: static;
     background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -207,8 +208,8 @@
     font-size: 18pt;
     font-weight: 1000;
     height: 4em;
-    margin-bottom: -.5em;
-    margin-top: .75em;
+    margin-bottom: 1em;
+    margin-top: 1em;
     outline: none;
     width: 17em;
 }
@@ -221,7 +222,7 @@
     border-style: groove;
     display: flex;
     flex-flow: column;
-    height: 20em;
+    height: auto;
     justify-content: center;
     margin-top:.5em;
     width: 30em;
@@ -230,7 +231,7 @@
 .LoginNewUsersContainerTitle {
     color: #ffca1c;
     font-size: 24pt;
-    margin-top: -.6em;
+    margin-top: .5em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
 }
@@ -280,3 +281,4 @@
     min-width:  20em;
     word-spacing: 1em;
 }
+

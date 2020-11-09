@@ -100,7 +100,7 @@ export const LendForm = () => {
                                 {loading ? (
                                     <h3 className="NewToolPictureLoading">Loading . . .</h3>
                                 ) : (
-                                        <img className="NewToolPicture" src={image} />
+                                        <img className="NewToolPictureForm" src={image ? image : "/Images/ToolMeOnceLogo.jpg.png"} />
                                     )
                                 }
                                 <h1 className="UploadTitle">Upload Image</h1>
@@ -121,7 +121,7 @@ export const LendForm = () => {
                                     name="AddToolNameInput" required autoFocus
                                     className="AddToolNameInput"
                                     onChange={handleControlledInputChange}
-                                    placeholder="Enter your tool's name here"
+                                    placeholder={toolId ? Tool.toolname : "Enter your tool's name here"}
                                 />
                             </div>
                             <div className="AddToolDescriptionInputBorder">
@@ -130,7 +130,7 @@ export const LendForm = () => {
                                     name="AddToolDescriptionInput" required autoFocus
                                     className="AddToolDescriptionInput"
                                     onChange={handleControlledInputChange}
-                                    placeholder="Enter your tool's description here"
+                                    placeholder={toolId ? Tool.tooldescription : "Enter your tool's description here"}
                                 />
                             </div>
                             <div className="AddToolSpecificationsInputBorder">
@@ -139,7 +139,7 @@ export const LendForm = () => {
                                     name="AddToolSpecificationsInput" required autoFocus
                                     className="AddToolSpecificationsInput"
                                     onChange={handleControlledInputChange}
-                                    placeholder="Enter your tool's specifications here"
+                                    placeholder={toolId ? Tool.toolspecs : "Enter your tool's specifications here"}
                                 />
                             </div>
                             <div className="AddToolAccessoriesInputBorder">
@@ -148,12 +148,12 @@ export const LendForm = () => {
                                     name="AddToolAccessoriesInput" required autoFocus
                                     className="AddToolAccessoriesInput"
                                     onChange={handleControlledInputChange}
-                                    placeholder="Enter your tool's accessories here"
+                                    placeholder={toolId ? Tool.toolaccessories : "Enter your tool's accessories here"}
                                 />
                             </div>
                             <div className="AddToolButtonsContainer">
                                 <button className="AddToolSaveButton"
-                                    disabled={isLoading}
+                                    disabled={isLoading, loading}
                                     onClick={event => {
                                         event.preventDefault()
                                         constructToolObject()

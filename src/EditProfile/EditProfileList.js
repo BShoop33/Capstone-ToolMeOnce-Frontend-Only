@@ -52,7 +52,7 @@ export const ProfilePage = () => {
                                 id="ProfileEditEmailInput"
                                 name="ProfileEditEmailInput" required autoFocus
                                 className="ProfileEditEmailInput"
-                                placeholder="Enter your new email address"
+                                placeholder={profileId ? newProfile.email : "Enter your new email address"}
                                 onChange={handleControlledInputChange}
                             />
                         </div>
@@ -62,7 +62,7 @@ export const ProfilePage = () => {
                                 id="ProfileEditHomeAddressInput"
                                 name="ProfileEditHomeAddressInput" required autoFocus
                                 className="ProfileEditHomeAddressInput"
-                                placeholder="Enter your new home address"
+                                placeholder={profileId ? newProfile.address : "Enter your new home address"}
                                 onChange={handleControlledInputChange}
                             />
                         </div>

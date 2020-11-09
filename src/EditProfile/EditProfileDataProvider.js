@@ -22,8 +22,6 @@ export const ProfileProvider = (props) => {
             .then(setProfile)
     }
 
-    console.log(profile)
-
     const getProfileById = (id) => {
         return fetch(`http://localhost:8088/UsersTable/${id}`)
             .then(res => res.json())

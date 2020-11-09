@@ -68,3 +68,13 @@
 .ReplyBorrowerMessage {
     margin-left: .25em;
 }
+
+.ReplyCardMessageStyling {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ReplyCardEmailStyling {
+    font-weight: 1000;
+    font-size: 16pt;
+}
