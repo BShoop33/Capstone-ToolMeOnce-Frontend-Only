@@ -232,3 +232,13 @@
     width: 15em;
     word-spacing: 1em;
 }
+
+.ContactLenderMessageStyling{
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ContactLenderBorrowerEmailStyling{
+    font-weight: 1000;
+    font-size: 16pt;
+}

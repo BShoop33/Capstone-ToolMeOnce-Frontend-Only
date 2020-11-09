@@ -39,11 +39,11 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
                             type="button">Return this Tool
                 </button>
                     </div>
-                    <div className="BorrowToolName">Tool Name:  {borrow.toolname}</div>
-                    <div className="BorrowToolDescription">Tool Description:  {borrow.tooldescription}</div>
-                    <div className="BorrowToolSpecs">Tool Specifications:  {borrow.toolspecs}</div>
-                    <div className="BorrowToolAccessories">Tool Accessories:  {borrow.toolaccessories}</div>
-                    <div className="BorrowToolAccessories">Lender Email:  {borrow.userid}</div>
+                    <div className="BorrowToolName"><span className="ToolsIAmBorrowingToolName">Tool Name:&nbsp;</span>  {borrow.toolname}</div>
+                    <div className="BorrowToolDescription"><span className="ToolsIAmBorrowingToolDescription">Tool Description:&nbsp;</span>  {borrow.tooldescription}</div>
+                    <div className="BorrowToolSpecs"><span className="ToolsIAmBorrowingToolSpecs">Tool Specifications:&nbsp;</span>  {borrow.toolspecs}</div>
+                    <div className="BorrowToolAccessories"><span className="ToolsIAmBorrowingToolAccessories">Tool Accessories:&nbsp;</span>  {borrow.toolaccessories}</div>
+                    <div className="BorrowToolAccessories"><span className="ToolsIAmBorrowingLenderEmail">Lender Email:&nbsp;  {borrow.userid}</span></div>
                 </div>
             </div>
         </>

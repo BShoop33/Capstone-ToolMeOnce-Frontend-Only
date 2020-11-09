@@ -421,3 +421,53 @@ button:hover {
     text-align: center;
     width: 43.7em;
 }
+
+.ToolsICanBorrowToolName {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsICanBorrowToolDescription {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsICanBorrowToolSpecs {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsICanBorrowToolAccessories {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsICanBorrowLenderEmail {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolName {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolDescription {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolSpecs {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolAccessories {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingLenderEmail {
+    font-weight: 1000;
+    font-size: 16pt;
+}

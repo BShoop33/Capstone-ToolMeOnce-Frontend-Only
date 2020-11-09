@@ -35,8 +35,8 @@ export const ReplyCard = ({ reply }) => {
                         type="button">Delete Message
                     </button>
                 </div>
-                <div className="ReplyBorrowerMessage">Message:  {reply.message}</div>
-                <div className="ReplyBorrowerId">Borrower Email:  {reply.userid}</div>
+                <div className="ReplyBorrowerMessage"><span className="ReplyCardMessageStyling">Message:</span>&nbsp;  {reply.message}</div>
+                <div className="ReplyBorrowerId"><span className="ReplyCardEmailStyling">Borrower Email:&nbsp;  {reply.userid}</span></div>
             </div>
         </div >
     )

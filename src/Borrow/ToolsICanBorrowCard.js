@@ -60,11 +60,11 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
                         type="button">Borrow this Tool
                 </button>
                 </div>
-                <div className="BorrowToolName">Tool Name:  {borrow.toolname}</div>
-                <div className="BorrowToolDescription">Tool Description:  {borrow.tooldescription}</div>
-                <div className="BorrowToolSpecs">Tool Specifications:  {borrow.toolspecs}</div>
-                <div className="BorrowToolAccessories">Tool Accessories:  {borrow.toolaccessories}</div>
-                <div className="BorrowToolAccessories">Lender Email:  {borrow.userid}</div>
+                <div className="BorrowToolName"><span className="ToolsICanBorrowToolName">Tool Name:&nbsp;</span>  {borrow.toolname}</div>
+                <div className="BorrowToolDescription"><span className="ToolsICanBorrowToolDescription">Tool Description:&nbsp;</span>  {borrow.tooldescription}</div>
+                <div className="BorrowToolSpecs"><span className="ToolsICanBorrowToolSpecs">Tool Specifications:&nbsp;</span>  {borrow.toolspecs}</div>
+                <div className="BorrowToolAccessories"><span className="ToolsICanBorrowToolAccessories">Tool Accessories:&nbsp;</span>  {borrow.toolaccessories}</div>
+                <div className="BorrowToolAccessories"><span className="ToolsICanBorrowLenderEmail">Lender Email:&nbsp;  {borrow.userid}</span></div>
             </div>
         </div>
     )

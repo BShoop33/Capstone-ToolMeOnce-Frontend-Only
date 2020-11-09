@@ -89,8 +89,6 @@ export const LendList = () => {
                         })
                     }
 
-
-
                 </div>
             </div>
             <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
