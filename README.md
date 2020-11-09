@@ -21,7 +21,7 @@ the user's registered home address.
 &nbsp;&nbsp;&nbsp;&nbsp;-Lend Page:  https://github.com/BShoop33/capstone-toolme-once/issues/14#issue-739142134  
 &nbsp;&nbsp;&nbsp;&nbsp;-Login Page:  https://github.com/BShoop33/capstone-toolme-once/issues/15#issue-739142298  
 &nbsp;&nbsp;&nbsp;&nbsp;-Reply:  https://github.com/BShoop33/capstone-toolme-once/issues/16#issue-739142449  
-&nbsp;&nbsp;&nbsp;&nbsp;-ToolmeOnce Logo:  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
+&nbsp;&nbsp;&nbsp;&nbsp;-ToolMeOnce Logo:  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
