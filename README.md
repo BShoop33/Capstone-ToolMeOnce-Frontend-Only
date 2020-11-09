@@ -1,16 +1,16 @@
-#ToolMeOnce  
+**#ToolMeOnce**
 ToolMeOnce is an app designed to help neighbors lend and borrow tools with their other neighbors.
 
-##Purpose  
+**##Purpose**
 The purpose of ToolMeOnce is to help make it cheaper and easier for people to obtain tools when they are temporarily needed.
 
-##Status  
+**##Status**
 ToolMeOnce Version 1.0 is complete.  
 ToolMeOnce Verison 1.1 is in development and will feature Google Geocoding, Maps, and Places API integration to enable autocomplete
 functionality for address inputs and administrative geofencing to restrict lend/borrow transactions to within a one-mile radius of
 the user's registered home address.
 
-##Planning Documentation  
+**##Planning Documentation**
 *Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080  
 *Wireframes:  
 &nbsp;&nbsp;&nbsp;&nbsp;-Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
