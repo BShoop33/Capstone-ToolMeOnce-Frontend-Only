@@ -68,28 +68,6 @@
       "toolaccessories": "None"
     },
     {
-      "id": 5,
-      "userid": "russellwilson@gmail.com",
-      "borrowerid": "",
-      "toolstatus": true,
-      "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1604868631/ToolMeOnce/biqbbbhdu2tuan8il6tq.jpg",
-      "toolname": "Irwin Tap and Die set",
-      "tooldescription": "Has both metric and SAE taps and dies",
-      "toolspecs": "Machine screws:  4 - 40 NC, 6 - 32 NC, 8 - 32 NC, 10 - 24 NC, 10 - 32 NF and 12 - 24 NC\n\nFractional:  1/4\" - 20 NC, 1/4\" - 28 NF, 5/16\" - 18 NC, 5/16\" - 24 NF, 3/8\" - 16 NC, 3/8\" - 24 NF, 7/16\" - 14 NC, 7/16\" - 20 NF, 1/2\" - 13 NC and 1/2\" 20 NF\n\nMetric:  5/8\" hexagon: 3mm - 0.5, 4mm - 0.7, 4mm - 0.75, 5mm - 0.8, 5mm - 0.9 and 6mm - 1.0",
-      "toolaccessories": "N/A"
-    },
-    {
-      "id": 6,
-      "userid": "russellwilson@gmail.com",
-      "borrowerid": "",
-      "toolstatus": true,
-      "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1604869529/ToolMeOnce/cqo73pmkr9gzlzxcbodv.jpg",
-      "toolname": "Speed Out set",
-      "tooldescription": "Four bits for removing stripped screws",
-      "toolspecs": "N/A",
-      "toolaccessories": "N/A"
-    },
-    {
       "id": 7,
       "userid": "aaronrodgers@gmail.com",
       "borrowerid": "",
@@ -112,24 +90,26 @@
       "toolaccessories": ""
     },
     {
+      "id": 9,
       "userid": "drewbrees@gmail.com",
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1604870077/ToolMeOnce/canb0s92kqxqjeair1kj.jpg",
       "toolname": "OTC Cylinder Leakage Tester",
       "tooldescription": "Used for compression testing combustion engine cylinders to see whether rings, valves, or head gaskets are failing. ",
       "toolspecs": "Includes a two foot long 14mm flex hose as well as 10 mm, 12 mm, and 18 mm thread adapters.",
-      "toolaccessories": "N/A",
-      "id": 9
+      "toolaccessories": "N/A"
     },
     {
+      "id": 10,
       "userid": "drewbrees@gmail.com",
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1604870341/ToolMeOnce/zsj4lptv0ahtsbxz9ioq.jpg",
       "toolname": "Ryobi Hot Glue Gun",
       "tooldescription": "Battery powered, construction grade glue gun  ",
       "toolspecs": "60W heating element, uses 1/2\" diameter glue sticks",
-      "toolaccessories": "A pack of 12 glue sticks, one 2Ah battery, and one 4Ah battery available",
-      "id": 10
+      "toolaccessories": "A pack of 12 glue sticks, one 2Ah battery, and one 4Ah battery available"
     }
   ]
 }

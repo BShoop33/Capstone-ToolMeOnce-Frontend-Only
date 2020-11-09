@@ -1,49 +1,34 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import { BorrowContext } from "./BorrowDataProvider.js"
-import { LendContext } from "../Lend/LendDataProvider"
 import { useHistory } from "react-router-dom"
 import "./Borrow.css"
 
 export const ToolsICanBorrowCard = ({ borrow }) => {
-    const { borrowTool } = useContext(BorrowContext)
-    const { getTools } = useContext(LendContext)
+    const { borrowTool, getBorrowToolsICanBorrow, getBorrowToolsIAmBorrowing } = useContext(BorrowContext)
     const history = useHistory();
-    const [Tool, setTool] = useState({})
 
-
-
-    useEffect(() => {
-        getTools()
-            .then(Tool => {
-                setTool(Tool)
-            })
-    }, [])
-
-    const handleSubmitInputChange = (e) => {
-        const newSubmit = { ...Tool }
-        newSubmit[e.target.name] = e.target.value
-        setTool(newSubmit)
-    }
-
-
-
+    //When invoked, runs the enclosed borrowTool, getBorrowToolsICanBorrow, and getBorrowToolsIAmBorrowing functions
     const constructToolObject = () => {
         const borrowed = false;
-        borrowTool(
-            ({
-                id: borrow.id,
-                userid: borrow.userid,
-                borrowerid: localStorage.getItem("ToolMeOnce_Member"),
-                imageurl: borrow.imageurl,
-                toolstatus: borrowed,
-                toolpicture: borrow.toolpicture,
-                toolname: borrow.toolname,
-                tooldescription: borrow.tooldescription,
-                toolspecs: borrow.toolspecs,
-                toolaccessories: borrow.toolaccessories
-            })
-        )
-            .then(() => history.push("/lend/borrow"))
+        /* Invokes the borrowTool function in BorrowDataProvider.js and constructs a tool object (using the data array received from the mapping of the 
+        toolsICanBorrow function in BorrowList.js and embedded as the {borrow} parameter of this module's toolsICanBorrow function) for that function's 
+        PUT operation to store*/
+        borrowTool({
+            id: borrow.id,
+            userid: borrow.userid,
+            borrowerid: localStorage.getItem("ToolMeOnce_Member"),
+            imageurl: borrow.imageurl,
+            toolstatus: borrowed,
+            toolpicture: borrow.toolpicture,
+            toolname: borrow.toolname,
+            tooldescription: borrow.tooldescription,
+            toolspecs: borrow.toolspecs,
+            toolaccessories: borrow.toolaccessories
+        })
+            //Updates state using the data returned by the getBorrowToolsICanBorrow function in the BorrowDataProvider.js module
+            .then(getBorrowToolsICanBorrow)
+            //Updates state using the data returned by the getBorrowToolsIAmBorrowing function in the BorrowDataProvider.js module
+            .then(getBorrowToolsIAmBorrowing)
     }
 
     return (
@@ -51,6 +36,7 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
             <img className="ToolCardPicture" src={borrow.toolpicture} alt="Tool Picture" />
             <div className="BorrowToolInfoContainer">
                 <div className="BorrowEditToolButtonContainer">
+                    {/* When clicked, invokes the constructToolObject function and then renders the Borrow Page on the DOM */}
                     <button className="BorrowThisToolButton"
                         onClick={event => {
                             event.preventDefault()

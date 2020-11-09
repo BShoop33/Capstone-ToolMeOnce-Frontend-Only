@@ -4,11 +4,15 @@ import { useHistory } from "react-router-dom"
 import "./Borrow.css"
 
 export const ToolsIAmBorrowingCard = ({ borrow }) => {
-    const { returnBorrowTool, } = useContext(BorrowContext)
+    const { returnBorrowTool, getBorrowToolsICanBorrow, getBorrowToolsIAmBorrowing } = useContext(BorrowContext)
     const history = useHistory();
 
-    const borrowed = true;
+    //When invoked, runs the enclosed returnBorrowTool, getBorrowToolsICanBorrow, and getBorrowToolsIAmBorrowing functions
     const constructToolObject = () => {
+        const borrowed = true;
+        /* Invokes the returnBorrowTool function in BorrowDataProvider.js and constructs a tool object (using the data array received from the mapping of the 
+        toolsIAmBorrowing function in BorrowList.js and embedded as the {borrow} parameter of this module's ToolsIAmBorrowingCard function) for that function's 
+        PUT operation to store*/
         returnBorrowTool({
             id: borrow.id,
             userid: borrow.userid,
@@ -21,7 +25,10 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
             toolspecs: borrow.toolspecs,
             toolaccessories: borrow.toolaccessories
         })
-            .then(() => history.push("/lend/borrow"))
+            //Updates state using the data returned by the getBorrowToolsICanBorrow function in the BorrowDataProvider.js module
+            .then(getBorrowToolsICanBorrow)
+            //Updates state using the data returned by the getBorrowToolsIAmBorrowing function in the BorrowDataProvider.js module
+            .then(getBorrowToolsIAmBorrowing)
     }
 
     return (
@@ -30,6 +37,7 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
                 <img className="ToolCardPicture" src={borrow.toolpicture} alt="Tool Picture" />
                 <div className="BorrowToolInfoContainer">
                     <div className="BorrowEditToolButtonContainer">
+                        {/* When clicked, invokes the constructToolObject function and then renders the Borrow Page on the DOM */}
                         <button className="BorrowDeleteToolButton"
                             onClick={event => {
                                 event.preventDefault()

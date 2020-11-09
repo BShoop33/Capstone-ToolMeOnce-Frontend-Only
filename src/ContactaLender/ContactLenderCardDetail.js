@@ -1,10 +1,12 @@
 import React, { useContext } from "react"
 import { ContactContext } from "./ContactLenderDataProvider"
+
 import { useHistory } from "react-router-dom"
 import "./ContactLender.css"
 
 export const BorrowerMessagesCardButtonsContainer = ({ message }) => {
-    const { deleteContact } = useContext(ContactContext)
+    const { deleteContact, getContact } = useContext(ContactContext)
+
     const history = useHistory();
 
     return (
@@ -15,6 +17,7 @@ export const BorrowerMessagesCardButtonsContainer = ({ message }) => {
                         () => {
                             deleteContact(message.id)
                                 .then(() => {
+                                    getContact()
                                     history.push("/lend/borrow")
                                 })
                         }

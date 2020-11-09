@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 import "./Reply.css"
 
 export const ReplyCard = ({ reply }) => {
-    const { addReply, deleteReply } = useContext(ReplyContext)
+    const { addReply, getReply, deleteReply } = useContext(ReplyContext)
     const history = useHistory();
 
     return (
@@ -27,6 +27,7 @@ export const ReplyCard = ({ reply }) => {
                         onClick={
                             () => {
                                 deleteReply(reply.id)
+                                    .then(getReply)
                                     .then(() => {
                                         history.push("/lend")
                                     })
