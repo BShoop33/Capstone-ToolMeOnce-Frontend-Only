@@ -13,8 +13,8 @@ the user's registered home address.
 ##Planning Documentation  
 *Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080  
 *Wireframes:  
-  -Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
-  -Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345  
+&nbsp;&nbsp;-Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
+&nbsp;&nbsp;-Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345  
   -Contact a Lender:  https://github.com/BShoop33/capstone-toolme-once/issues/11#issue-739141548  
   -Edit Profile:  https://github.com/BShoop33/capstone-toolme-once/issues/12#issue-739141735  
   -Edit Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/13#issue-739141960  
