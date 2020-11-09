@@ -24,9 +24,7 @@ export const LendList = () => {
 
 
     useEffect(() => {
-        setInterval(() => {
-            getReply()
-        }, 125)
+        getReply()
     }, [])
 
     return (

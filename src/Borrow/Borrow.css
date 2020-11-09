@@ -411,6 +411,31 @@ button:hover {
     width: 43.7em;
 }
 
+.ToolsIAmBorrowingLenderEmail {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolAccessories {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolDescription {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolName {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
+.ToolsIAmBorrowingToolSpecs {
+    font-weight: 1000;
+    font-size: 16pt;
+}
+
 .ToolsICanBorrowButtonsContainer {
     background-color: rgb(63, 54, 54);
     background-image: url("/Images/dust.png");
@@ -422,17 +447,7 @@ button:hover {
     width: 43.7em;
 }
 
-.ToolsICanBorrowToolName {
-    font-weight: 1000;
-    font-size: 16pt;
-}
-
-.ToolsICanBorrowToolDescription {
-    font-weight: 1000;
-    font-size: 16pt;
-}
-
-.ToolsICanBorrowToolSpecs {
+.ToolsICanBorrowLenderEmail {
     font-weight: 1000;
     font-size: 16pt;
 }
@@ -442,32 +457,17 @@ button:hover {
     font-size: 16pt;
 }
 
-.ToolsICanBorrowLenderEmail {
+.ToolsICanBorrowToolDescription {
     font-weight: 1000;
     font-size: 16pt;
 }
 
-.ToolsIAmBorrowingToolName {
+.ToolsICanBorrowToolName {
     font-weight: 1000;
     font-size: 16pt;
 }
 
-.ToolsIAmBorrowingToolDescription {
-    font-weight: 1000;
-    font-size: 16pt;
-}
-
-.ToolsIAmBorrowingToolSpecs {
-    font-weight: 1000;
-    font-size: 16pt;
-}
-
-.ToolsIAmBorrowingToolAccessories {
-    font-weight: 1000;
-    font-size: 16pt;
-}
-
-.ToolsIAmBorrowingLenderEmail {
+.ToolsICanBorrowToolSpecs {
     font-weight: 1000;
     font-size: 16pt;
 }

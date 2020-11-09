@@ -6,6 +6,7 @@ export const BorrowProvider = (props) => {
     const [toolsIAmBorrowing, setToolsIAmBorrowing] = useState([])
     const [toolsICanBorrow, setToolsICanBorrow] = useState([])
 
+    //Conducts POST operation to save new tool data in the database
     const addBorrow = (param) => {
         return fetch(`http://localhost:8088/Toolstable`, {
             method: "POST",
@@ -17,6 +18,7 @@ export const BorrowProvider = (props) => {
             .then(getBorrow)
     }
 
+    //Conducts PUT operation to edit tool data in the database
     const borrowTool = param => {
         return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
             method: "PUT",
