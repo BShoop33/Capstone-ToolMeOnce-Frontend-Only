@@ -21,7 +21,7 @@ the user's registered home address.
 &nbsp;&nbsp;&nbsp;&nbsp;-Lend Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603407-9afbad00-22a7-11eb-95af-734b5978f67d.jpg  
 &nbsp;&nbsp;&nbsp;&nbsp;-Login Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603434-a4851500-22a7-11eb-94bd-0953f4e357b9.jpg  
 &nbsp;&nbsp;&nbsp;&nbsp;-Reply:&nbsp;  https://user-images.githubusercontent.com/69258389/98603455-ad75e680-22a7-11eb-82bc-0d7739440809.jpg  
-&nbsp;&nbsp;&nbsp;&nbsp;-ToolMeOnce Logo:&nbsp;  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
+*ToolMeOnce Logo:&nbsp;  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
