@@ -13,14 +13,14 @@ the user's registered home address.
 ##Planning Documentation  
 *Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080  
 *Wireframes:  
-&nbsp;&nbsp;-Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
-&nbsp;&nbsp;-Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345  
-&nbsp;&nbsp;-Contact a Lender:  https://github.com/BShoop33/capstone-toolme-once/issues/11#issue-739141548  
-&nbsp;&nbsp;-Edit Profile:  https://github.com/BShoop33/capstone-toolme-once/issues/12#issue-739141735  
-&nbsp;&nbsp;-Edit Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/13#issue-739141960  
-&nbsp;&nbsp;-Lend Page:  https://github.com/BShoop33/capstone-toolme-once/issues/14#issue-739142134  
-&nbsp;&nbsp;-Login Page:  https://github.com/BShoop33/capstone-toolme-once/issues/15#issue-739142298  
-&nbsp;&nbsp;-Reply:  https://github.com/BShoop33/capstone-toolme-once/issues/16#issue-739142449
+&nbsp;&nbsp;&nbsp;&nbsp;-Add a New Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/9#issue-739141084  
+&nbsp;&nbsp;&nbsp;&nbsp;-Borrow Page:  https://github.com/BShoop33/capstone-toolme-once/issues/10#issue-739141345  
+&nbsp;&nbsp;&nbsp;&nbsp;-Contact a Lender:  https://github.com/BShoop33/capstone-toolme-once/issues/11#issue-739141548  
+&nbsp;&nbsp;&nbsp;&nbsp;-Edit Profile:  https://github.com/BShoop33/capstone-toolme-once/issues/12#issue-739141735  
+&nbsp;&nbsp;&nbsp;&nbsp;-Edit Tool:  https://github.com/BShoop33/capstone-toolme-once/issues/13#issue-739141960  
+&nbsp;&nbsp;&nbsp;&nbsp;-Lend Page:  https://github.com/BShoop33/capstone-toolme-once/issues/14#issue-739142134  
+&nbsp;&nbsp;&nbsp;&nbsp;-Login Page:  https://github.com/BShoop33/capstone-toolme-once/issues/15#issue-739142298  
+&nbsp;&nbsp;&nbsp;&nbsp;-Reply:  https://github.com/BShoop33/capstone-toolme-once/issues/16#issue-739142449
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
