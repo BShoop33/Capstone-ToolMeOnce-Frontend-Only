@@ -13,14 +13,14 @@ the user's registered home address.
 **##Planning Documentation**  
 *Entity Relationship Diagram (ERD):  https://github.com/BShoop33/capstone-toolme-once/issues/8#issue-739138080  
 *Wireframes:  
-&nbsp;&nbsp;&nbsp;&nbsp;-Add a New Tool:&nbsp;  https://user-images.githubusercontent.com/69258389/98603246-5ec84c80-22a7-11eb-9b26-39bcca732f77.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Borrow Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603301-76073a00-22a7-11eb-884d-2cf8ab71a074.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Contact a Lender:&nbsp;  https://user-images.githubusercontent.com/69258389/98603326-7ef80b80-22a7-11eb-923b-470011bc4059.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Edit Profile:&nbsp;  https://user-images.githubusercontent.com/69258389/98603360-88817380-22a7-11eb-9d57-8a84c1e6dfad.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Edit Tool:&nbsp;  https://user-images.githubusercontent.com/69258389/98603384-920adb80-22a7-11eb-91a9-73de1eb0551f.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Lend Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603407-9afbad00-22a7-11eb-95af-734b5978f67d.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Login Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603434-a4851500-22a7-11eb-94bd-0953f4e357b9.jpg
-&nbsp;&nbsp;&nbsp;&nbsp;-Reply:&nbsp;  https://user-images.githubusercontent.com/69258389/98603455-ad75e680-22a7-11eb-82bc-0d7739440809.jpg
+&nbsp;&nbsp;&nbsp;&nbsp;-Add a New Tool:&nbsp;  https://user-images.githubusercontent.com/69258389/98603246-5ec84c80-22a7-11eb-9b26-39bcca732f77.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Borrow Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603301-76073a00-22a7-11eb-884d-2cf8ab71a074.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Contact a Lender:&nbsp;  https://user-images.githubusercontent.com/69258389/98603326-7ef80b80-22a7-11eb-923b-470011bc4059.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Edit Profile:&nbsp;  https://user-images.githubusercontent.com/69258389/98603360-88817380-22a7-11eb-9d57-8a84c1e6dfad.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Edit Tool:&nbsp;  https://user-images.githubusercontent.com/69258389/98603384-920adb80-22a7-11eb-91a9-73de1eb0551f.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Lend Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603407-9afbad00-22a7-11eb-95af-734b5978f67d.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Login Page:&nbsp;  https://user-images.githubusercontent.com/69258389/98603434-a4851500-22a7-11eb-94bd-0953f4e357b9.jpg  
+&nbsp;&nbsp;&nbsp;&nbsp;-Reply:&nbsp;  https://user-images.githubusercontent.com/69258389/98603455-ad75e680-22a7-11eb-82bc-0d7739440809.jpg  
 &nbsp;&nbsp;&nbsp;&nbsp;-ToolMeOnce Logo:&nbsp;  https://user-images.githubusercontent.com/69258389/98602800-aa2e2b00-22a6-11eb-938b-391fcf2b2109.png
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
