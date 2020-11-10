@@ -31,11 +31,10 @@ the user's registered home address.
 **##Asset Installation**  
 For this project, please ensure you have Node.js, Node Package Manager (NPM), ReactJS, ReactJS Router DOM, and Cloudinary installed on your device. To install those assets, please reference the following instructions:  
   
-&nbsp;&nbsp;&nbsp;&nbsp;-To install Node.js please visit https://nodejs.org/en/ and click on the install button that contains the letters "LTS". When downloading that software accept all of the defaults settings.  
+-To install Node.js please visit https://nodejs.org/en/ and click on the install button that contains the letters "LTS". When downloading that software accept all of the defaults settings.  
   
-&nbsp;&nbsp;&nbsp;&nbsp;-To install Node Pacakage Manager (NPM), please visit https://www.npmjs.com/get-npm and follow that site's instructions.  
+-To install Node Pacakage Manager (NPM), please visit https://www.npmjs.com/get-npm and follow that site's instructions.  
   
-&nbsp;&nbsp;&nbsp;&nbsp;
 From a command line interface, create the directory where you want this project to reside. In that directory install the ReactJS library with the following command:  
 &nbsp;&nbsp;&nbsp;&nbsp;-npx create-react-app .  
   
