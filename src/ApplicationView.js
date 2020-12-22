@@ -56,6 +56,7 @@ export const ApplicationViews = () => {
 
             <ProfileProvider>
                 <Route exact path="/lend/editprofile/:profileId(\d+)">
+
                     <ProfilePage />
                 </Route>
             </ProfileProvider>
@@ -93,6 +94,7 @@ export const ApplicationViews = () => {
                     <ReplyProvider>
                         <LendResponseProvider>
                             <Route exact path="/lend">
+
                                 <LendList />
                             </Route>
                         </LendResponseProvider>
