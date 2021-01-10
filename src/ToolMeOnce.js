@@ -10,17 +10,19 @@ export const ToolMeOnce = () => (
                 if (localStorage.getItem("ToolMeOnce_Member")) {
                     return (
                         <>
+
                             <ApplicationViews />
                         </>
                     );
                 } else {
-                    return <Redirect to="/login" />;
+
+                    return <LoginPage />
+
+
+                        ;
                 }
             }}
         />
 
-        <Route exact path="/login">
-            <LoginPage />
-        </Route>
     </>
 );

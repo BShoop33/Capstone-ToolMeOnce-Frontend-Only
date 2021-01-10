@@ -17,7 +17,7 @@ export const ProfileProvider = (props) => {
     }
 
     const getProfile = () => {
-        return fetch(`http://localhost:8088/UsersTable?email=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/UsersTable?id=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setProfile)
     }
