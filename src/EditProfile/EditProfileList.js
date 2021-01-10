@@ -8,11 +8,9 @@ export const ProfilePage = () => {
     const [newProfile, setNewProfile] = useState({})
     const { profileId } = useParams()
     const history = useHistory()
-    const email = useRef()
+    // const email = useRef()
 
-    const handleLogin = () => {
-        localStorage.setItem("ToolMeOnce_Member", email.current.value)
-    }
+
 
     const handleControlledInputChange = (event) => {
         const addedProfile = { ...newProfile }
@@ -42,51 +40,51 @@ export const ProfilePage = () => {
 
     return (
         <>
-            <div className="ProfileLoginBodyContainer">
-                <div className="ProfileEditContainer">
-                    <h2 className="ProfileEditContainerTitle">Edit Profile</h2>
-                    <div className="ProfileInputsContainer">
-                        <div className="ProfileEditEmailInputBorder">
-                            <input type="text"
-                                ref={email}
-                                id="ProfileEditEmailInput"
-                                name="ProfileEditEmailInput" required autoFocus
-                                className="ProfileEditEmailInput"
-                                placeholder={profileId ? newProfile.email : "Enter your new email address"}
-                                onChange={handleControlledInputChange}
-                            />
-                        </div>
-                        <div className="ProfileEditHomeAddressInputBorder">
-                            <input
-                                type="text"
-                                id="ProfileEditHomeAddressInput"
-                                name="ProfileEditHomeAddressInput" required autoFocus
-                                className="ProfileEditHomeAddressInput"
-                                placeholder={profileId ? newProfile.address : "Enter your new home address"}
-                                onChange={handleControlledInputChange}
-                            />
-                        </div>
-                        <div className="ProfileEditButtonsContainer">
-                            <button className="ProfileSaveChangesButton"
-                                onClick={event => {
-                                    event.preventDefault()
-                                    constructProfileObject()
-                                    handleLogin()
-                                    history.push(`lend`)
-                                }}
-                                type="button">Save Changes
+            <form>
+                <div className="ProfileLoginBodyContainer">
+                    <div className="ProfileEditContainer">
+                        <h2 className="ProfileEditContainerTitle">Edit Profile</h2>
+                        <div className="ProfileInputsContainer">
+                            <div className="ProfileEditEmailInputBorder">
+                                <input type="text"
+                                    id="ProfileEditEmailInput"
+                                    name="ProfileEditEmailInput"
+                                    className="ProfileEditEmailInput"
+                                    defaultValue={profileId ? newProfile.email : "Enter your new email address"}
+                                    onChange={handleControlledInputChange}
+                                />
+                            </div>
+                            <div className="ProfileEditHomeAddressInputBorder">
+                                <input
+                                    type="text"
+                                    id="ProfileEditHomeAddressInput"
+                                    name="ProfileEditHomeAddressInput"
+                                    className="ProfileEditHomeAddressInput"
+                                    defaultValue={profileId ? newProfile.address : "Enter your new home address"}
+                                    onChange={handleControlledInputChange}
+                                />
+                            </div>
+                            <div className="ProfileEditButtonsContainer">
+                                <button className="ProfileSaveChangesButton"
+                                    onClick={event => {
+                                        event.preventDefault()
+                                        constructProfileObject()
+                                        history.push(`lend`)
+                                    }}
+                                    type="button">Save Changes
                                 </button>
-                            <button className="ProfileCancelButton"
-                                onClick={() => {
-                                    history.push(`/lend`)
-                                }}
-                                type="button">Cancel
+                                <button className="ProfileCancelButton"
+                                    onClick={() => {
+                                        history.push(`/lend`)
+                                    }}
+                                    type="button">Cancel
                                 </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
+                <footer className="LendPageFooter">&copy; Tool Me Once, 2020</footer>
+            </form>
         </>
     )
 }

@@ -9,9 +9,6 @@ export const LendForm = () => {
     const [Tool, setNewTool] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const history = useHistory()
-
-
-    //////////////////////////////////////////////////////////////////////
     const [image, setImage] = useState('')
     const [loading, setLoading] = useState(false)
 
@@ -30,11 +27,8 @@ export const LendForm = () => {
         )
         const file = await res.json()
         setImage(file.secure_url)
-        localStorage.setItem("Tool_Photo", image)
         setLoading(false)
     }
-    //////////////////////////////////////////////////////////////////////
-
 
     const handleControlledInputChange = (event) => {
         const addedTool = { ...Tool }
@@ -56,17 +50,20 @@ export const LendForm = () => {
         })
     }, [])
 
+
+    // localStorage.getItem("ToolMeOnce_Member")
+
+
     const constructToolObject = () => {
         setIsLoading(true)
         if (toolId) {
             editTools({
                 id: Tool.id,
-                userid: localStorage.getItem("ToolMeOnce_Member"),
+                userid: parseInt(localStorage.getItem("ToolMeOnce_Member")),
                 borrowerid: Tool.borrowerid,
-                imageurl: Tool.imageurl,
                 toolstatus: Tool.toolstatus,
                 toolname: Tool.AddToolNameInput,
-                toolpicture: localStorage.getItem("Tool_Photo"),
+                toolpicture: image,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
                 toolaccessories: Tool.AddToolAccessoriesInput
@@ -75,11 +72,10 @@ export const LendForm = () => {
         } else {
             addTools({
                 id: Tool.id,
-                userid: localStorage.getItem("ToolMeOnce_Member"),
+                userid: parseInt(localStorage.getItem("ToolMeOnce_Member")),
                 borrowerid: Tool.borrowerid,
-                imageurl: Tool.imageurl,
                 toolstatus: true,
-                toolpicture: localStorage.getItem("Tool_Photo"),
+                toolpicture: image,
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
@@ -109,7 +105,7 @@ export const LendForm = () => {
                                     type="file"
                                     name="file"
                                     placeholder="Upload an image"
-                                    onChange={localStorage.setItem("Tool_Photo", image), uploadImage}
+                                    onChange={uploadImage}
                                 />
                             </div>
                         </div>
@@ -163,7 +159,7 @@ export const LendForm = () => {
                                 </button>
                                 <button className="AddToolCancelButton"
                                     onClick={() => {
-                                        localStorage.setItem("Tool_Photo", "")
+
                                         history.push(`/lend`)
                                     }}
                                     type="button">Cancel

@@ -22,7 +22,7 @@ export const LoginPage = (props) => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("ToolMeOnce_Member", email.current.value)
+                    localStorage.setItem("ToolMeOnce_Member", exists.id)
                     history.push("/lend")
                 } else {
                     existDialog.current.showModal()
@@ -62,7 +62,7 @@ export const LoginPage = (props) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 // localStorage.setItem("ToolMeOnce_Member", createdUser.id)
-                                localStorage.setItem("ToolMeOnce_Member", newemail.current.value)
+                                localStorage.setItem("ToolMeOnce_Member", createdUser.id)
                                 history.push("/lend")
                             }
                         })
@@ -129,7 +129,7 @@ export const LoginPage = (props) => {
                                 <input type="text"
                                     ref={newemail}
                                     id="LoginNewEmailInput"
-                                    name="LoginNewEmailInput" required autoFocus
+                                    name="LoginNewEmailInput"
                                     className="LoginNewEmailInput"
                                     placeholder="Enter Your Email Address to Register"
                                 />
@@ -138,7 +138,7 @@ export const LoginPage = (props) => {
                                 <input type="text"
                                     ref={newaddress}
                                     id="LoginNewHomeAddressInput"
-                                    name="LoginNewHomeAddressInput" required autoFocus
+                                    name="LoginNewHomeAddressInput"
                                     className="LoginNewHomeAddressInput"
                                     placeholder="Enter Your Home Address to Register"
                                 />
