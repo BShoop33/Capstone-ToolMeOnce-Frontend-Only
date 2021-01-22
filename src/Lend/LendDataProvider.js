@@ -35,7 +35,7 @@ export const LendProvider = (props) => {
     }
 
     const getTools = () => {
-        return fetch(`http://localhost:8088/Toolstable?userid=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/Toolstable?lenderId=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setTools)
     }

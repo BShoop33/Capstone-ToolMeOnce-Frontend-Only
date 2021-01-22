@@ -437,7 +437,7 @@ button:hover {
     border-style: groove;
     height: auto;
     min-width: 76em;
-    overflow: auto;
+    
 }
 
 .LendToolsICanLendHeader {
@@ -534,4 +534,9 @@ button:hover {
     margin-left: -2em;
     text-align: center;
     text-shadow: 0 0 20px #000000;
+}
+
+.LendReturnedToolsCards {
+    overflow: auto;
+    height: 30em;
 }

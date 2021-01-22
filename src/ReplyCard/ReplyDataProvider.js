@@ -22,7 +22,7 @@ export const ReplyProvider = (props) => {
     }
 
     const getReply = () => {
-        return fetch(`http://localhost:8088/Messages?replytoid=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/Messages?lenderId=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setReply)
     }

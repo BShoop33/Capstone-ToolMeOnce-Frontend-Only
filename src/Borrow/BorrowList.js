@@ -84,12 +84,7 @@ export const BorrowList = () => {
                 </div>
                 <div className="BorrowMessagesContainer">
                     <h2 className="BorrowMessagesTitle">Messages</h2>
-                    <button className="BorrowContactALenderButton"
-                        onClick={() => {
-                            history.push(`/lend/contact`)
-                        }}
-                        type="button">Contact a Lender
-                    </button>
+
                     {/* Applies the .map method to the contact array to pass that data to the BorrowerMessagesCard */}
                     {
                         contact.map(message => {

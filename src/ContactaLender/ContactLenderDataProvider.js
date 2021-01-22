@@ -22,7 +22,7 @@ export const ContactProvider = (props) => {
     }
 
     const getContact = () => {
-        return fetch(`http://localhost:8088/Messages?userid=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/Messages?lenderId=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setContact)
     }

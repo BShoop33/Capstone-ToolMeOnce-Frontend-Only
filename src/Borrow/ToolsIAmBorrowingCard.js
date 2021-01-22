@@ -15,9 +15,9 @@ export const ToolsIAmBorrowingCard = ({ borrow }) => {
         PUT operation to store*/
         returnBorrowTool({
             id: borrow.id,
-            userid: borrow.userid,
+            lenderId: borrow.lenderId,
             borrowerid: "",
-            imageurl: borrow.imageurl,
+            // imageurl: borrow.imageurl,
             toolstatus: borrowed,
             toolpicture: borrow.toolpicture,
             toolname: borrow.toolname,

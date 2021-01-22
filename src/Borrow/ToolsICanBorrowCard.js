@@ -16,8 +16,8 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
         borrowTool({
             id: borrow.id,
             userid: borrow.userid,
+            lenderId: borrow.lenderId,
             borrowerid: localStorage.getItem("ToolMeOnce_Member"),
-            imageurl: borrow.imageurl,
             toolstatus: borrowed,
             toolpicture: borrow.toolpicture,
             toolname: borrow.toolname,
@@ -50,7 +50,13 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
                 <div className="BorrowToolDescription"><span className="ToolsICanBorrowToolDescription">Tool Description:&nbsp;</span>  {borrow.tooldescription}</div>
                 <div className="BorrowToolSpecs"><span className="ToolsICanBorrowToolSpecs">Tool Specifications:&nbsp;</span>  {borrow.toolspecs}</div>
                 <div className="BorrowToolAccessories"><span className="ToolsICanBorrowToolAccessories">Tool Accessories:&nbsp;</span>  {borrow.toolaccessories}</div>
-                <div className="BorrowToolAccessories"><span className="ToolsICanBorrowLenderEmail">Lender Email:&nbsp;  {borrow.userid}</span></div>
+                <button className="BorrowContactALenderButton"
+                    onClick={() => {
+                        history.push(`/lend/contact`)
+                    }}
+                    type="button">Contact a Lender
+                </button>
+
             </div>
         </div>
     )
