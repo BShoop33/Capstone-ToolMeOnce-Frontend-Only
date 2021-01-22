@@ -60,10 +60,11 @@ export const LendForm = () => {
             editTools({
                 id: Tool.id,
                 userid: parseInt(localStorage.getItem("ToolMeOnce_Member")),
-                borrowerid: Tool.borrowerid,
+                lenderId: parseInt(localStorage.getItem("ToolMeOnce_Member")),
+                borrowerId: Tool.borrowerid,
                 toolstatus: Tool.toolstatus,
                 toolname: Tool.AddToolNameInput,
-                toolpicture: image,
+                toolpicture: image ? image : "/Images/ToolMeOnceLogo.jpg.png",
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,
                 toolaccessories: Tool.AddToolAccessoriesInput
@@ -72,10 +73,10 @@ export const LendForm = () => {
         } else {
             addTools({
                 id: Tool.id,
-                userid: parseInt(localStorage.getItem("ToolMeOnce_Member")),
+                lenderId: parseInt(localStorage.getItem("ToolMeOnce_Member")),
                 borrowerid: Tool.borrowerid,
                 toolstatus: true,
-                toolpicture: image,
+                toolpicture: image ? image : "/Images/ToolMeOnceLogo.jpg.png",
                 toolname: Tool.AddToolNameInput,
                 tooldescription: Tool.AddToolDescriptionInput,
                 toolspecs: Tool.AddToolSpecificationsInput,

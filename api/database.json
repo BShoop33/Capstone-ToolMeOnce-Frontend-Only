@@ -1,18 +1,10 @@
 {
   "UsersTable": [
     {
-      "id": 1,
-      "email": "eryjtyjhjfghj"
-    },
-    {
-      "email": "fred",
-      "address": "afgas",
-      "id": 2
-    },
-    {
       "email": "braxton.shoop@gmail.com",
       "address": "1513 Hayden Drive",
-      "id": 3
+      "registrationDate": "Thu Jan 21 2021 22:04:41 GMT-0600 (Central Standard Time)",
+      "id": 1
     }
   ],
   "Messages": [],

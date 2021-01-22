@@ -10,6 +10,7 @@ export const LoginPage = (props) => {
     const existDialog = useRef()
     const conflictDialog = useRef()
     const conflictDialogAddress = useRef()
+    let date = Date();
 
     const existingUserCheck = () => {
         return fetch(`http://localhost:8088/UsersTable?email=${email.current.value}`)
@@ -55,7 +56,8 @@ export const LoginPage = (props) => {
                         },
                         body: JSON.stringify({
                             email: newemail.current.value,
-                            address: newaddress.current.value
+                            address: newaddress.current.value,
+                            registrationDate: date
                         })
                     })
                         .then(_ => _.json())
@@ -121,7 +123,6 @@ export const LoginPage = (props) => {
                             type="button">Log Into Tool Me Once
                         </button>
                     </div>
-
                     <div className="LoginNewUsersContainer">
                         <h2 className="LoginNewUsersContainerTitle">New User</h2>
                         <div className="LoginInputsContainer">

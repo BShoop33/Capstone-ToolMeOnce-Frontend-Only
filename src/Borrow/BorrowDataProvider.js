@@ -18,6 +18,9 @@ export const BorrowProvider = (props) => {
             .then(getBorrow)
     }
 
+
+
+
     //Conducts PUT operation to edit tool data in the database
     const borrowTool = param => {
         return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
@@ -37,13 +40,13 @@ export const BorrowProvider = (props) => {
     }
 
     const getBorrowToolsIAmBorrowing = () => {
-        return fetch(`http://localhost:8088/Toolstable?toolstatus=false&userid_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/Toolstable?toolstatus=false&lenderId_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setToolsIAmBorrowing)
     }
 
     const getBorrowToolsICanBorrow = () => {
-        return fetch(`http://localhost:8088/Toolstable?toolstatus=true&userid_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
+        return fetch(`http://localhost:8088/Toolstable?toolstatus=true&lenderId_ne=${localStorage.getItem("ToolMeOnce_Member")}`)
             .then(res => res.json())
             .then(setToolsICanBorrow)
     }

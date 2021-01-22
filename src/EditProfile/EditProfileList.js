@@ -8,8 +8,6 @@ export const ProfilePage = () => {
     const [newProfile, setNewProfile] = useState({})
     const { profileId } = useParams()
     const history = useHistory()
-    // const email = useRef()
-
 
 
     const handleControlledInputChange = (event) => {
@@ -72,13 +70,13 @@ export const ProfilePage = () => {
                                         history.push(`lend`)
                                     }}
                                     type="button">Save Changes
-                                </button>
+                            </button>
                                 <button className="ProfileCancelButton"
                                     onClick={() => {
                                         history.push(`/lend`)
                                     }}
                                     type="button">Cancel
-                                </button>
+                            </button>
                             </div>
                         </div>
                     </div>
@@ -88,3 +86,21 @@ export const ProfilePage = () => {
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
