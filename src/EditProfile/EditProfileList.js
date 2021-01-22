@@ -9,29 +9,34 @@ export const ProfilePage = () => {
     const { profileId } = useParams()
     const history = useHistory()
 
+    const newEmail = useRef()
+    const newAddress = useRef()
 
     const handleControlledInputChange = (event) => {
-        const addedProfile = { ...newProfile }
+        const addedProfile = newProfile
         addedProfile[event.target.name] = event.target.value
         setNewProfile(addedProfile)
     }
 
     useEffect(() => {
-        getProfile().then(() => {
-            if (profileId) {
-                getProfileById(profileId)
-                    .then(param => {
-                        setNewProfile(param)
-                    })
-            }
-        })
+        getProfile()
     }, [])
+
+    useEffect(() => {
+        if (profileId) {
+            getProfileById(profileId)
+                .then(param => {
+                    setNewProfile(param)
+                })
+        } else { }
+    }, [getProfileById, profileId])
 
     const constructProfileObject = () => {
         editProfile({
             id: newProfile.id,
-            email: newProfile.ProfileEditEmailInput,
-            address: newProfile.ProfileEditHomeAddressInput
+            email: newEmail.current.value,
+            address: newAddress.current.value,
+            registrationDate: newProfile.registrationDate
         })
             .then(() => history.push("/Lend"))
     }
@@ -47,9 +52,10 @@ export const ProfilePage = () => {
                                 <input type="text"
                                     id="ProfileEditEmailInput"
                                     name="ProfileEditEmailInput"
-                                    className="ProfileEditEmailInput"
-                                    defaultValue={profileId ? newProfile.email : "Enter your new email address"}
+                                    ref={newEmail}
                                     onChange={handleControlledInputChange}
+                                    defaultValue={profileId ? newProfile.email : "Enter your new email address"}
+                                    className="ProfileEditEmailInput"
                                 />
                             </div>
                             <div className="ProfileEditHomeAddressInputBorder">
@@ -57,9 +63,10 @@ export const ProfilePage = () => {
                                     type="text"
                                     id="ProfileEditHomeAddressInput"
                                     name="ProfileEditHomeAddressInput"
-                                    className="ProfileEditHomeAddressInput"
-                                    defaultValue={profileId ? newProfile.address : "Enter your new home address"}
+                                    ref={newAddress}
                                     onChange={handleControlledInputChange}
+                                    defaultValue={profileId ? newProfile.address : "Enter your new home address"}
+                                    className="ProfileEditHomeAddressInput"
                                 />
                             </div>
                             <div className="ProfileEditButtonsContainer">
