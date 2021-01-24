@@ -13,7 +13,9 @@ export const ProfilePage = () => {
     const newAddress = useRef()
 
     const handleControlledInputChange = (event) => {
+        debugger;
         const addedProfile = newProfile
+
         addedProfile[event.target.name] = event.target.value
         setNewProfile(addedProfile)
     }
