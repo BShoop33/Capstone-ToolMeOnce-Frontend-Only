@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useState, useRef } from "react"
 import { LendContext } from "./LendDataProvider.js"
 import { useHistory, useParams } from 'react-router-dom';
 import "./Lend.css"
@@ -11,6 +11,15 @@ export const LendForm = () => {
     const history = useHistory()
     const [image, setImage] = useState('')
     const [loading, setLoading] = useState(false)
+
+    const [preview, setPreview] = useState("")
+
+
+    const toolPicture = useRef();
+    const toolName = useRef();
+    const toolDescription = useRef();
+    const toolSpecs = useRef();
+    const toolAccessories = useRef();
 
     const uploadImage = async e => {
         const files = e.target.files
@@ -51,9 +60,6 @@ export const LendForm = () => {
     }, [])
 
 
-    // localStorage.getItem("ToolMeOnce_Member")
-
-
     const constructToolObject = () => {
         setIsLoading(true)
         if (toolId) {
@@ -63,11 +69,11 @@ export const LendForm = () => {
                 lenderId: parseInt(localStorage.getItem("ToolMeOnce_Member")),
                 borrowerId: Tool.borrowerid,
                 toolstatus: Tool.toolstatus,
-                toolname: Tool.AddToolNameInput,
-                toolpicture: image ? image : "/Images/ToolMeOnceLogo.jpg.png",
-                tooldescription: Tool.AddToolDescriptionInput,
-                toolspecs: Tool.AddToolSpecificationsInput,
-                toolaccessories: Tool.AddToolAccessoriesInput
+                toolname: toolName.current.value,
+                toolpicture: image === "" ? Tool.toolpicture : image,
+                tooldescription: toolDescription.current.value,
+                toolspecs: toolSpecs.current.value,
+                toolaccessories: toolAccessories.current.value
             })
                 .then(() => history.push("/Lend"))
         } else {
@@ -97,7 +103,7 @@ export const LendForm = () => {
                                 {loading ? (
                                     <h3 className="NewToolPictureLoading">Loading . . .</h3>
                                 ) : (
-                                        <img className="NewToolPictureForm" src={image ? image : "/Images/ToolMeOnceLogo.jpg.png"} />
+                                        <img className="NewToolPictureForm" src={image ? image : Tool.toolpicture} />
                                     )
                                 }
                                 <h1 className="UploadTitle">Upload Image</h1>
@@ -106,6 +112,8 @@ export const LendForm = () => {
                                     type="file"
                                     name="file"
                                     placeholder="Upload an image"
+                                    ref={toolPicture}
+                                    defaultValue={image}
                                     onChange={uploadImage}
                                 />
                             </div>
@@ -117,8 +125,9 @@ export const LendForm = () => {
                                     id="AddToolNameInput"
                                     name="AddToolNameInput" required autoFocus
                                     className="AddToolNameInput"
+                                    ref={toolName}
                                     onChange={handleControlledInputChange}
-                                    placeholder={toolId ? Tool.toolname : "Enter your tool's name here"}
+                                    defaultValue={toolId ? Tool.toolname : "Enter your tool's name here"}
                                 />
                             </div>
                             <div className="AddToolDescriptionInputBorder">
@@ -126,8 +135,9 @@ export const LendForm = () => {
                                     id="AddToolDescriptionInput"
                                     name="AddToolDescriptionInput" required autoFocus
                                     className="AddToolDescriptionInput"
+                                    ref={toolDescription}
                                     onChange={handleControlledInputChange}
-                                    placeholder={toolId ? Tool.tooldescription : "Enter your tool's description here"}
+                                    defaultValue={toolId ? Tool.tooldescription : "Enter your tool's description here"}
                                 />
                             </div>
                             <div className="AddToolSpecificationsInputBorder">
@@ -135,8 +145,9 @@ export const LendForm = () => {
                                     id="AddToolSpecificationsInput"
                                     name="AddToolSpecificationsInput" required autoFocus
                                     className="AddToolSpecificationsInput"
+                                    ref={toolSpecs}
                                     onChange={handleControlledInputChange}
-                                    placeholder={toolId ? Tool.toolspecs : "Enter your tool's specifications here"}
+                                    defaultValue={toolId ? Tool.toolspecs : "Enter your tool's specifications here"}
                                 />
                             </div>
                             <div className="AddToolAccessoriesInputBorder">
@@ -144,8 +155,9 @@ export const LendForm = () => {
                                     id="AddToolAccessoriesInput"
                                     name="AddToolAccessoriesInput" required autoFocus
                                     className="AddToolAccessoriesInput"
+                                    ref={toolAccessories}
                                     onChange={handleControlledInputChange}
-                                    placeholder={toolId ? Tool.toolaccessories : "Enter your tool's accessories here"}
+                                    defaultValue={toolId ? Tool.toolaccessories : "Enter your tool's accessories here"}
                                 />
                             </div>
                             <div className="AddToolButtonsContainer">
