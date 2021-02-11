@@ -22,7 +22,6 @@ export const LendList = () => {
         getProfile()
     }, [])
 
-
     useEffect(() => {
         getReply()
     }, [])
