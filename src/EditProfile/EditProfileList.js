@@ -5,19 +5,30 @@ import "./EditProfile.css"
 
 export const ProfilePage = () => {
     const { editProfile, getProfile, getProfileById } = useContext(ProfileContext)
+
     const [newProfile, setNewProfile] = useState({})
+
     const { profileId } = useParams()
+
     const history = useHistory()
 
     const newEmail = useRef()
     const newAddress = useRef()
 
     const handleControlledInputChange = (event) => {
-        debugger;
         const addedProfile = newProfile
-
         addedProfile[event.target.name] = event.target.value
         setNewProfile(addedProfile)
+    }
+
+    const constructProfileObject = () => {
+        editProfile({
+            id: newProfile.id,
+            email: newEmail.current.value,
+            address: newAddress.current.value,
+            registrationDate: newProfile.registrationDate
+        })
+            .then(() => history.push("/Lend"))
     }
 
     useEffect(() => {
@@ -33,16 +44,6 @@ export const ProfilePage = () => {
         } else { }
     }, [getProfileById, profileId])
 
-    const constructProfileObject = () => {
-        editProfile({
-            id: newProfile.id,
-            email: newEmail.current.value,
-            address: newAddress.current.value,
-            registrationDate: newProfile.registrationDate
-        })
-            .then(() => history.push("/Lend"))
-    }
-
     return (
         <>
             <form>
@@ -52,27 +53,28 @@ export const ProfilePage = () => {
                         <div className="ProfileInputsContainer">
                             <div className="ProfileEditEmailInputBorder">
                                 <input type="text"
+                                    className="ProfileEditEmailInput"
+                                    defaultValue={profileId ? newProfile.email : "Enter your new email address"}
                                     id="ProfileEditEmailInput"
                                     name="ProfileEditEmailInput"
-                                    ref={newEmail}
                                     onChange={handleControlledInputChange}
-                                    defaultValue={profileId ? newProfile.email : "Enter your new email address"}
-                                    className="ProfileEditEmailInput"
+                                    ref={newEmail}
                                 />
                             </div>
                             <div className="ProfileEditHomeAddressInputBorder">
                                 <input
-                                    type="text"
+                                    className="ProfileEditHomeAddressInput"
+                                    defaultValue={profileId ? newProfile.address : "Enter your new home address"}
                                     id="ProfileEditHomeAddressInput"
                                     name="ProfileEditHomeAddressInput"
-                                    ref={newAddress}
                                     onChange={handleControlledInputChange}
-                                    defaultValue={profileId ? newProfile.address : "Enter your new home address"}
-                                    className="ProfileEditHomeAddressInput"
+                                    ref={newAddress}
+                                    type="text"
                                 />
                             </div>
                             <div className="ProfileEditButtonsContainer">
-                                <button className="ProfileSaveChangesButton"
+                                <button
+                                    className="ProfileSaveChangesButton"
                                     onClick={event => {
                                         event.preventDefault()
                                         constructProfileObject()
@@ -80,7 +82,8 @@ export const ProfilePage = () => {
                                     }}
                                     type="button">Save Changes
                             </button>
-                                <button className="ProfileCancelButton"
+                                <button
+                                    className="ProfileCancelButton"
                                     onClick={() => {
                                         history.push(`/lend`)
                                     }}
@@ -95,21 +98,3 @@ export const ProfilePage = () => {
         </>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

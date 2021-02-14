@@ -1,22 +1,19 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import { LendContext } from "./LendDataProvider"
+import { ProfileContext } from "../EditProfile/EditProfileDataProvider"
+import { ReplyContext } from "../ReplyCard/ReplyDataProvider"
 import { ReplyCard } from "../ReplyCard/ReplyCard"
 import { ToolCard } from "./LendCard"
-import { useHistory } from "react-router-dom"
-import { ProfileContext } from "../EditProfile/EditProfileDataProvider"
-import "./Lend.css"
-import { ReplyContext } from "../ReplyCard/ReplyDataProvider"
 import { EditProfileButton } from "../EditProfile/EditProfileButton"
+import "./Lend.css"
 
 export const LendList = () => {
-    const { tool, getTools } = useContext(LendContext)
     const { profile, getProfile } = useContext(ProfileContext)
     const { reply, getReply } = useContext(ReplyContext)
-    const history = useHistory();
+    const { tool, getTools } = useContext(LendContext)
 
-    useEffect(() => {
-        getTools()
-    }, [])
+    const history = useHistory();
 
     useEffect(() => {
         getProfile()
@@ -26,16 +23,20 @@ export const LendList = () => {
         getReply()
     }, [])
 
+    useEffect(() => {
+        getTools()
+    }, [])
+
     return (
         <>
-
             <header className="LendPageHeaderContainer">
-                <img className="LendToolMeOnceLogo" src="/Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
+                <img alt="Logo" className="LendToolMeOnceLogo" src="/Images/ToolMeOnceLogo.jpg.png" />
                 <div className="LendToolMeOnceTitleContainer">
                     <h1 className="LendToolMeOnceTitle">Tool - Me - Once</h1>
                 </div>
                 <div className="LendProfileandBorrowButtonContainer">
-                    <button className="LendLogOutButton"
+                    <button
+                        className="LendLogOutButton"
                         onClick={() => {
                             localStorage.clear()
                             history.push(`/lend`)
@@ -50,7 +51,8 @@ export const LendList = () => {
                 </div>
             </header>
             <div className="LendSubHeaderContainer">
-                <button className="LendGoToBorrowButton"
+                <button
+                    className="LendGoToBorrowButton"
                     onClick={() => {
                         history.push(`/lend/borrow`)
                     }}
@@ -62,7 +64,8 @@ export const LendList = () => {
                 <div className="LendToolsICanLendContainer">
                     <div className="LendToolsICanLendHeader">
                         <h2 className="LendToolsIAmLendingTitle">Tools I Can Lend</h2>
-                        <button className="LendAddNewToolButton"
+                        <button
+                            className="LendAddNewToolButton"
                             onClick={() => {
                                 history.push(`/lend/toolchangepage/addnewtool`)
                             }}

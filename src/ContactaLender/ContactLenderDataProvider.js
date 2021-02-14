@@ -29,7 +29,7 @@ export const ContactProvider = (props) => {
 
     return (
         <ContactContext.Provider value={{
-            contact, addContact, deleteContact, getContact
+            addContact, contact, deleteContact, getContact
         }}>
             {props.children}
         </ContactContext.Provider>

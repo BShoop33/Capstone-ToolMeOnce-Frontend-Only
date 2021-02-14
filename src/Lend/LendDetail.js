@@ -5,18 +5,21 @@ import "./Lend.css"
 
 export const ToolCardButtonsContainer = ({ tool }) => {
     const { deleteTool } = useContext(LendContext)
+
     const history = useHistory();
 
     return (
         <>
             <div className="LendEditToolButtonContainer">
-                <button className="LendEditToolButton"
+                <button
+                    className="LendEditToolButton"
                     onClick={() => {
                         history.push(`/lend/toolchangepage/${tool.id}`)
                     }}
                     type="button">Edit this Tool
                 </button>
-                <button className="LendDeleteToolButton"
+                <button
+                    className="LendDeleteToolButton"
                     onClick={
                         () => {
                             deleteTool(tool.id)

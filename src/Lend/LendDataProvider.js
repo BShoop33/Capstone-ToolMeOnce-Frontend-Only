@@ -47,7 +47,7 @@ export const LendProvider = (props) => {
 
     return (
         <LendContext.Provider value={{
-            tool, addTools, deleteTool, editTools, getTools, getToolById
+            addTools, deleteTool, editTools, getToolById, getTools, tool
         }}>
             {props.children}
         </LendContext.Provider>

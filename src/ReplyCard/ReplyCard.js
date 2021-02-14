@@ -5,13 +5,15 @@ import "./Reply.css"
 
 export const ReplyCard = ({ reply }) => {
     const { addReply, getReply, deleteReply } = useContext(ReplyContext)
+
     const history = useHistory();
 
     return (
         < div className="BorrowerMessagesCardContainer" >
             <div className="BorrowerMessagesCardInfoContainer">
                 <div className="ContactBorrowerButtonContainer">
-                    <button className="ContactBorrowerReplyButton"
+                    <button
+                        className="ContactBorrowerReplyButton"
                         onClick={
                             () => {
                                 addReply(reply.id)
@@ -23,7 +25,8 @@ export const ReplyCard = ({ reply }) => {
                         type="button">Reply
                     </button>
 
-                    <button className="ContactBorrowerDeleteButton"
+                    <button
+                        className="ContactBorrowerDeleteButton"
                         onClick={
                             () => {
                                 deleteReply(reply.id)
