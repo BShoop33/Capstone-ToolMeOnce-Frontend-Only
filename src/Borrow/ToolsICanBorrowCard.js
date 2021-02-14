@@ -7,12 +7,9 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
     const { borrowTool, getBorrowToolsICanBorrow, getBorrowToolsIAmBorrowing } = useContext(BorrowContext)
     const history = useHistory();
 
-    //When invoked, runs the enclosed borrowTool, getBorrowToolsICanBorrow, and getBorrowToolsIAmBorrowing functions
     const constructToolObject = () => {
         const borrowed = false;
-        /* Invokes the borrowTool function in BorrowDataProvider.js and constructs a tool object (using the data array received from the mapping of the 
-        toolsICanBorrow function in BorrowList.js and embedded as the {borrow} parameter of this module's toolsICanBorrow function) for that function's 
-        PUT operation to store*/
+
         borrowTool({
             id: borrow.id,
             userid: borrow.userid,
@@ -25,19 +22,17 @@ export const ToolsICanBorrowCard = ({ borrow }) => {
             toolspecs: borrow.toolspecs,
             toolaccessories: borrow.toolaccessories
         })
-            //Updates state using the data returned by the getBorrowToolsICanBorrow function in the BorrowDataProvider.js module
             .then(getBorrowToolsICanBorrow)
-            //Updates state using the data returned by the getBorrowToolsIAmBorrowing function in the BorrowDataProvider.js module
             .then(getBorrowToolsIAmBorrowing)
     }
 
     return (
         <div className="BorrowToolsIAmBorrowingCard">
-            <img className="ToolCardPicture" src={borrow.toolpicture} alt="Tool Picture" />
+            <img alt="Tool Picture" className="ToolCardPicture" src={borrow.toolpicture} />
             <div className="BorrowToolInfoContainer">
                 <div className="BorrowEditToolButtonContainer">
-                    {/* When clicked, invokes the constructToolObject function and then renders the Borrow Page on the DOM */}
-                    <button className="BorrowThisToolButton"
+                    <button
+                        className="BorrowThisToolButton"
                         onClick={event => {
                             event.preventDefault()
                             constructToolObject()

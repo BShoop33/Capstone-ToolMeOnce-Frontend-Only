@@ -30,7 +30,7 @@ export const LendResponseProvider = (props) => {
 
     return (
         <LendResponseContext.Provider value={{
-            response, addResponse, deleteResponse, getResponse
+            addResponse, deleteResponse, getResponse, response
         }}>
             {props.children}
         </LendResponseContext.Provider>

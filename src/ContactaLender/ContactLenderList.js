@@ -5,7 +5,9 @@ import "./ContactLender.css"
 
 export const ContactLenderPage = () => {
     const { addContact } = useContext(ContactContext)
+
     const [contact, setContact] = useState({})
+
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {

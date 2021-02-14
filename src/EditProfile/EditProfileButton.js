@@ -1,5 +1,4 @@
-import React, { useContext } from "react"
-import { ProfileContext } from "./EditProfileDataProvider"
+import React from "react"
 import { useHistory } from "react-router-dom"
 import "./EditProfile.css"
 
@@ -8,8 +7,8 @@ export const EditProfileButton = ({ profile }) => {
 
     return (
         <>
-
-            <button className="LendEditProfile"
+            <button
+                className="LendEditProfile"
                 onClick={() => {
                     history.push(`/lend/editprofile/${profile.id}`)
                 }}

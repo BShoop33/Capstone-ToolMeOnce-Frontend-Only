@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { ContactContext } from "./ContactLenderDataProvider"
-
 import { useHistory } from "react-router-dom"
 import "./ContactLender.css"
 
@@ -12,7 +11,8 @@ export const BorrowerMessagesCardButtonsContainer = ({ message }) => {
     return (
         <>
             <div className="ContactLenderButtonContainer">
-                <button className="ContactLenderDeleteButton"
+                <button
+                    className="ContactLenderDeleteButton"
                     onClick={
                         () => {
                             deleteContact(message.id)

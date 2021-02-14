@@ -4,16 +4,16 @@ import { useHistory, useParams } from 'react-router-dom';
 import "./Lend.css"
 
 export const LendForm = () => {
-    const { getTools, getToolById, editTools, addTools } = useContext(LendContext)
+    const { addTools, editTools, getToolById, getTools } = useContext(LendContext)
+
     const { toolId } = useParams()
+
     const [Tool, setNewTool] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const history = useHistory()
     const [image, setImage] = useState('')
     const [loading, setLoading] = useState(false)
 
-    const [preview, setPreview] = useState("")
-
+    const history = useHistory()
 
     const toolPicture = useRef();
     const toolName = useRef();
@@ -44,21 +44,6 @@ export const LendForm = () => {
         addedTool[event.target.name] = event.target.value
         setNewTool(addedTool)
     }
-
-    useEffect(() => {
-        getTools().then(() => {
-            if (toolId) {
-                getToolById(toolId)
-                    .then(Tool => {
-                        setNewTool(Tool)
-                        setIsLoading(false)
-                    })
-            } else {
-                setIsLoading(false)
-            }
-        })
-    }, [])
-
 
     const constructToolObject = () => {
         setIsLoading(true)
@@ -92,6 +77,20 @@ export const LendForm = () => {
         }
     }
 
+    useEffect(() => {
+        getTools().then(() => {
+            if (toolId) {
+                getToolById(toolId)
+                    .then(Tool => {
+                        setNewTool(Tool)
+                        setIsLoading(false)
+                    })
+            } else {
+                setIsLoading(false)
+            }
+        })
+    }, [])
+
     return (
         <>
             <div className="AddToolMain">
@@ -103,65 +102,73 @@ export const LendForm = () => {
                                 {loading ? (
                                     <h3 className="NewToolPictureLoading">Loading . . .</h3>
                                 ) : (
-                                        <img className="NewToolPictureForm" src={image ? image : Tool.toolpicture} />
+                                        <img alt="Tool Picture" className="NewToolPictureForm" src={image ? image : Tool.toolpicture} />
                                     )
                                 }
                                 <h1 className="UploadTitle">Upload Image</h1>
                                 <input
                                     className="ToolPictureFileInput"
-                                    type="file"
+                                    defaultValue={image}
                                     name="file"
+                                    onChange={uploadImage}
                                     placeholder="Upload an image"
                                     ref={toolPicture}
-                                    defaultValue={image}
-                                    onChange={uploadImage}
+                                    type="file"
                                 />
                             </div>
                         </div>
 
                         <div className="NewToolInputs">
                             <div className="AddToolNameInputBorder">
-                                <input type="text"
+                                <input
+                                    className="AddToolNameInput"
+                                    defaultValue={toolId ? Tool.toolname : "Enter your tool's name here"}
                                     id="AddToolNameInput"
                                     name="AddToolNameInput" required autoFocus
-                                    className="AddToolNameInput"
-                                    ref={toolName}
                                     onChange={handleControlledInputChange}
-                                    defaultValue={toolId ? Tool.toolname : "Enter your tool's name here"}
+                                    ref={toolName}
+                                    type="text"
                                 />
                             </div>
                             <div className="AddToolDescriptionInputBorder">
                                 <textarea
-                                    id="AddToolDescriptionInput"
-                                    name="AddToolDescriptionInput" required autoFocus
+                                    autoFocus
                                     className="AddToolDescriptionInput"
-                                    ref={toolDescription}
-                                    onChange={handleControlledInputChange}
                                     defaultValue={toolId ? Tool.tooldescription : "Enter your tool's description here"}
+                                    id="AddToolDescriptionInput"
+                                    name="AddToolDescriptionInput"
+                                    onChange={handleControlledInputChange}
+                                    ref={toolDescription}
+                                    required
                                 />
                             </div>
                             <div className="AddToolSpecificationsInputBorder">
                                 <textarea
-                                    id="AddToolSpecificationsInput"
-                                    name="AddToolSpecificationsInput" required autoFocus
+                                    autoFocus
                                     className="AddToolSpecificationsInput"
-                                    ref={toolSpecs}
-                                    onChange={handleControlledInputChange}
                                     defaultValue={toolId ? Tool.toolspecs : "Enter your tool's specifications here"}
+                                    id="AddToolSpecificationsInput"
+                                    name="AddToolSpecificationsInput"
+                                    onChange={handleControlledInputChange}
+                                    ref={toolSpecs}
+                                    required
                                 />
                             </div>
                             <div className="AddToolAccessoriesInputBorder">
                                 <textarea
-                                    id="AddToolAccessoriesInput"
-                                    name="AddToolAccessoriesInput" required autoFocus
+                                    autoFocus
                                     className="AddToolAccessoriesInput"
-                                    ref={toolAccessories}
-                                    onChange={handleControlledInputChange}
                                     defaultValue={toolId ? Tool.toolaccessories : "Enter your tool's accessories here"}
+                                    id="AddToolAccessoriesInput"
+                                    name="AddToolAccessoriesInput"
+                                    onChange={handleControlledInputChange}
+                                    ref={toolAccessories}
+                                    required
                                 />
                             </div>
                             <div className="AddToolButtonsContainer">
-                                <button className="AddToolSaveButton"
+                                <button
+                                    className="AddToolSaveButton"
                                     disabled={isLoading, loading}
                                     onClick={event => {
                                         event.preventDefault()
@@ -170,7 +177,8 @@ export const LendForm = () => {
                                     }}
                                     type="button">Save Tool
                                 </button>
-                                <button className="AddToolCancelButton"
+                                <button
+                                    className="AddToolCancelButton"
                                     onClick={() => {
 
                                         history.push(`/lend`)

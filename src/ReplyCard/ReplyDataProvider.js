@@ -29,7 +29,7 @@ export const ReplyProvider = (props) => {
 
     return (
         <ReplyContext.Provider value={{
-            reply, addReply, deleteReply, getReply
+            addReply, deleteReply, getReply, reply
         }}>
             {props.children}
         </ReplyContext.Provider>

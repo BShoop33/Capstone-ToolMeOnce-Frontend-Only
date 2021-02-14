@@ -4,12 +4,14 @@ import "./Login.css"
 
 export const LoginPage = (props) => {
     const history = useHistory()
+
     const email = useRef()
     const newemail = useRef()
     const newaddress = useRef()
     const existDialog = useRef()
     const conflictDialog = useRef()
     const conflictDialogAddress = useRef()
+
     let date = Date();
 
     const existingUserCheck = () => {
@@ -63,7 +65,6 @@ export const LoginPage = (props) => {
                         .then(_ => _.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                // localStorage.setItem("ToolMeOnce_Member", createdUser.id)
                                 localStorage.setItem("ToolMeOnce_Member", createdUser.id)
                                 history.push("/lend")
                             }
@@ -80,27 +81,33 @@ export const LoginPage = (props) => {
             <main className="container--login">
                 <dialog className="DialogExisting" ref={existDialog}>
                     <div>Oops! It looks like we don't have a user record for you. Please register as a new user in the New User field below.</div>
-                    <button className="ButtonCloseExisting"
-                        onClick={e => existDialog.current.close()}>Close
-                        </button>
+                    <button
+                        className="ButtonCloseExisting"
+                        onClick={e => existDialog.current.close()}
+                    >Close
+                    </button>
                 </dialog>
 
                 <dialog className="DialogNewEmail" ref={conflictDialog}>
                     <div>Please enter your email address to register</div>
-                    <button className="ButtonCloseNewEmail"
-                        onClick={e => conflictDialog.current.close()}>Close
-                        </button>
+                    <button
+                        className="ButtonCloseNewEmail"
+                        onClick={e => conflictDialog.current.close()}
+                    >Close
+                    </button>
                 </dialog>
 
                 <dialog className="DialogNewEmail" ref={conflictDialogAddress}>
                     <div>Please enter your home address to register</div>
-                    <button className="ButtonCloseNewEmail"
-                        onClick={e => conflictDialogAddress.current.close()}>Close
-                        </button>
+                    <button
+                        className="ButtonCloseNewEmail"
+                        onClick={e => conflictDialogAddress.current.close()}
+                    >Close
+                    </button>
                 </dialog>
 
                 <header className="LoginPageHeaderContainer">
-                    <img className="LoginToolMeOnceLogo" src="Images/ToolMeOnceLogo.jpg.png" alt="Logo" />
+                    <img alt="Logo" className="LoginToolMeOnceLogo" src="Images/ToolMeOnceLogo.jpg.png" />
                     <div className="LoginToolMeOnceLoginTitleContainer">
                         <h1 className="LoginToolMeOnceTitle">Tool - Me - Once</h1>
                     </div>
@@ -110,15 +117,17 @@ export const LoginPage = (props) => {
                     <div className="LoginExistingUsersContainer">
                         <h2 className="LoginExistingUsersContainerTitle">Existing Users</h2>
                         <div className="LoginExistingEmailInputBorder">
-                            <input type="text"
-                                ref={email}
+                            <input
+                                className="LoginExistingEmailInput"
                                 id="LoginExistingEmailInput"
                                 name="LoginExistingEmailInput" required autoFocus
-                                className="LoginExistingEmailInput"
                                 placeholder="Enter Your Email Address to Log In"
+                                ref={email}
+                                type="text"
                             />
                         </div>
-                        <button className="LoginExistingUserLoginButton"
+                        <button
+                            className="LoginExistingUserLoginButton"
                             onClick={handleLogin}
                             type="button">Log Into Tool Me Once
                         </button>
@@ -128,23 +137,24 @@ export const LoginPage = (props) => {
                         <div className="LoginInputsContainer">
                             <div className="LoginNewUsersEmailInputBorder">
                                 <input type="text"
-                                    ref={newemail}
+                                    className="LoginNewEmailInput"
                                     id="LoginNewEmailInput"
                                     name="LoginNewEmailInput"
-                                    className="LoginNewEmailInput"
                                     placeholder="Enter Your Email Address to Register"
+                                    ref={newemail}
                                 />
                             </div>
                             <div className="LoginNewUsersHomeAddressInputBorder">
                                 <input type="text"
-                                    ref={newaddress}
+                                    className="LoginNewHomeAddressInput"
                                     id="LoginNewHomeAddressInput"
                                     name="LoginNewHomeAddressInput"
-                                    className="LoginNewHomeAddressInput"
                                     placeholder="Enter Your Home Address to Register"
+                                    ref={newaddress}
                                 />
                             </div>
-                            <button className="LoginNewUserLoginButton"
+                            <button
+                                className="LoginNewUserLoginButton"
                                 onClick={handleRegister}
                                 type="button">Register for Tool Me Once
                             </button>

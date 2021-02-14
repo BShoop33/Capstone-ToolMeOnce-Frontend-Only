@@ -1,23 +1,18 @@
 import React from "react";
 import { Route } from "react-router-dom";
-
 import { BorrowList } from "./Borrow/BorrowList.js"
 import { BorrowProvider } from "./Borrow/BorrowDataProvider.js"
 import { ToolsIAmBorrowingCard } from "./Borrow/ToolsIAmBorrowingCard.js"
 import { ToolsICanBorrowCard } from "./Borrow/ToolsICanBorrowCard.js"
-
 import { ContactLenderPage } from "./ContactaLender/ContactLenderList.js"
 import { ContactProvider } from "./ContactaLender/ContactLenderDataProvider.js"
 import { ReplyProvider } from "./ReplyCard/ReplyDataProvider.js"
-
 import { ProfilePage } from "./EditProfile/EditProfileList"
 import { ProfileProvider } from "./EditProfile/EditProfileDataProvider.js"
-
 import { LendList } from "./Lend/LendList.js"
 import { LendProvider } from "./Lend/LendDataProvider.js"
 import { LendForm } from "./Lend/LendForm.js"
 import { ToolCardButtonsContainer } from "./Lend/LendDetail.js"
-
 import { LendResponseProvider } from "./Response/LendResponseDataProvider"
 import { LendResponsePage } from "./Response/LendResponseList"
 
@@ -46,8 +41,6 @@ export const ApplicationViews = () => {
                 </Route>
             </BorrowProvider>
 
-
-
             <ContactProvider>
                 <Route exact path="/lend/contact">
                     <ContactLenderPage />
@@ -61,8 +54,6 @@ export const ApplicationViews = () => {
                 </Route>
             </ProfileProvider>
 
-
-
             <LendResponseProvider>
                 <Route exact path="/lend">
                     <LendResponseProvider />
@@ -74,8 +65,6 @@ export const ApplicationViews = () => {
                     <LendResponsePage />
                 </Route>
             </LendResponseProvider>
-
-
 
             <LendProvider>
                 <Route exact path="/lend/toolchangepage/addnewtool">

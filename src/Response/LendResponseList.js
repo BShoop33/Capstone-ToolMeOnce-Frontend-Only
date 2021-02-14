@@ -5,7 +5,9 @@ import "./LendResponse.css"
 
 export const LendResponsePage = () => {
     const { addResponse } = useContext(LendResponseContext)
+
     const [response, setResponse] = useState({})
+
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
@@ -33,24 +35,29 @@ export const LendResponsePage = () => {
                     <div className="LendResponseInputsContainer">
                         <div className="LendResponseEmailInputBorder">
                             <input type="text"
-                                id="LendResponseEmailInput"
-                                onChange={handleControlledInputChange}
-                                name="LendResponseEmailInput" required autoFocus
+                                autoFocus
                                 className="LendResponseEmailInput"
+                                id="LendResponseEmailInput"
+                                name="LendResponseEmailInput"
+                                onChange={handleControlledInputChange}
                                 placeholder="Enter the lender's email address here"
+                                required
                             />
                         </div>
                         <div className="LendResponseMessageInputBorder">
                             <input type="text"
-                                id="LendResponseMessageInput"
-                                onChange={handleControlledInputChange}
-                                name="LendResponseMessageInput" required autoFocus
+                                autoFocus
                                 className="LendResponseMessageInput"
+                                id="LendResponseMessageInput"
+                                name="LendResponseMessageInput"
+                                onChange={handleControlledInputChange}
                                 placeholder="Enter your message here"
+                                required
                             />
                         </div>
                         <div className="LendResponseButtonsContainer">
-                            <button className="LendResponseSaveChangesButton"
+                            <button
+                                className="LendResponseSaveChangesButton"
                                 onClick={event => {
                                     event.preventDefault()
                                     constructMessageObject()
@@ -58,7 +65,8 @@ export const LendResponsePage = () => {
                                 }}
                                 type="button">Send Message
                             </button>
-                            <button className="LendResponseCancelButton"
+                            <button
+                                className="LendResponseCancelButton"
                                 onClick={() => {
                                     history.push(`/lend`)
                                 }}

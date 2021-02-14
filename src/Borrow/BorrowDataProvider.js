@@ -2,11 +2,11 @@ import React, { useState, createContext } from "react"
 export const BorrowContext = createContext()
 
 export const BorrowProvider = (props) => {
+
     const [borrow, setBorrow] = useState([])
     const [toolsIAmBorrowing, setToolsIAmBorrowing] = useState([])
     const [toolsICanBorrow, setToolsICanBorrow] = useState([])
 
-    //Conducts POST operation to save new tool data in the database
     const addBorrow = (param) => {
         return fetch(`http://localhost:8088/Toolstable`, {
             method: "POST",
@@ -18,10 +18,6 @@ export const BorrowProvider = (props) => {
             .then(getBorrow)
     }
 
-
-
-
-    //Conducts PUT operation to edit tool data in the database
     const borrowTool = param => {
         return fetch(`http://localhost:8088/Toolstable/${param.id}`, {
             method: "PUT",
@@ -64,7 +60,8 @@ export const BorrowProvider = (props) => {
 
     return (
         <BorrowContext.Provider value={{
-            borrow, toolsIAmBorrowing, toolsICanBorrow, getBorrowToolsICanBorrow, addBorrow, getBorrow, getBorrowToolsIAmBorrowing, returnBorrowTool, borrowTool
+            addBorrow, borrow, borrowTool, getBorrow, getBorrowToolsIAmBorrowing, getBorrowToolsICanBorrow, toolsIAmBorrowing,
+            toolsICanBorrow, returnBorrowTool,
         }}>
             {props.children}
         </BorrowContext.Provider>
