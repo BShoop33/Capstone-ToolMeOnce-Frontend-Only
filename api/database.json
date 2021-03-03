@@ -25,7 +25,20 @@
       "id": 4
     }
   ],
-  "Messages": [],
+  "Messages": [
+    {
+      "lenderId": "1",
+      "replyToId": "2",
+      "message": "Howdy",
+      "id": 1
+    },
+    {
+      "lenderId": "1",
+      "message": "What It Do?",
+      "replyToId": "2",
+      "id": 2
+    }
+  ],
   "Toolstable": [
     {
       "id": 1,
@@ -69,54 +82,59 @@
       "id": 4
     },
     {
+      "id": 5,
       "lenderId": 2,
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1613057669/ToolMeOnce/regh94qnwhavmqlkoorm.jpg",
       "toolname": "Irwin Tap and Die set",
       "tooldescription": "Has both metric and SAE taps and dies",
       "toolspecs": "Machine screws:  4 - 40 NC, 6 - 32 NC, 8 - 32 NC, 10 - 24 NC, 10 - 32 NF and 12 - 24 NC\\n\\nFractional:  1/4\\\" - 20 NC, 1/4\\\" - 28 NF, 5/16\\\" - 18 NC, 5/16\\\" - 24 NF, 3/8\\\" - 16 NC, 3/8\\\" - 24 NF, 7/16\\\" - 14 NC, 7/16\\\" - 20 NF, 1/2\\\" - 13 NC and 1/2\\\" 20 NF\\n\\nMetric:  5/8\\\" hexagon: 3mm - 0.5, 4mm - 0.7, 4mm - 0.75, 5mm - 0.8, 5mm - 0.9 and 6mm - 1.0",
-      "toolaccessories": "N/A",
-      "id": 5
+      "toolaccessories": "N/A"
     },
     {
+      "id": 6,
       "lenderId": 2,
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1613057701/ToolMeOnce/ue9g0qg71q40w4huog70.jpg",
       "toolname": "Speed Out set",
       "tooldescription": "Four bits for removing stripped screws",
       "toolspecs": "N/A",
-      "toolaccessories": "N/A",
-      "id": 6
+      "toolaccessories": "N/A"
     },
     {
+      "id": 7,
       "lenderId": 3,
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1613057748/ToolMeOnce/igrbs3kqfgikskmenitj.jpg",
       "toolname": "Bosch Router",
       "tooldescription": "Variable speed plunge and fixed-base router kit. Good for freeform milling in wood and plastic.",
       "toolspecs": "12 amp motor with 1/4\\\" and 1/2\\\" chucks. Variable speed from 8,000-25,000 rpms.",
-      "toolaccessories": "Bosch RA1054 edge guide also available for it",
-      "id": 7
+      "toolaccessories": "Bosch RA1054 edge guide also available for it"
     },
     {
+      "id": 8,
       "lenderId": 3,
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1613057782/ToolMeOnce/rzmezjbko54xxm7nbbjz.jpg",
       "toolname": "Extension cord",
       "tooldescription": "50ft  length",
       "toolspecs": "",
-      "toolaccessories": "",
-      "id": 8
+      "toolaccessories": ""
     },
     {
+      "id": 9,
       "lenderId": 4,
+      "borrowerid": "",
       "toolstatus": true,
       "toolpicture": "https://res.cloudinary.com/dstfvbrwf/image/upload/v1613057825/ToolMeOnce/ri1vhgptstmgzf0bazij.jpg",
       "toolname": "OTC Cylinder Leakage Tester",
       "tooldescription": "Used for compression testing combustion engine cylinders to see whether rings, valves, or head gaskets are failing.",
       "toolspecs": "Includes a two foot long 14mm flex hose as well as 10 mm, 12 mm, and 18 mm thread adapters.",
-      "toolaccessories": "N/A",
-      "id": 9
+      "toolaccessories": "N/A"
     },
     {
       "lenderId": 4,

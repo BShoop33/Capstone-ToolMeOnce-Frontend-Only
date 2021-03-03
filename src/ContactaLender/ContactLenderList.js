@@ -1,15 +1,15 @@
 import React, { useContext, useState } from "react"
 import { ContactContext } from "./ContactLenderDataProvider"
-import { useHistory } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import "./ContactLender.css"
 
 export const ContactLenderPage = () => {
     const { addContact } = useContext(ContactContext)
 
     const [contact, setContact] = useState({})
-
+    const lenderId = useParams();
     const history = useHistory()
-
+    console.log(lenderId.borrowId)
     const handleControlledInputChange = (event) => {
         const addedMessage = { ...contact }
         addedMessage[event.target.name] = event.target.value
@@ -19,8 +19,8 @@ export const ContactLenderPage = () => {
     const constructMessageObject = () => {
         addContact({
             id: contact.id,
-            userid: localStorage.getItem("ToolMeOnce_Member"),
-            replytoid: contact.ContactLenderEmailInput,
+            lenderId: lenderId.borrowId,
+            replyToId: localStorage.getItem("ToolMeOnce_Member"),
             message: contact.ContactLenderMessageInput
         })
             .then(() =>
@@ -33,7 +33,7 @@ export const ContactLenderPage = () => {
                 <div className="ContactLenderContainer">
                     <h2 className="ContactLenderContainerTitle">Contact a Lender</h2>
                     <div className="ContactLenderInputsContainer">
-                        <div className="ContactLenderEmailInputBorder">
+                        {/* <div className="ContactLenderEmailInputBorder">
                             <input type="text"
                                 id="ContactLenderEmailInput"
                                 onChange={handleControlledInputChange}
@@ -41,7 +41,7 @@ export const ContactLenderPage = () => {
                                 className="ContactLenderEmailInput"
                                 placeholder="Enter the lender's email address here"
                             />
-                        </div>
+                        </div> */}
                         <div className="ContactLenderMessageInputBorder">
                             <input type="text"
                                 id="ContactLenderMessageInput"

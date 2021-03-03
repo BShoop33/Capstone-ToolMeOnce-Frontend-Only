@@ -42,7 +42,7 @@ export const ApplicationViews = () => {
             </BorrowProvider>
 
             <ContactProvider>
-                <Route exact path="/lend/contact">
+                <Route exact path="/lend/contact/:borrowId(\d+)">
                     <ContactLenderPage />
                 </Route>
             </ContactProvider>
@@ -61,7 +61,7 @@ export const ApplicationViews = () => {
             </LendResponseProvider>
 
             <LendResponseProvider>
-                <Route exact path="/lend/response">
+                <Route exact path="/lend/response/:replyToId(\d+)">
                     <LendResponsePage />
                 </Route>
             </LendResponseProvider>
