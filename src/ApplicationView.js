@@ -61,7 +61,7 @@ export const ApplicationViews = () => {
             </LendResponseProvider>
 
             <LendResponseProvider>
-                <Route exact path="/lend/response">
+                <Route exact path="/lend/response/:replyToId(\d+)">
                     <LendResponsePage />
                 </Route>
             </LendResponseProvider>

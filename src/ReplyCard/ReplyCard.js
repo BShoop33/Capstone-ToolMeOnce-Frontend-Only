@@ -18,7 +18,7 @@ export const ReplyCard = ({ reply }) => {
                             () => {
                                 addReply(reply.id)
                                     .then(() => {
-                                        history.push("/lend/response")
+                                        history.push(`/lend/response/${reply.replyToId}`)
                                     })
                             }
                         }

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react"
 import { LendResponseContext } from "./LendResponseDataProvider"
-import { useHistory } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import "./LendResponse.css"
 
 export const LendResponsePage = () => {
     const { addResponse } = useContext(LendResponseContext)
 
     const [response, setResponse] = useState({})
-
+    const borrowerId = useParams();
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
@@ -19,9 +19,9 @@ export const LendResponsePage = () => {
     const constructMessageObject = () => {
         addResponse({
             id: response.id,
-            userid: response.LendResponseEmailInput,
+            lenderId: localStorage.getItem("ToolMeOnce_Member"),
             message: response.LendResponseMessageInput,
-            replytoid: localStorage.getItem("ToolMeOnce_Member")
+            replyToId: borrowerId.replyToId
         })
             .then(() =>
                 history.push("/lend"))
@@ -33,7 +33,7 @@ export const LendResponsePage = () => {
                 <div className="LendResponseContainer">
                     <h2 className="LendResponseContainerTitle">Respond to Borrower</h2>
                     <div className="LendResponseInputsContainer">
-                        <div className="LendResponseEmailInputBorder">
+                        {/* <div className="LendResponseEmailInputBorder">
                             <input type="text"
                                 autoFocus
                                 className="LendResponseEmailInput"
@@ -43,7 +43,7 @@ export const LendResponsePage = () => {
                                 placeholder="Enter the lender's email address here"
                                 required
                             />
-                        </div>
+                        </div> */}
                         <div className="LendResponseMessageInputBorder">
                             <input type="text"
                                 autoFocus
